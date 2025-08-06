@@ -275,7 +275,7 @@
     <section class="py-16 md:py-20 bg-gray-900 rounded-lg shadow-lg mx-auto container px-6 mb-16">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4 text-white">
-                �🐱 Conexão Irresistível — <span class="text-highlight">O Pacote Completo para Criar (ou Recuperar) um Vínculo Emocional Verdadeiro com Seu Pet</span>
+                🐶🐱 Conexão Irresistível — <span class="text-highlight">O Pacote Completo para Criar (ou Recuperar) um Vínculo Emocional Verdadeiro com Seu Pet</span>
             </h2>
             <h3 class="text-2xl md:text-3xl font-semibold mb-8 text-gray-200">
                 Quatro guias emocionais. Um só objetivo: transformar cuidado em conexão real.
@@ -364,7 +364,7 @@
                             Este guia foi desenvolvido para tutores que sentem que a conexão com seu pet se perdeu, oferecendo um roteiro prático para um reencontro verdadeiro.
                         </p>
                         <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-4 text-left">
-                            <li>Desafios diários simples e eficazes</li>
+                            <li>Desafios diários diários simples e eficazes</li>
                             <li>Estratégias para reativar segurança emocional e confiança mútua</li>
                             <li>Construção de Confiança Mútua</li>
                         </ul>
@@ -701,7 +701,30 @@
             }
         }
     </script>
+    <!-- Script para passar parâmetros UTM para links da Kiwify -->
+    <script>
+        let prefix = ["https://pay.kiwify.com.br"];
+
+        function getParams() {
+            let t = "",
+                e = window.top.location.href,
+                r = new URL(e);
+            if (null != r) {
+                let a = r.searchParams.get("utm_source"),
+                    n = r.searchParams.get("utm_medium"),
+                    o = r.searchParams.get("utm_campaign"),
+                    m = r.searchParams.get("utm_term"),
+                    c = r.searchParams.get("utm_content");
+                -1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+            }
+            return t
+        }! function() {
+            var t = new URLSearchParams(window.location.search);
+            t.toString() && document.querySelectorAll("a").forEach(function(e) {
+                for (let r = 0; r < prefix.length; r++) -1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+            })
+        }();
+    </script>
 
 </body>
 </html>
-�
