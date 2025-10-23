@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- NOVO TÍTULO COM FOCO NA DOR -->
+    <!-- TÍTULO COM FOCO NA DOR -->
     <title>Método 7V - Chega de Culpa: Rotina de Oração em 7 Minutos</title>
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;f.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)f._fbq=n;f._fbq=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -87,6 +87,12 @@
         .urgency-bar strong {
             color: #FFDEB4; /* Destaque no preço */
         }
+        .urgency-timer {
+            font-weight: 900;
+            color: #FFDEB4;
+            display: inline-block;
+            min-width: 90px; /* Garante que o timer não salte */
+        }
         @media (min-width: 768px) {
             .urgency-bar {
                 font-size: 1.125rem;
@@ -115,16 +121,19 @@
             padding: 0.75rem 1rem;
             width: 100%;
         }
+        /* Pulsating animation for the fixed CTA */
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(255, 138, 101, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 138, 101, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 138, 101, 0); }
+        }
+        .cta-fixed .btn-primary {
+            animation: pulse-border 1.5s infinite;
+        }
         @media (min-width: 768px) {
             .cta-fixed {
                 display: none;
             }
-        }
-        /* CORREÇÃO DE QUEBRA DE LINHA E ESPAÇAMENTO - V7: Ajustado o word-break para garantir que o espaçamento seja respeitado */
-        .list-item-content {
-            white-space: normal;
-            word-break: normal; /* Garante que a quebra ocorra no espaço */
-            /* Foi mantido, mas o erro maior foi na manipulação da string ao redor do <strong> */
         }
         /* CUSTOM STYLES FOR KIWIFY-LIKE ICONS */
         .kiwify-icon-box {
@@ -151,9 +160,9 @@
 </head>
 <body class="leading-relaxed">
 
-    <!-- BARRA DE URGÊNCIA FIXA - NOVA COPY - PREÇO ATUALIZADO (R$ 47,70) -->
+    <!-- BARRA DE URGÊNCIA FIXA COM CONTADOR DINÂMICO -->
     <div class="urgency-bar">
-        ⏰ OFERTA ESPECIAL TERMINA EM: 23h 47m 35s | APENAS HOJE: <span class="line-through">De R$ 147,90</span> por <strong class="text-white">R$ 47,70</strong> (68% OFF)
+        ⏰ OFERTA ESPECIAL TERMINA EM: <span id="countdown" class="urgency-timer">00h 00m 00s</span> | APENAS HOJE: <span class="line-through">De R$ 147,90</span> por <strong class="text-white">R$ 37,70</strong> (74% OFF)
     </div>
 
     <!-- Header Section - NOVO NOME + PROVA SOCIAL -->
@@ -167,11 +176,11 @@
         </div>
     </header>
 
-    <!-- Hero Section - Headline Principal e Mecanismo (Alto Foco na Dor e Culpa) -->
+    <!-- Hero Section - Headline Principal e Mecanismo -->
     <section class="section-padding bg-[#E0F7FA] text-center rounded-3xl shadow-lg mx-4 sm:mx-auto max-w-5xl">
         <div class="max-w-4xl mx-auto container-padding">
             
-            <!-- Imagem e Capa do Ebook (7-versiculos-pequeno.png) -->
+            <!-- Imagem e Capa do Ebook -->
             <div class="mb-6 flex justify-center">
                  <img
                     src="https://huggingface.co/spaces/PerformancePoetica/prayerpowermoms/resolve/main/images/7-versiculos-pequeno.png" 
@@ -181,27 +190,29 @@
                 >
             </div>
 
-            <!-- ABERTURA COM DOR -->
+            <!-- 1. HEADLINE REVISADA: Mais específica e emocional (Foco em paz e 7 minutos) -->
             <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-[#2c3e50]">
-                "Mãe, <span class="text-red-600">quando foi a última vez</span> que você orou pelos seus filhos <strong class="text-red-600">sem sentir pressa ou culpa?</strong>"
+                "Mãe, <span class="text-red-600">e se 7 minutos por dia</span> fossem suficientes para devolver sua paz e <strong class="text-red-600">fortalecer seus filhos diante de Deus?</strong>"
             </h2>
             
-            <!-- AMPLIFICAÇÃO DA DOR -->
-            <p class="text-xl sm:text-2xl text-[#5F6B79] mb-6 max-w-3xl mx-auto">
-                Se você não lembra, é porque vive o ciclo que está te consumindo:
+            <!-- 2. MICRO-HISTÓRIA/CENA MENTAL -->
+            <p class="text-xl sm:text-2xl text-[#5F6B79] mb-6 max-w-3xl mx-auto font-semibold">
+                Você deita exausta, o corpo quer dormir, mas a mente não deixa. A culpa começa a sussurrar: "Hoje de novo não deu tempo de orar...".
+            </p>
+
+            <!-- AMPLIFICAÇÃO DA DOR (Lista original mantida) -->
+            <p class="text-xl sm:text-2xl text-[#5F6B79] mb-4 max-w-3xl mx-auto">
+                Você vive o ciclo que está te consumindo:
             </p>
             <ul class="text-left text-lg space-y-2 max-w-2xl mx-auto mb-8">
-                 <!-- CORREÇÃO 1: Adicionado espaço antes do <strong> para evitar 'masapagar' (como visto em image_2a7282.png) -->
                  <li class="flex items-start">
                      <span class="mr-3 text-red-500 font-extrabold">❌</span>
                      <span class="list-item-content">Tentar orar antes de dormir, mas <strong class="font-extrabold">apagar no sofá</strong>.</span>
                  </li>
-                 <!-- CORREÇÃO 2: Ajustado o texto da frase, que estava quebrando. Mantido como estava antes para evitar colagem de aspas/negrito. -->
                  <li class="flex items-start">
                      <span class="mr-3 text-red-500 font-extrabold">❌</span>
                      <span class="list-item-content">Acordar no meio da noite com aquele peso no peito: <strong class="font-extrabold">"Mais um dia que não orei pelos meus filhos."</strong></span>
                  </li>
-                 <!-- CORREÇÃO 3: Ajustado o texto da frase, que estava quebrando. -->
                  <li class="flex items-start">
                      <span class="mr-3 text-red-500 font-extrabold">❌</span>
                      <span class="list-item-content">A dúvida cruel: <strong class="font-extrabold">"Será que estou fazendo o suficiente por eles diante de Deus?"</strong></span>
@@ -215,7 +226,9 @@
 
             <!-- MECANISMO CLARO (POR QUE FUNCIONA) -->
             <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[#4DB6AC] mb-10">
-                <h4 class="text-2xl font-bold mb-4 text-[#2c3e50]">Como? A Fórmula 7V: 7 Versículos + 7 Minutos por Dia = Transformação Garantida</h4>
+                <!-- 3. REFORÇO DO MECANISMO (Sistema vs. Falta de Fé) -->
+                <p class="text-xl font-bold mb-4 text-red-600">Descobri que a maioria das mães não falha por falta de fé, mas por falta de um sistema.</p>
+                <h4 class="text-2xl font-bold mb-4 text-[#2c3e50]">A Fórmula 7V: 7 Versículos + 7 Minutos por Dia = Transformação Garantida</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm font-semibold">
                     <div class="p-3 bg-red-100 rounded-lg shadow-sm">DIA 1: CULPA → Versículo de Perdão</div>
                     <div class="p-3 bg-red-100 rounded-lg shadow-sm">DIA 2: PREOCUPAÇÃO → Versículo de Proteção</div>
@@ -228,17 +241,23 @@
                 <p class="text-base mt-4 font-semibold text-gray-700">Cada dia <strong class="font-extrabold">resolve UMA EMOÇÃO ESPECÍFICA</strong> que te consome.</p>
             </div>
 
-            <!-- NOVO CTA CONECTADO À DOR - PREÇO ATUALIZADO (R$ 47,70) -->
+            <!-- CTA CONECTADO À DOR -->
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <a href="#oferta-principal" class="btn-primary font-bold bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] max-w-lg">
-                    SIM, QUERO PARAR DE ME SENTIR CULPADA - R$ 47,70
+                    SIM, QUERO PARAR DE ME SENTIR CULPADA - R$ 37,70
                 </a>
+            </div>
+            <!-- Selo de Segurança abaixo do CTA -->
+            <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
+                 <span>✅ Pagamento Seguro (Kiwify)</span> 
+                 <span>|</span> 
+                 <span>🔒 Garantia 7 dias</span>
             </div>
             <a href="https://pay.kiwify.com.br/O5vy5bs" class="text-[#2c3e50] text-sm mt-3 inline-block font-semibold hover:underline">
                 Ou quero testar com o Desafio 7 Dias por apenas R$ 9,90 →
             </a>
             <div class="mt-4 text-center text-sm text-gray-700">
-                <span class="text-yellow-500">⭐⭐⭐⭐⭐ 4.9/5 (847 avaliações)</span> | 🔒 <strong class="font-bold">Garantia 7 dias</strong> | Acesso em 2 minutos
+                <span class="text-yellow-500">⭐⭐⭐⭐⭐ 4.9/5 (847 avaliações)</span> | Acesso em 2 minutos
             </div>
         </div>
     </section>
@@ -251,7 +270,7 @@
             </h3>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Dor (Reforçado com a Copy MAIS INTENSA) -->
+                <!-- Dor -->
                 <div class="bg-red-50 p-6 rounded-xl border-l-4 border-red-400 shadow-inner">
                     <p class="text-xl font-bold mb-4 text-red-700">O que te mantém acordada à noite (O PESO DA CULPA):</p>
                     <ul class="space-y-3 text-lg text-gray-800">
@@ -271,7 +290,6 @@
                             <span class="mr-3 text-red-500">❌</span>
                             <span class="list-item-content">"Sou uma mãe cristã de verdade se não consigo nem orar direito?"</span>
                         </li>
-                        <!-- CORREÇÃO 4: Adicionado espaço antes do <strong> para evitar 'culpasua' (como visto em image_2a7ea2.png) -->
                         <li class="flex items-start">
                             <span class="mr-3 text-red-500">❌</span>
                             <span class="list-item-content">O medo de que seus filhos sofram por <strong class="font-extrabold">culpa sua</strong>.</span>
@@ -279,11 +297,10 @@
                     </ul>
                 </div>
 
-                <!-- Desejo (Depois do Método 7V) -->
+                <!-- Desejo -->
                 <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-400 shadow-inner">
                     <p class="text-xl font-bold mb-4 text-green-700">Como você QUER se sentir (depois do Método 7V):</p>
                     <ul class="space-y-3 text-lg text-gray-800">
-                        <!-- CORREÇÃO 5: Removida a vírgula após o negrito e ajustado o espaçamento para evitar colagem de vírgula/negrito -->
                         <li class="flex items-start">
                             <span class="mr-3 text-green-500">✨</span>
                             <span class="list-item-content"><strong class="font-bold">Dormindo em Paz</strong>, sem o peso da culpa.</span>
@@ -321,6 +338,12 @@
             <a href="#oferta-principal" class="btn-primary mt-12 text-xl font-bold bg-[#B2DFDB] text-[#2c3e50] hover:bg-[#80CBC4] max-w-md">
                 EU ESCOLHO DORMIR EM PAZ
             </a>
+            <!-- Selo de Segurança abaixo do CTA -->
+            <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
+                 <span>✅ Pagamento Seguro (Kiwify)</span> 
+                 <span>|</span> 
+                 <span>🔒 Garantia 7 dias</span>
+            </div>
         </div>
     </section>
 
@@ -370,12 +393,12 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                 
-                <!-- Depoimento 1: Luciana - Foco na Rotina (depoimento-luciana.png) -->
+                <!-- Depoimento 1: Luciana - Foco na Rotina -->
                 <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-teal-500">
                     <div class="flex items-start mb-3">
                         <img
                             src="https://huggingface.co/spaces/PerformancePoetica/prayerpowermoms/resolve/main/images/depoimento-luciana.png" 
-                            alt="Foto de Luciana" 
+                            alt="" 
                             class="w-16 h-16 object-cover rounded-full border-3 border-[#B2DFDB] mr-4"
                             onerror="this.onerror=null; this.src='https://placehold.co/70x70/B2DFDB/333333?text=L';"
                         >
@@ -388,12 +411,12 @@
                     <p class="text-lg italic text-gray-700 pl-2">"Eu dormia mal por causa da culpa. O Método 7V é o sistema que faltava. Não é sobre ter mais tempo, é sobre usar 7 minutos de forma estratégica. Recomendo para toda mãe exausta!"</p>
                 </div>
                 
-                <!-- Depoimento 2: Patricia - Foco em 4 Filhos (depoimento-patricia.png) -->
+                <!-- Depoimento 2: Patricia - Foco em 4 Filhos -->
                 <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-teal-500">
                     <div class="flex items-start mb-3">
                         <img
                             src="https://huggingface.co/spaces/PerformancePoetica/prayerpowermoms/resolve/main/images/depoimento-patricia.png" 
-                            alt="Foto de Patricia" 
+                            alt="" 
                             class="w-16 h-16 object-cover rounded-full border-3 border-[#B2DFDB] mr-4"
                             onerror="this.onerror=null; this.src='https://placehold.co/70x70/B2DFDB/333333?text=P';"
                         >
@@ -431,10 +454,9 @@
                     </div>
 
                     <ul class="text-left text-base mb-6 space-y-2">
-                        <!-- Itens do Desafio 7 Dias - Usando ícone de check verde, conforme o print -->
+                        <!-- Itens do Desafio 7 Dias -->
                         <li class="flex items-start">
                             <span class="kiwify-icon-box kiwify-icon-green">✓</span>
-                            <!-- CORREÇÃO 6: Adicionado espaço após o negrito para não colar (visto em image_2a0dc5.png) -->
                             <span class="list-item-content">O <strong class="font-bold">Guia Essencial 7V</strong> (O mecanismo de 7 minutos)</span>
                         </li>
                         <li class="flex items-start">
@@ -449,68 +471,73 @@
                     <a href="https://pay.kiwify.com.br/O5vy5bs" class="btn-primary text-lg mt-4 bg-[#B2DFDB] text-[#2c3e50] hover:bg-[#80CBC4]">
                         QUERO COMEÇAR MEU DESAFIO POR R$9,90
                     </a>
+                    <!-- Selo de Segurança abaixo do CTA -->
+                    <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
+                         <span>✅ Pagamento Seguro (Kiwify)</span> 
+                         <span>|</span> 
+                         <span>🔒 Garantia 7 dias</span>
+                    </div>
                     <p class="text-xs mt-2 text-gray-500">Acesso imediato, 100% digital.</p>
                 </div>
                 
-                <!-- Card 2: Jornada Completa (Produto Principal) - COM ÍCONES ATUALIZADOS DO PRINT -->
+                <!-- Card 2: Jornada Completa (Produto Principal) - PREÇO R$ 37,70 -->
                 <div class="price-card featured bg-white w-full md:w-1/2 rounded-2xl p-6 shadow-2xl border-4 border-[#FFAB91]">
-                    <span class="bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm font-bold px-4 py-1 rounded-full mb-3 inline-block shadow-lg">🏆 PACOTE MAIS VENDIDO | 68% OFF HOJE</span>
+                    <span class="bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm font-bold px-4 py-1 rounded-full mb-3 inline-block shadow-lg">🏆 PACOTE MAIS VENDIDO | 74% OFF HOJE</span>
                     <h4 class="text-2xl font-bold mb-2">🎁 OPÇÃO 2: A JORNADA COMPLETA (O Fim da Culpa)</h4>
                     
                     <div class="my-4">
                         <p class="text-lg line-through text-gray-500">De R$ 147,90</p>
-                        <p class="text-5xl font-extrabold text-[#FFAB91] mb-2">R$ 47<span class="text-3xl">,70</span></p>
-                        <span class="text-red-500 font-bold">68% OFF</span>
+                        <p class="text-5xl font-extrabold text-[#FFAB91] mb-2">R$ 37<span class="text-3xl">,70</span></p>
+                        <span class="text-red-500 font-bold">74% OFF</span>
                     </div>
 
+                    <!-- 4. STACK DE VALOR REVISADO com Benefício Imediato -->
                     <ul class="text-left text-base mb-6 space-y-3">
-                        <!-- Itens Principais (Ícones azuis e verdes) -->
                         <li class="flex items-start text-gray-800">
                              <span class="kiwify-icon-box kiwify-icon-blue">📘</span>
-                             <!-- CORREÇÃO 7: Espaçamento após o negrito (visto em image_2a114b.png) -->
-                            <span class="list-item-content"><strong class="font-bold">O MÉTODO 7V ESSENCIAL:</strong> O fim da culpa em 7 minutos.</span>
+                            <span class="list-item-content"><strong class="font-bold">O MÉTODO 7V ESSENCIAL:</strong> O fim da culpa em 7 minutos — simples, prático e testado com mães reais.</span>
                         </li>
                         <li class="flex items-start text-gray-800">
                             <span class="kiwify-icon-box kiwify-icon-green">📗</span>
-                            <!-- CORREÇÃO 8: Espaçamento após o negrito (visto em image_2a114b.png) -->
-                            <span class="list-item-content"><strong class="font-bold">GUIA "Mães na Palavra" (52 Planos):</strong> Para não ter mais desculpas de "não saber estudar a Bíblia".</span>
+                            <span class="list-item-content"><strong class="font-bold">GUIA "Mães na Palavra" (52 Planos):</strong> 52 planos para manter sua conexão viva, mesmo na correria.</span>
                         </li>
                         <li class="flex items-start text-gray-800">
                             <span class="kiwify-icon-box kiwify-icon-red">📙</span>
-                            <!-- CORREÇÃO 9: Espaçamento após o negrito (visto em image_2a114b.png) -->
-                            <span class="list-item-content"><strong class="font-bold">DEVOCIONAL "30 Dias de Poder":</strong> Para ter uma rotina sólida depois dos 7 dias.</span>
+                            <span class="list-item-content"><strong class="font-bold">DEVOCIONAL "30 Dias de Poder":</strong> Para continuar firme e ter uma rotina sólida depois dos 7 dias.</span>
                         </li>
-                        <!-- NOVAS VANTAGENS (Ícones Azuis, Roxo e Laranja, conforme o print) -->
                         <li class="flex items-start text-gray-800">
                             <span class="kiwify-icon-box kiwify-icon-blue">∞</span>
-                            <!-- CORREÇÃO 10: Espaçamento após o negrito (visto em image_2a114b.png) -->
                             <span class="list-item-content"><strong class="font-bold">ACESSO VITALÍCIO:</strong> Assista e reveja quando quiser, para sempre.</span>
                         </li>
                         <li class="flex items-start text-gray-800">
                             <span class="kiwify-icon-box kiwify-icon-purple">@</span>
-                            <!-- CORREÇÃO 11: Espaçamento após o negrito (visto em image_2a114b.png) -->
                             <span class="list-item-content"><strong class="font-bold">SUPORTE VIA EMAIL:</strong> Tire suas dúvidas sobre o método.</span>
                         </li>
                         <li class="flex items-start text-gray-800">
                             <span class="kiwify-icon-box kiwify-icon-orange">🔒</span>
-                            <!-- CORREÇÃO 12: Espaçamento após o negrito (visto em image_2a114b.png) -->
                             <span class="list-item-content"><strong class="font-bold">GARANTIA INCONDICIONAL:</strong> 7 dias, ou seu dinheiro de volta.</span>
                         </li>
                     </ul>
                     <a href="https://pay.kiwify.com.br/vRdyJoq" class="btn-primary mt-4 bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] text-xl animate-pulse">
                         🔥 SIM, QUERO PARAR DE SENTIR CULPA AGORA
                     </a>
-                    <p class="text-xs mt-2 text-gray-500">Acesso imediato. Último dia com 68% OFF.</p>
+                    <!-- Selo de Segurança abaixo do CTA -->
+                    <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
+                         <span>✅ Pagamento Seguro (Kiwify)</span> 
+                         <span>|</span> 
+                         <span>🔒 Garantia 7 dias</span>
+                    </div>
+                    <p class="text-xs mt-2 text-gray-500">Acesso imediato. Último dia com 74% OFF.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO 7: GARANTIA (Remove Resistência) -->
+    <!-- SEÇÃO 7: GARANTIA (Confiança Reversa) -->
     <section class="section-padding bg-[#B2DFDB] rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
         <div class="max-w-4xl mx-auto container-padding text-center">
             <h3 class="text-3xl sm:text-4xl font-extrabold mb-6 text-[#2c3e50]">
-                🛡️ Garantia Incondicional: <span class="text-green-700">"Paz ou Seu Dinheiro de Volta"</span>
+                🛡️ Nossa Garantia de Confiança Reversa: <span class="text-green-700">"Paz ou Seu Dinheiro de Volta"</span>
             </h3>
             <div class="flex flex-col items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-yellow-600 mb-6" viewBox="0 0 20 20" fill="currentColor">
@@ -525,7 +552,7 @@
                     <li class="flex items-start"><span class="mr-3 text-green-700">✓</span> Menos culpada por sua rotina.</li>
                 </ul>
                 <p class="text-xl font-extrabold mt-6 text-[#2c3e50] max-w-3xl">
-                    Devolvemos 100% do seu investimento. Sem perguntas, sem burocracia. <strong class="underline">Porque temos certeza absoluta de que funciona.</strong>
+                    <strong class="underline">Você não precisa decidir agora.</strong> Teste o Método 7V e sinta a diferença. Se não sentir paz, <strong class="text-green-700">eu insisto que você receba 100% do seu reembolso.</strong> Seu risco é zero.
                 </p>
             </div>
         </div>
@@ -536,7 +563,7 @@
         <div class="max-w-4xl mx-auto container-padding text-center">
             
             <h3 class="text-3xl font-extrabold mb-4 text-red-600">
-                ⚠️ ATENÇÃO: Esta oferta expira HOJE às 23:59h!
+                ⚠️ ATENÇÃO: Esta oferta expira HOJE! O relógio está correndo...
             </h3>
             
             <h4 class="text-2xl font-bold mb-8 text-gray-800">
@@ -548,7 +575,6 @@
                 <div class="bg-red-100 p-6 rounded-xl border-l-4 border-red-500 shadow-lg">
                     <p class="text-2xl font-bold mb-4 text-red-700">❌ ESCOLHA 1: Continuar no ciclo de culpa</p>
                     <ul class="space-y-2 text-lg text-gray-800">
-                        <!-- CORREÇÃO 13: Ajustado o texto e os negritos para corrigir a quebra e palavras coladas (visto em image_2a7e82.png) -->
                         <li class="flex items-start">
                              <span class="mr-3 text-red-500">→</span>
                              <span class="list-item-content">Carregar a culpa <strong class="font-extrabold">que consome sua energia</strong> diariamente.</span>
@@ -557,7 +583,6 @@
                              <span class="mr-3 text-red-500">→</span>
                              <span class="list-item-content">Deixar mais um ano passar sem uma rotina de oração sólida.</span>
                         </li>
-                        <!-- CORREÇÃO 14: Ajustado o texto e negritos (visto em image_2a7e82.png) -->
                         <li class="flex items-start">
                             <span class="mr-3 text-red-500">→</span>
                             <span class="list-item-content">O Custo: <strong class="font-extrabold">Sua paz, sua confiança e seu sono</strong>.</span>
@@ -569,7 +594,6 @@
                 <div class="bg-green-100 p-6 rounded-xl border-l-4 border-green-500 shadow-lg">
                     <p class="text-2xl font-bold mb-4 text-green-700">✅ ESCOLHA 2: Transformação Hoje com o Método 7V</p>
                     <ul class="space-y-2 text-lg text-gray-800">
-                        <!-- CORREÇÃO 15: Ajustado o texto e negritos para corrigir 'REALMENTEem 7 minutos' e quebra (visto em image_2a2088.png) -->
                         <li class="flex items-start">
                             <span class="mr-3 text-green-500">→</span>
                             <span class="list-item-content">Começar uma rotina de oração que <strong class="font-extrabold">funciona REALMENTE em 7 minutos</strong>.</span>
@@ -578,7 +602,6 @@
                             <span class="mr-3 text-green-500">→</span>
                             <span class="list-item-content">Dormir em paz, sem o peso da culpa.</span>
                         </li>
-                        <!-- CORREÇÃO 16: Ajustado o texto e negritos (visto em image_2a2088.png) -->
                         <li class="flex items-start">
                             <span class="mr-3 text-green-500">→</span>
                             <span class="list-item-content">O Retorno: <strong class="font-extrabold">Paz, confiança e a certeza de ser a mãe cristã que você quer ser</strong>.</span>
@@ -587,17 +610,22 @@
                 </div>
             </div>
 
-            <!-- CTA Final - PREÇO ATUALIZADO (R$ 47,70) -->
+            <!-- 9. CTA FINAL REVISADO: Mais racional e orientado à ação -->
             <h4 class="text-2xl font-bold mt-10 mb-4 text-[#2c3e50]">
                 QUAL VOCÊ ESCOLHE?
             </h4>
 
-            <!-- MUDANÇA AQUI: NOVO CTA FOCADO NA PAZ/SOLUÇÃO -->
             <a href="#oferta-principal" class="btn-primary text-2xl font-bold bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] max-w-lg">
-                ✅ QUERO RESTAURAR MINHA PAZ AINDA HOJE
+                COMECE AGORA E RECEBA TUDO EM 2 MINUTOS
             </a>
+            <!-- Selo de Segurança abaixo do CTA -->
+            <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
+                 <span>✅ Pagamento Seguro (Kiwify)</span> 
+                 <span>|</span> 
+                 <span>🔒 Garantia 7 dias</span>
+            </div>
             <p class="text-sm mt-3 text-gray-600">
-                Acesso imediato | Garantia 7 dias | Seu risco é ZERO.
+                Sua nova rotina de paz começa hoje.
             </p>
             <a href="https://pay.kiwify.com.br/O5vy5bs" class="text-[#2c3e50] text-sm mt-3 inline-block font-semibold hover:underline">
                 💎 Ou comece pequeno: Quero testar com o Desafio 7 Dias por R$ 9,90 →
@@ -605,7 +633,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO 10: FAQ ESTRATÉGICO -->
+    <!-- 7. FAQ REVISADO com item de Segurança e Pagamento -->
     <section class="section-padding bg-[#E0F7FA] rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
         <div class="max-w-4xl mx-auto container-padding">
             <h3 class="text-2xl sm:text-3xl font-extrabold mb-8 text-center text-[#2c3e50]">
@@ -615,28 +643,31 @@
                 <!-- 1. Não tem tempo -->
                 <details class="bg-white rounded-lg shadow-sm border border-gray-200">
                     <summary class="text-gray-800 font-bold p-4 cursor-pointer">1. "Funciona mesmo para quem NÃO tem tempo?"</summary>
-                    <!-- CORREÇÃO DE FLUXO E PONTUAÇÃO: Trocado 'ou' por 'e até' para melhor fluidez. -->
                     <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">Sim. O Método 7V foi testado especificamente com mães que trabalham 12h/dia e vivem em caos. Não é sobre ter tempo—é sobre ter um <strong class="font-bold">SISTEMA</strong> que cabe na sua vida real. <strong class="font-bold">7 minutos cabem em qualquer lugar</strong>: no banho, antes de acordar e até na fila do mercado.</p>
                 </details>
                 <!-- 2. Nunca estudei a Bíblia -->
                 <details class="bg-white rounded-lg shadow-sm border border-gray-200">
                     <summary class="text-gray-800 font-bold p-4 cursor-pointer">2. "E se eu NUNCA estudei a Bíblia?"</summary>
-                    <!-- CORREÇÃO DE FLUXO E PONTUAÇÃO: Melhorado o final da frase para 'e você aprende enquanto faz, sem se sentir intimidada.' -->
                     <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">Perfeito. 78% das nossas alunas eram iniciantes. O Método 7V é baseado em versículos simples e diretos, sem teologia pesada. Cada um vem com uma reflexão em linguagem comum, e você aprende <strong class="font-bold">enquanto faz</strong>, sem se sentir intimidada.</p>
                 </details>
-                <!-- 3. Filhos agitados/pequenos -->
+                <!-- NOVO FAQ: Segurança e Pagamento -->
                 <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">3. "Meus filhos são muito pequenos/agitados..."</summary>
+                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">3. "É seguro comprar pela Kiwify?"</summary>
+                    <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">Sim! A Kiwify é uma plataforma 100% brasileira, confiável e com pagamento criptografado. Seus dados estão seguros e você recebe o acesso ao Método 7V <strong class="font-bold">automaticamente</strong> após a confirmação da compra.</p>
+                </details>
+                <!-- 3. Filhos agitados/pequenos (Reordenado) -->
+                <details class="bg-white rounded-lg shadow-sm border border-gray-200">
+                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">4. "Meus filhos são muito pequenos/agitados..."</summary>
                     <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">O método funciona <strong class="font-extrabold">apesar do caos</strong>. Para bebês: você ora enquanto eles dormem. Para crianças maiores: o Guia traz estratégias para envolvê-los. O ponto é: você não precisa de silêncio absoluto. O método se adapta à sua vida, não o contrário.</p>
                 </details>
-                <!-- 4. Tempo para ver resultados -->
+                <!-- 4. Tempo para ver resultados (Reordenado) -->
                 <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">4. "Quanto tempo leva para ver resultados?"</summary>
+                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">5. "Quanto tempo leva para ver resultados?"</summary>
                     <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">Alívio imediato? <strong class="font-bold">Dia 1 você já sente diferença</strong> (porque finalmente fez algo). Transformação real? Dia 3-5 você sente a mudança interior e a paz genuína. Em 30 dias, você terá uma rotina sólida.</p>
                 </details>
-                <!-- 5. Denominação -->
+                <!-- 5. Denominação (Reordenado) -->
                 <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">5. "Funciona para qualquer denominação?"</summary>
+                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">6. "Funciona para qualquer denominação?"</summary>
                     <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">100% sim. O método é baseado na Bíblia pura, sem viés denominacional ou teologia pesada. Já ajudou mães de igrejas evangélicas, protestantes e católicas carismáticas. <strong class="font-bold">A oração é universal. A culpa da mãe ocupada também.</strong></p>
                 </details>
             </div>
@@ -654,15 +685,21 @@
                 Não deixe mais um dia de culpa te consumir.
             </p>
 
-            <!-- NOVO CTA FINAL: Foco na paz e solução imediata -->
+            <!-- CTA FINAL REVISADO: Mais racional e orientado à ação -->
             <a href="#oferta-principal" class="btn-primary text-2xl font-bold bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] max-w-lg">
-                ✅ QUERO RESTAURAR MINHA PAZ AINDA HOJE
+                COMECE AGORA E RECEBA TUDO EM 2 MINUTOS
             </a>
+            <!-- Selo de Segurança abaixo do CTA -->
+            <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
+                 <span>✅ Pagamento Seguro (Kiwify)</span> 
+                 <span>|</span> 
+                 <span>🔒 Garantia 7 dias</span>
+            </div>
             <p class="text-sm mt-3 text-gray-600">
-                Seus filhos vão agradecer. Você vai se orgulhar. Deus vai abençoar.
+                Sua nova rotina de paz começa hoje.
             </p>
             <p class="text-base font-extrabold mt-6 text-red-600 animate-pulse">
-                OFERTA EXPIRA HOJE À MEIA-NOITE.
+                ÚLTIMAS HORAS DE OFERTA.
             </p>
         </div>
     </section>
@@ -680,61 +717,109 @@
         </div>
     </footer>
 
-    <!-- Fixed CTA for mobile - PREÇO ATUALIZADO (R$ 47,70) -->
+    <!-- Fixed CTA for mobile - COM EFEITO PULSANTE -->
     <div class="cta-fixed md:hidden">
         <a href="#oferta-principal" class="btn-primary text-white font-bold text-lg">
-            PARE DE SENTIR CULPA - R$ 47,70
+            PARE DE SENTIR CULPA - R$ 37,70
         </a>
     </div>
 
-    <!-- Script de rastreamento corrigido -->
+    <!-- Script de rastreamento e CONTADOR DINÂMICO -->
     <script>
-    const PAY_PREFIXES = ["https://pay.kiwify.com.br"];
-    
-    // Function to collect UTMs from the current URL
-    function getUTMs() {
-      // Usando window.location.href para evitar o erro de SecurityError no iframe
-      const url = new URL(window.location.href);
-      const params = url.searchParams;
-      let qs = params.toString();
-    
-      // Create the sck field with all UTMs combined
-      const sck = [
-        params.get("utm_source") || "",
-        params.get("utm_medium") || "",
-        params.get("utm_campaign") || "",
-        params.get("utm_term") || "",
-        params.get("utm_content") || ""
-      ].join("|");
-    
-      if (sck.replace(/\|+$/, "")) {
-        qs += (qs ? "&" : "") + `sck=${encodeURIComponent(sck)}`;
-      }
-    
-      return qs ? `?${qs}` : "";
-    }
-    
-    // Function to append UTMs to Kiwify links
-    function appendUTMsToKiwifyLinks() {
-      const utmString = getUTMs();
-      
-      document.querySelectorAll("a").forEach(function(e) {
-        const isKiwifyLink = PAY_PREFIXES.some(prefix => e.href.startsWith(prefix));
+        const PAY_PREFIXES = ["https://pay.kiwify.com.br"];
+        
+        // --- 6. CONTADOR DINÂMICO (24h) ---
+        function initializeCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            if (!countdownEl) return;
 
-        if (isKiwifyLink) {
-          const updatedSuffix = utmString.startsWith("?") ? utmString.substring(1) : utmString;
+            // Use localStorage para persistir o tempo de expiração por 24 horas
+            const expiryKey = 'offerExpiryTime';
+            let expiryTime = localStorage.getItem(expiryKey);
+            const duration = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 
-          if (e.href.includes("?")) {
-            e.href += "&" + updatedSuffix;
-          } else {
-            e.href += utmString;
-          }
+            if (!expiryTime || new Date().getTime() > parseInt(expiryTime, 10)) {
+                // Se não houver tempo ou se já expirou, define um novo tempo de expiração
+                expiryTime = new Date().getTime() + duration;
+                localStorage.setItem(expiryKey, expiryTime);
+            }
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = expiryTime - now;
+
+                // Cálculo do tempo
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Formatação (adiciona zero à esquerda)
+                const h = String(hours).padStart(2, '0');
+                const m = String(minutes).padStart(2, '0');
+                const s = String(seconds).padStart(2, '0');
+
+                // Exibir o resultado
+                if (distance > 0) {
+                    countdownEl.innerHTML = `${h}h ${m}m ${s}s`;
+                } else {
+                    // Se o contador terminar, define como 0 e exibe uma mensagem
+                    countdownEl.innerHTML = "00h 00m 00s";
+                    // Para fins de teste, o contador pode ser reiniciado na próxima recarga
+                    // Para produção, você pode ocultar a barra ou alterar a mensagem
+                    clearInterval(timerInterval); 
+                }
+            }
+
+            // Atualiza o contador imediatamente e depois a cada segundo
+            updateCountdown();
+            const timerInterval = setInterval(updateCountdown, 1000);
         }
-      });
-    }
 
-    // Run the function when the page loads
-    window.onload = appendUTMsToKiwifyLinks;
+        // --- RASTREAMENTO UTM (Mantido) ---
+        function getUTMs() {
+            const url = new URL(window.location.href);
+            const params = url.searchParams;
+            let qs = params.toString();
+        
+            // Create the sck field with all UTMs combined
+            const sck = [
+                params.get("utm_source") || "",
+                params.get("utm_medium") || "",
+                params.get("utm_campaign") || "",
+                params.get("utm_term") || "",
+                params.get("utm_content") || ""
+            ].join("|");
+        
+            if (sck.replace(/\|+$/, "")) {
+                qs += (qs ? "&" : "") + `sck=${encodeURIComponent(sck)}`;
+            }
+        
+            return qs ? `?${qs}` : "";
+        }
+        
+        function appendUTMsToKiwifyLinks() {
+            const utmString = getUTMs();
+            
+            document.querySelectorAll("a").forEach(function(e) {
+                const isKiwifyLink = PAY_PREFIXES.some(prefix => e.href.startsWith(prefix));
+
+                if (isKiwifyLink) {
+                    const updatedSuffix = utmString.startsWith("?") ? utmString.substring(1) : utmString;
+
+                    if (e.href.includes("?")) {
+                        e.href += "&" + updatedSuffix;
+                    } else {
+                        e.href += utmString;
+                    }
+                }
+            });
+        }
+
+        // Executar as funções na carga da janela
+        window.onload = function() {
+            appendUTMsToKiwifyLinks();
+            initializeCountdown();
+        };
     </script>
 </body>
 </html>
