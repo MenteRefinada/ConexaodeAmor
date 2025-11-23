@@ -3,953 +3,632 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TÍTULO COM FOCO NA DOR -->
-    <title>Método 7V - Chega de Culpa: Rotina de Oração em 7 Minutos</title>
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(f._fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;f._fbq=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1131696225474131');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1131696225474131&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    <!-- Tailwind CSS CDN -->
+    <!-- TÍTULO ATUALIZADO CONFORME COPY -->
+    <title>PÁGINA DE VENDAS - MÉTODO 7V - ORAÇÃO COM AMOR EM 7 MINUTOS</title>
+    <!-- Carregamento do Tailwind CSS para estilização -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Configuração da fonte Inter com font-display:swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Estilos críticos inline -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body {
+body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8F8F8; /* Bege claro */
+            background-color: #fcf8f9; /* Fundo suave, quase branco */
             color: #333;
-            padding-top: 40px; /* Space for the fixed urgency bar */
+            /* Padding para garantir que o conteúdo não fique escondido pelas barras fixas */
+            padding-top: 50px; /* Espaço para a barra de urgência (Mobile) */
+            padding-bottom: 90px; /* Espaço para a barra final de CTA (Mobile) */
         }
-        .btn-primary {
-            background-color: #FFAB91; /* Laranja pêssego para CTA */
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 0.75rem; /* rounded-xl */
-            font-weight: 700; /* font-bold */
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-            max-width: 450px; /* Aumentado para melhor visibilidade */
-            margin-left: auto;
-            margin-right: auto;
-            text-transform: uppercase;
-            font-size: 1.25rem; /* text-xl */
+        /* Estilos personalizados para o tema (rosas e roxos) */
+        .btn-principal {
+            background-color: #E91E63; /* Deep Pink (principal) */
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+            transition: background-color 0.3s;
         }
-        .btn-primary:hover {
-            background-color: #FF8A65;
-            transform: translateY(-2px);
+        .btn-principal:hover {
+            background-color: #C2185B; /* Darker Pink */
         }
-        .section-padding {
-            padding: 3rem 1rem;
+        .btn-secundario {
+            border: 2px solid #9C27B0; /* Roxo para o Desafio */
+            color: #9C27B0;
+            transition: background-color 0.3s;
         }
+        .btn-secundario:hover {
+            background-color: #E1BEE7; /* Light Purple for hover */
+            color: #7B1FA2;
+        }
+        .text-accent {
+            color: #9C27B0; /* Roxo suave para títulos */
+        }
+        .bg-guarantee {
+            background-color: #F8BBD0; /* Rosa claro para o bloco de garantia */
+        }
+        /* Ajuste responsivo das barras fixas */
         @media (min-width: 768px) {
-            .section-padding {
-                padding: 5rem 2rem;
-            }
             body {
-                padding-top: 50px; /* Larger space for the fixed urgency bar on desktop */
+                padding-top: 0px; 
+                padding-bottom: 0px; 
+            }
+            #urgency-bar {
+                position: static;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            #final-cta-bar {
+                display: none; /* Esconder barra fixa no desktop */
             }
         }
-        .container-padding {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-        /* Urgency Bar Style - MAIS INTENSA E COM VAGAS */
-        .urgency-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            background-color: #E53E3E; /* Vermelho escuro */
-            color: white;
-            padding: 0.75rem 0;
-            font-weight: 800; /* font-extrabold */
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            font-size: 0.9rem;
-        }
-        .urgency-bar strong {
-            color: #FFDEB4; /* Destaque no preço */
-        }
-        .urgency-timer {
-            font-weight: 900;
-            color: #FFDEB4;
-            display: inline-block;
-            min-width: 90px; /* Garante que o timer não salte */
-        }
-        @media (min-width: 768px) {
-            .urgency-bar {
-                font-size: 1.125rem;
+        @media (max-width: 767px) {
+            #urgency-bar {
+                position: fixed;
+            }
+             .container {
+                margin-top: 60px; /* Ajuste para o espaço da barra superior fixa */
             }
         }
-        /* Pricing Cards */
-        /* Hierarquia Visual Aprimorada para o Card Principal */
-        .price-card.featured {
-            border-color: #FFAB91;
-            transform: scale(1.03);
-            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
-        }
-        /* Fixed CTA for mobile */
-        .cta-fixed {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            padding: 1rem;
-            background-color: white;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .cta-fixed a {
-            font-size: 1.25rem;
-            padding: 0.75rem 1rem;
-            width: 100%;
-        }
-        /* Pulsating animation for the fixed CTA */
-        @keyframes pulse-border {
-            0% { box-shadow: 0 0 0 0 rgba(255, 138, 101, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(255, 138, 101, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 138, 101, 0); }
-        }
-        .cta-fixed .btn-primary {
-            animation: pulse-border 1.5s infinite; /* Apenas o CTA fixo e o da Jornada Completa pulsam */
-        }
-        @media (min-width: 768px) {
-            .cta-fixed {
-                display: none;
-            }
-        }
-        /* CUSTOM STYLES FOR KIWIFY-LIKE ICONS */
-        .kiwify-icon-box {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            font-size: 16px;
-            margin-right: 0.75rem;
-            color: white; /* Icon color is always white */
-            font-weight: 700;
-        }
-        /* Icon Colors based on the user's print */
-        .kiwify-icon-blue { background-color: #3B82F6; } /* blue-500 */
-        .kiwify-icon-green { background-color: #10B981; } /* emerald-500 */
-        .kiwify-icon-red { background-color: #EF4444; } /* red-500 */
-        .kiwify-icon-purple { background-color: #8B5CF6; } /* violet-500 */
-        .kiwify-icon-orange { background-color: #F97316; } /* orange-500 */
-        .kiwify-icon-gold { background-color: #F59E0B; } /* amber-500 */
-
     </style>
+    <!-- Meta Tags Essenciais -->
+    <meta name="description" content="Método 7V: Oração leve e poderosa pelos seus filhos em apenas 7 minutos por dia. Transforme sua rotina espiritual com amor e praticidade.">
+    <meta name="keywords" content="oração, mães, filhos, espiritualidade, devocional, 7 minutos, método 7v">
+    <meta property="og:title" content="Método 7V - Oração com Amor em 7 Minutos">
+    <meta property="og:description" content="Transforme sua rotina espiritual com apenas 7 minutos por dia. Método simples e amoroso para mães.">
+    <meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:url" content="https://www.metodo7v.com.br">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Otimização de imagens -->
+    <meta name="image-optimization" content="lazy-loading, responsive, compressed">
+<!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s) {
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1131696225474131');
+fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <!-- Note: Facebook Pixel image is an exception as it needs to be hosted externally -->
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1131696225474131&ev=PageView&noscript=1">
+</noscript>
 </head>
-<body class="leading-relaxed">
+<body class="md:pt-0">
 
-    <!-- BARRA DE URGÊNCIA FIXA COM CONTADOR DINÂMICO (Atualizado com a razão específica) -->
-    <div class="urgency-bar">
-        ⚠️ VAGAS LIMITADAS (RESTAM 47/100) ⚠️ | OFERTA TERMINA EM: <span id="countdown" class="urgency-timer">00h 00m 00s</span> | APENAS HOJE: <span class="line-through">De R$ 147,90</span> por <strong class="text-white">R$ 47,70</strong>
+    <!-- 🌟 BARRA DE URGÊNCIA (FIXA NO TOPO, ESTATICA NO DESKTOP) -->
+    <div id="urgency-bar" class="w-full bg-red-600 text-center p-3 z-50 shadow-xl text-sm md:text-lg font-extrabold text-white">
+        🎁 Oferta de hoje: de <span class="line-through">R$147,90</span> por R$ 47,70 | <span class="bg-white text-red-600 px-2 rounded-full">47 vagas com suporte personalizado</span>
     </div>
 
-    <!-- Header Section - NOVO NOME + PROVA SOCIAL -->
-    <header class="bg-white pt-4 pb-2 shadow-md rounded-b-xl mb-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-xl font-extrabold text-[#2c3e50] tracking-wider">MÉTODO 7V - ORAÇÃO TRANSFORMADORA PARA MÃES OCUPADAS</h1>
-            <div class="flex justify-center items-center mt-1 text-sm text-gray-600">
-                <span class="mr-3 text-green-600 font-semibold">✅ +5.247 mães transformadas</span> 
-                <span class="text-yellow-500">⭐⭐⭐⭐⭐ 4.9/5 (847 avaliações)</span>
-            </div>
-        </div>
-    </header>
+    <main class="container mx-auto px-4 py-8 max-w-4xl pt-10 md:pt-16">
 
-    <!-- Hero Section - Headline Principal e Mecanismo -->
-    <section class="section-padding bg-[#E0F7FA] text-center rounded-3xl shadow-lg mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding">
-            
-            <!-- Imagem e Capa do Ebook (Corrigido para 7-versiculos-pequeno.png) -->
-            <div class="mb-6 flex justify-center">
-                 <img
-                    src="assets/7-versiculos-pequeno.png" 
-                    alt="Guia 7V Principal" 
-                    class="w-56 md:w-64 lg:w-72 h-auto rounded-xl shadow-2xl border-4 border-white transform hover:scale-105 transition duration-300"
-                    onerror="this.onerror=null; this.src='https://placehold.co/300x400/cccccc/333333?text=Guia+7V+Principal';"
-                >
+        <!-- HERO SECTION (PRIMEIRA DOBRA) -->
+        <section class="text-center mb-12">
+            <!-- Mockup visual dos 3 guias juntos -->
+            <div class="mb-6">
+                <!-- CAMINHO DA IMAGEM ATUALIZADO: assets/7-versiculos-pequeno.png -->
+                     <img src="assets/7-versiculos-pequeno.png"
+                     alt="Mockup visual dos 3 guias digitais do Método 7V mostrando capa rosa com título '7 Versículos para Orar pelos Filhos'"
+                     class="mx-auto w-full max-w-sm rounded-xl shadow-2xl border-4 border-pink-300"
+                     loading="lazy">
+</div>
+
+            <!-- Selos de Confiança -->
+            <div class="flex flex-wrap justify-center items-center gap-4 text-xs md:text-sm mb-8 font-semibold text-gray-700">
+                <span class="flex items-center space-x-1 bg-white p-2 rounded-full shadow-md"><span class="text-green-500">✓</span> Pagamento seguro</span>
+                <span class="flex items-center space-x-1 bg-white p-2 rounded-full shadow-md"><span class="text-yellow-500">★</span> Garantia 7 dias</span>
+                <span class="flex items-center space-x-1 bg-white p-2 rounded-full shadow-md"><span class="text-pink-500">💖</span> +5.247 mães transformadas</span>
             </div>
 
-            <!-- 1. HEADLINE REVISADA: Mais específica e com promessa concreta -->
-            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-[#2c3e50]">
-                <strong class="text-red-600">7 minutos por dia</strong> acabam com a culpa que te mantém <strong class="text-red-600">acordada à noite</strong>
+            <!-- HEADLINE PRINCIPAL -->
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-accent">
+                Seu coração deseja orar pelos seus filhos todos os dias... E se você descobrisse uma forma leve, amorosa e possível de fazer isso em apenas <span class="text-pink-600">7 minutos</span>?
+            </h1>
+
+            <!-- SUBHEADLINE -->
+            <p class="text-lg md:text-xl mb-8 font-medium text-gray-600">
+                Descubra como milhares de mães estão transformando sua rotina espiritual com apenas 7 minutos por dia — sem pressão, sem cobrança, com muito amor.
+            </p>
+
+            <!-- BOTÕES DE CTA ANTES DA DOBRA -->
+            <a href="#jornada-completa" class="w-full sm:w-auto block btn-principal text-white font-bold py-4 px-8 rounded-xl uppercase mb-4 text-lg transform hover:scale-105 transition duration-300 shadow-xl"
+               role="button"
+               aria-label="Comprar Jornada Completa por R$47,70 - Quero Começar Meus 7 Minutos de Amor">
+                Quero Começar Meus 7 Minutos de Amor - R$ 47,70
+            </a>
+<p class="text-base mb-6 font-semibold text-gray-500">
+                Ou experimente o primeiro passo com carinho:
+            </p>
+            <!-- O CTA do desafio leva para a seção na própria página -->
+                <a href="#desafio-7-dias" class="w-full sm:w-auto block btn-secundario font-bold py-3 px-8 rounded-xl uppercase text-lg transform hover:scale-105 transition duration-300 shadow-md"
+                   role="button"
+                   aria-label="Testar Desafio de 7 Dias por R$9,90">
+                    Quero Testar o Desafio de 7 Dias por R$ 9,90
+                </a>
+</section>
+        <!-- 🌸 O MÉTODO 7V - COMO FUNCIONA -->
+        <section class="my-16 p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-center mb-4 text-pink-600">
+                🌸 O Método 7V: Oração Leve, Poderosa e Possível
+            </h2>
+<p class="text-xl text-center mb-10 font-semibold text-gray-600">
+                7 Versículos + 7 Minutos por Dia = Um Coração em Paz
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <!-- Mockup do Guia (Exemplo da página Dia 1) -->
+                <div class="md:w-1/3 order-2 md:order-1">
+                    <!-- Placeholder de PDF digital (pode ser substituído por 'assets/guia-dia-1.png' se fornecido) -->
+                    <img src="assets/mae-filhos-biblia.png" 
+                         alt="Exemplo visual do guia mostrando mãe lendo bíblia com filhos" 
+                         class="rounded-xl shadow-2xl mx-auto border-4 border-purple-500"
+                         loading="lazy">
+</div>
+
+                <!-- A Jornada de Amor Diária (As 7 Versões) -->
+                <div class="md:w-2/3 order-1 md:order-2">
+                    <h3 class="text-2xl font-semibold mb-6 text-accent text-center md:text-left">
+                        A Jornada de Amor Diária:
+                    </h3>
+                    <ul class="space-y-3 text-lg list-none p-0">
+                        <!-- Itens da Jornada de Amor Diária -->
+                        <li class="flex items-center p-2 bg-pink-50 rounded-lg"><span class="text-pink-500 text-2xl mr-3">✨</span><span class="font-bold">Acolhimento</span> (Perdão)</li>
+                        <li class="flex items-center p-2 bg-pink-50 rounded-lg"><span class="text-pink-500 text-2xl mr-3">🛡️</span><span class="font-bold">Confiança</span> (Proteção)</li>
+                        <li class="flex items-center p-2 bg-pink-50 rounded-lg"><span class="text-pink-500 text-2xl mr-3">💪</span><span class="font-bold">Coragem</span> (Confiança)</li>
+                        <li class="flex items-center p-2 bg-pink-50 rounded-lg"><span class="text-pink-500 text-2xl mr-3">😴</span><span class="font-bold">Descanso</span> (Força)</li>
+                        <li class="flex items-center p-2 bg-pink-50 rounded-lg"><span class="text-pink-500 text-2xl mr-3">🎉</span><span class="font-bold">Celebração</span> (Esperança)</li>
+                        <li class="flex items-center p-2 bg-pink-50 rounded-lg"><span class="text-pink-500 text-2xl mr-3">🤝</span><span class="font-bold">Comunhão</span> (Presença)</li>
+                        <li class="flex items-center p-2 bg-pink-50 rounded-lg"><span class="text-pink-500 text-2xl mr-3">🙏</span><span class="font-bold">Gratidão</span> (Alegria)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🧠 POR QUE FUNCIONA -->
+        <section class="my-16 p-8 bg-purple-50 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-center mb-8 text-purple-700">
+                🧠 Por Que o Método 7V Funciona?
             </h2>
             
-            <!-- 2. AMPLIFICAÇÃO DA DOR: Adicionado o parágrafo intermediário -->
-            <p class="text-xl sm:text-2xl text-[#5F6B79] mb-4 max-w-3xl mx-auto font-semibold">
-                Você deita exausta, o corpo quer dormir, mas a mente não deixa. A culpa começa a sussurrar: "Hoje de novo não deu tempo de orar...".
-            </p>
-            <p class="text-xl sm:text-2xl text-[#5F6B79] mb-4 max-w-3xl mx-auto font-semibold">
-                E o pior? Você sabe que deveria orar. Quer orar. Mas o cansaço vence. <strong class="text-red-600">Parece um ciclo vicioso impossível de quebrar:</strong>
-            </p>
-
-            <!-- AMPLIFICAÇÃO DA DOR (Lista original mantida) -->
-            <ul class="text-left text-lg space-y-2 max-w-2xl mx-auto mb-8">
-                 <li class="flex items-start">
-                     <span class="mr-3 text-red-500 font-extrabold">❌</span>
-                     <span class="list-item-content">Tentar orar antes de dormir, mas <strong class="font-extrabold">apagar no sofá</strong>.</span>
-                 </li>
-                 <li class="flex items-start">
-                     <span class="mr-3 text-red-500 font-extrabold">❌</span>
-                     <span class="list-item-content">Acordar no meio da noite com aquele peso no peito: <strong class="font-extrabold">"Mais um dia que não orei pelos meus filhos."</strong></span>
-                 </li>
-                 <li class="flex items-start">
-                     <span class="mr-3 text-red-500 font-extrabold">❌</span>
-                     <span class="list-item-content">A dúvida cruel: <strong class="font-extrabold">"Será que estou fazendo o suficiente por eles diante de Deus?"</strong></span>
-                 </li>
-            </ul>
-
-            <!-- 3. ANTI-RESULTADO: Novo bloco de benefício/alívio -->
-            <div class="bg-green-100 p-4 rounded-xl shadow-md mb-8 max-w-4xl mx-auto">
-                <p class="text-2xl font-extrabold text-green-700 mb-4">E você NUNCA MAIS vai:</p>
-                 <ul class="text-left text-lg space-y-2 max-w-3xl mx-auto">
-                    <li class="flex items-start">
-                        <span class="mr-3 text-green-600 font-extrabold">✅</span>
-                        <span class="list-item-content">Se sentir uma mãe de segunda classe por não ter 2 horas livres.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="mr-3 text-green-600 font-extrabold">✅</span>
-                        <span class="list-item-content">Cair no sono com o livro de devocional no rosto, exausta.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="mr-3 text-green-600 font-extrabold">✅</span>
-                        <span class="list-item-content">Carregar o peso da culpa. <strong class="font-extrabold">O 7V te dá a certeza inabalável.</strong></span>
-                    </li>
-                </ul>
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-5xl font-extrabold text-pink-500 mb-3">7</div>
+                    <h3 class="text-xl font-bold mb-2">7 Versículos</h3>
+                    <p class="text-gray-600">
+                        Neurociência comprova: 7 é o número ideal de itens que 
+                        nossa memória consegue reter e processar profundamente.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-5xl font-extrabold text-pink-500 mb-3">7</div>
+                    <h3 class="text-xl font-bold mb-2">7 Minutos</h3>
+                    <p class="text-gray-600">
+                        Tempo comprovado para absorção profunda SEM sobrecarga mental. 
+                        Oração focada, não desesperada.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-5xl font-extrabold text-pink-500 mb-3">1</div>
+                    <h3 class="text-xl font-bold mb-2">1 Aplicação</h3>
+                    <p class="text-gray-600">
+                        Um exercício prático por dia que fixa o aprendizado 
+                        no coração - não apenas na mente.
+                    </p>
+                </div>
             </div>
             
-            <!-- PROMESSA ESPECÍFICA E CONCRETA -->
-            <p class="text-2xl sm:text-3xl font-extrabold text-[#2c3e50] mb-8 max-w-4xl mx-auto bg-yellow-100 p-4 rounded-xl shadow-md">
-                O <strong class="text-[#FFAB91]">Método 7V</strong> transforma isso em 7 dias. Você vai dormir em paz, todas as noites, com a <strong class="text-green-600">certeza inabalável de que fez o suficiente.</strong>
+            <p class="text-center text-xl font-bold mt-8 text-purple-700">
+                Por isso 89% das mães mantêm a rotina por 30+ dias - 
+                porque é leve, científico e eficaz. 💝
+            </p>
+        </section>
+<!-- 💝 O PRIMEIRO PASSO: DESAFIO 7 DIAS -->
+        <section id="desafio-7-dias" class="my-16 p-8 bg-purple-50 rounded-2xl shadow-xl border-t-4 border-purple-500">
+            <h2 class="text-3xl font-bold text-center mb-4 text-accent">
+                💝 O Primeiro Passo: Desafio 7 Dias
+            </h2>
+            <p class="text-xl text-center mb-8 font-medium text-gray-700">
+                Ideal para quem quer experimentar com leveza
             </p>
 
-            <!-- MECANISMO CLARO (POR QUE FUNCIONA) -->
-            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[#4DB6AC] mb-10">
-                <!-- 3. REFORÇO DO MECANISMO (Sistema vs. Falta de Fé) -->
-                <p class="text-xl font-bold mb-4 text-red-600">Descobri que a maioria das mães não falha por falta de fé, mas por falta de um sistema.</p>
-                <h4 class="text-2xl font-bold mb-4 text-[#2c3e50]">A Fórmula 7V: 7 Versículos + 7 Minutos por Dia = Transformação Garantida</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm font-semibold">
-                    <div class="p-3 bg-red-100 rounded-lg shadow-sm">DIA 1: CULPA → Versículo de Perdão</div>
-                    <div class="p-3 bg-red-100 rounded-lg shadow-sm">DIA 2: PREOCUPAÇÃO → Versículo de Proteção</div>
-                    <div class="p-3 bg-yellow-100 rounded-lg shadow-sm">DIA 3: INSEGURANÇA → Versículo de Confiança</div>
-                    <div class="p-3 bg-yellow-100 rounded-lg shadow-sm">DIA 4: CANSAÇO → Versículo de Força</div>
-                    <div class="p-3 bg-green-100 rounded-lg shadow-sm">DIA 5: FRACASSO → Versículo de Esperança</div>
-                    <div class="p-3 bg-green-100 rounded-lg shadow-sm">DIA 6: SOLIDÃO → Versículo de Comunhão</div>
-                    <div class="p-3 bg-blue-100 rounded-lg shadow-sm lg:col-span-2">DIA 7: ALÍVIO → Versículo de Alegria (Você dorme em paz!)</div>
-                </div>
-                <p class="text-base mt-4 font-semibold text-gray-700">Cada dia <strong class="font-extrabold">resolve UMA EMOÇÃO ESPECÍFICA</strong> que te consome.</p>
+            <div class="max-w-md mx-auto space-y-3 text-lg text-gray-800">
+                <p class="text-2xl font-bold text-pink-600 mb-4">✅ O que você recebe:</p>
+                <li class="flex items-start space-x-2 p-1"><span class="text-green-600 font-bold text-xl">✓</span><span>Guia essencial 7V</span></li>
+                <li class="flex items-start space-x-2 p-1"><span class="text-green-600 font-bold text-xl">✓</span><span>7 Versículos com reflexões diárias</span></li>
+                <li class="flex items-start space-x-2 p-1"><span class="text-green-600 font-bold text-xl">✓</span><span>Aplicações práticas simples</span></li>
+                <li class="flex items-start space-x-2 p-1"><span class="text-green-600 font-bold text-xl">✓</span><span>Garantia de 7 dias com carinho</span></li>
             </div>
 
-            <!-- CTA CONECTADO À DOR (Atualizado com o novo texto de CTA) -->
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <!-- Adicionado 'scroll-link' para rolagem suave -->
-                <a href="#oferta-principal" class="scroll-link btn-primary font-bold bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] max-w-lg">
-                    SIM, QUERO DORMIR SEM CULPA HOJE - R$ 47,70
+            <div class="text-center mt-8">
+                <p class="text-3xl font-extrabold mb-4 text-gray-800">
+                    💸 Investimento: <span class="line-through text-gray-400 text-xl mr-2">R$ 19,80</span><span class="text-red-600">R$ 9,90</span> (50% OFF)
+                </p>
+                <!-- CTA Desafio 7 Dias -->
+                <a href="https://pay.kiwify.com.br/O5vy5bs" class="w-full sm:w-auto block mx-auto btn-secundario font-bold py-3 px-12 rounded-xl uppercase text-xl transform hover:scale-105 transition duration-300 shadow-lg"
+                   role="button"
+                   aria-label="Comprar Desafio 7 Dias por R$9,90 - Quero começar pelo desafio">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                    </svg>
+                    QUERO COMEÇAR PELO DESAFIO 7 DIAS
                 </a>
-            </div>
-            <!-- Selo de Segurança abaixo do CTA -->
-            <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
-                 <span>✅ Pagamento Seguro (Kiwify)</span> 
-                 <span>|</span> 
-                 <span>🔒 Garantia 7 dias</span>
-            </div>
-            <!-- Alterado 'href' para rolagem suave até o card de R$ 9,90 -->
-            <a href="#oferta-inicial" class="scroll-link text-[#2c3e50] text-sm mt-3 inline-block font-semibold hover:underline">
-                Ou quero testar com o Desafio 7 Dias por apenas R$ 9,90 →
-            </a>
-            <div class="mt-4 text-center text-sm text-gray-700">
-                <span class="text-yellow-500">⭐⭐⭐⭐⭐ 4.9/5 (847 avaliações)</span> | Acesso em 2 minutos
-            </div>
-        </div>
-    </section>
-    
-    <!-- SEÇÃO 2: DOR vs DESEJO (CONFIRMAÇÃO) -->
-    <section class="section-padding bg-white rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding">
-            <h3 class="text-3xl font-extrabold mb-10 text-center text-[#2c3e50]">
-                💔 Você se reconhece neste <span class="text-red-600">ciclo de cansaço e culpa?</span> 👇
-            </h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Dor -->
-                <div class="bg-red-50 p-6 rounded-xl border-l-4 border-red-400 shadow-inner">
-                    <p class="text-xl font-bold mb-4 text-red-700">O que te mantém acordada à noite (O PESO DA CULPA):</p>
-                    <ul class="space-y-3 text-lg text-gray-800">
-                        <li class="flex items-start">
-                            <span class="mr-3 text-red-500">❌</span>
-                            <span class="list-item-content">"Mais um dia que não consegui orar pelos meus filhos..."</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-red-500">❌</span>
-                            <span class="list-item-content">"E se algo acontecer e eu não os protegi espiritualmente?"</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-red-500">❌</span>
-                            <span class="list-item-content">"Outras mães parecem tão organizadas espiritualmente..."</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-red-500">❌</span>
-                            <span class="list-item-content">"Sou uma mãe cristã de verdade se não consigo nem orar direito?"</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-red-500">❌</span>
-                            <span class="list-item-content">O medo de que seus filhos sofram por <strong class="font-extrabold">culpa sua</strong>.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Desejo -->
-                <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-400 shadow-inner">
-                    <p class="text-xl font-bold mb-4 text-green-700">Como você QUER se sentir (depois do Método 7V):</p>
-                    <ul class="space-y-3 text-lg text-gray-800">
-                        <li class="flex items-start">
-                            <span class="mr-3 text-green-500">✨</span>
-                            <span class="list-item-content"><strong class="font-bold">Dormindo em Paz</strong>, sem o peso da culpa.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-green-500">✨</span>
-                            <span class="list-item-content">Confiante de que está fazendo o melhor pelos filhos.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-green-500">✨</span>
-                            <span class="list-item-content">Conectada com Deus mesmo na correria do dia.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-green-500">✨</span>
-                            <span class="list-item-content">Orgulhosa da mãe e mulher de fé que se tornou.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-green-500">✨</span>
-                            <span class="list-item-content">Em paz sabendo que entregou seus filhos a Deus.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+</div>
+        </section>
+        <!-- 📚 DETALHES DOS 3 GUIAS ESPIRITUAIS -->
+        <section class="my-16 p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-center mb-8 text-pink-600">
+                📚 Seus 3 Guias de Transformação Espiritual
+            </h2>
             
-            <!-- NÚMEROS QUE COMPROVAM -->
-            <div class="mt-12 text-center">
-                <h4 class="text-2xl font-bold mb-4 text-[#2c3e50]">📊 Resultados Comprovados em +5.200 Mães:</h4>
-                <div class="flex flex-wrap justify-center gap-4 text-white text-lg font-bold">
-                    <div class="bg-blue-500 p-3 rounded-xl shadow-md">97% sentem alívio da culpa em 7 dias</div>
-                    <div class="bg-blue-500 p-3 rounded-xl shadow-md">89% mantêm a rotina por 30+ dias</div>
-                    <div class="bg-blue-500 p-3 rounded-xl shadow-md">86% dizem que seus filhos percebem a mudança neles</div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Ebook 1 -->
+                <div class="bg-pink-50 p-6 rounded-xl border-l-4 border-pink-500">
+                    <h3 class="text-xl font-bold mb-3 text-pink-700">1. "7 Versículos para Orar pelos Filhos Todos os Dias"</h3>
+                    <img src="assets/7-versiculos-pequeno.png" alt="Ebook 7 Versículos" class="mb-4 rounded-lg w-full shadow-md border">
+<p class="text-gray-700">Um guia simples e profundo para mães que querem orar com mais direção, leveza e propósito. Em poucos minutos por dia, você se conecta à Palavra e declara verdades sobre a vida dos seus filhos — sem culpa, sem pressa, sem complicação.</p>
+                </div>
+                <!-- Ebook 2 -->
+                <div class="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500">
+                    <h3 class="text-xl font-bold mb-3 text-purple-700">2. "Mães na Palavra — Estudando com Alegria"</h3>
+                    <img src="assets/maes-na-palavra-pequeno.png" alt="Ebook Mães na Palavra" class="mb-4 rounded-lg w-full shadow-md border">
+<p class="text-gray-700">Um guia prático que mostra como estudar a Bíblia com clareza, intencionalidade e profundidade, mesmo com pouco tempo. Você aprende métodos simples, exercícios e direcionamentos que tornam a Palavra parte real do seu dia.</p>
+                </div>
+                <!-- Ebook 3 -->
+                <div class="bg-pink-100 p-6 rounded-xl border-l-4 border-pink-600">
+                    <h3 class="text-xl font-bold mb-3 text-pink-800">3. "30 Dias de Poder na Oração"</h3>
+                    <img src="assets/30-dias-poder-pequeno.png" alt="Ebook 30 Dias de Oração" class="mb-4 rounded-lg w-full shadow-md border">
+<p class="text-gray-700">Um devocional de 30 dias que ajuda você a criar uma rotina de oração forte e cheia de propósito. Cada dia traz um versículo, reflexão e oração que fortalecem sua fé e aproximam seu coração de Deus.</p>
                 </div>
             </div>
+        </section>
 
-            <a href="#oferta-principal" class="scroll-link btn-primary mt-12 text-xl font-bold bg-[#B2DFDB] text-[#2c3e50] hover:bg-[#80CBC4] max-w-md">
-                EU ESCOLHO DORMIR EM PAZ
-            </a>
-            <!-- Selo de Segurança abaixo do CTA -->
-            <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
-                 <span>✅ Pagamento Seguro (Kiwify)</span> 
-                 <span>|</span> 
-                 <span>🔒 Garantia 7 dias</span>
-            </div>
-        </div>
-    </section>
+        <!-- 🏆 JORNADA COMPLETA: TRANSFORMAÇÃO PROFUNDA -->
+        <section id="jornada-completa" class="my-16 p-8 bg-pink-100 rounded-2xl shadow-2xl border-t-4 border-pink-600">
+            <h2 class="text-3xl font-bold text-center mb-4 text-pink-600">
+                🏆 Jornada Completa: Transformação Profunda
+            </h2>
+            <p class="text-xl text-center mb-8 font-medium text-gray-700">
+                A escolha favorita das mães
+            </p>
 
-    <!-- SEÇÃO 5: O MECANISMO APROFUNDADO (Insight Único) -->
-    <section class="section-padding bg-[#E0F7FA] rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding text-center">
-            <h3 class="text-3xl font-extrabold mb-8 text-[#2c3e50]">
-                🔑 Por Que o Método 7V É Diferente de TUDO Que Você Já Tentou
-            </h3>
-
-            <div class="bg-white p-8 rounded-2xl shadow-xl mb-10 border-t-8 border-[#FFAB91]">
-                <h4 class="text-2xl font-bold mb-4 text-red-600">A Verdade Que Ninguém Fala:</h4>
-                <p class="text-xl text-gray-700 mb-6 max-w-3xl mx-auto">
-                    Você não fracassou em oração por falta de fé ou por não amar seus filhos.
-                    <br><strong class="font-extrabold text-red-600">Você fracassou porque NINGUÉM criou um SISTEMA para mães ocupadas.</strong>
-                </p>
-                <p class="text-lg text-gray-600 italic mb-8 max-w-3xl mx-auto">
-                    "A maioria dos devocionais são criados por pessoas com tempo livre. O Método 7V foi testado com mães que trabalham 12h/dia, que precisam de algo que funcione APESAR do caos."
-                </p>
-            </div>
-            
-            <h4 class="text-2xl font-bold mb-4 text-[#2c3e50]">🧠 A Fórmula Científica Por Trás: Por que 7 Minutos?</h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                <div class="p-4 bg-white rounded-xl shadow-lg border-b-4 border-[#4DB6AC]">
-                    <p class="text-4xl font-extrabold text-[#4DB6AC]">7 Versículos</p>
-                    <p class="text-base text-gray-600 mt-1">Neurociência: 7 é o número ideal de itens que a memória retém para processamento sistemático.</p>
-                </div>
-                <div class="p-4 bg-white rounded-xl shadow-lg border-b-4 border-[#4DB6AC]">
-                    <p class="text-4xl font-extrabold text-[#4DB6AC]">3 Minutos</p>
-                    <p class="text-base text-gray-600 mt-1">Tempo comprovado para absorção profunda SEM sobrecarga mental. Oração focada, não desesperada.</p>
-                </div>
-                <div class="p-4 bg-white rounded-xl shadow-lg border-b-4 border-[#4DB6AC]">
-                    <p class="text-4xl font-extrabold text-[#4DB6AC]">1 Aplicação</p>
-                    <p class="text-base text-gray-600 mt-1">Um exercício prático por dia (escrever uma oração de 2 minutos) que fixa o aprendizado no coração.</p>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- Section: Depoimentos (Manter o foco na solução da dor) (Atualizado com localização completa) -->
-    <section class="section-padding bg-white rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding text-center">
-            <h3 class="text-3xl font-extrabold mb-10 text-[#2c3e50]">
-                💌 Mães Que Pararam de Sentir Culpa
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                
-                <!-- Depoimento 1: Luciana - Foco na Rotina -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-teal-500">
-                    <div class="flex items-start mb-3">
-                        <img
-                            src="assets/depoimento-luciana.png" 
-                            alt="" 
-                            class="w-16 h-16 object-cover rounded-full border-3 border-[#B2DFDB] mr-4"
-                            onerror="this.onerror=null; this.src='https://placehold.co/70x70/B2DFDB/333333?text=L';"
-                        >
-                        <div>
-                            <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
-                            <p class="font-bold text-gray-800">Luciana A. - Mãe de 2, Empresária, São Paulo/SP</p>
-                            <p class="text-sm text-gray-500">"Finalmente a paz que eu precisava"</p>
-                        </div>
-                    </div>
-                    <p class="text-lg italic text-gray-700 pl-2">"Eu dormia mal por causa da culpa. O Método 7V é o sistema que faltava. Não é sobre ter mais tempo, é sobre usar 7 minutos de forma estratégica. Recomendo para toda mãe exausta!"</p>
-                </div>
-                
-                <!-- Depoimento 2: Patricia - Foco em 4 Filhos -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-teal-500">
-                    <div class="flex items-start mb-3">
-                        <img
-                            src="assets/depoimento-patricia.png" 
-                            alt="" 
-                            class="w-16 h-16 object-cover rounded-full border-3 border-[#B2DFDB] mr-4"
-                            onerror="this.onerror=null; this.src='https://placehold.co/70x70/B2DFDB/333333?text=P';"
-                        >
-                        <div>
-                            <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
-                            <p class="font-bold text-gray-800">Patricia M. - Mãe de 4, Do Lar, Rio de Janeiro/RJ</p>
-                            <p class="text-sm text-gray-500">"Pude entregar meus filhos a Deus, de verdade"</p>
-                        </div>
-                    </div>
-                    <p class="text-lg italic text-gray-700 pl-2">"Com 4 filhos pequenos, achei que era impossível. Agora eu paro, respiro e uso os 7 versículos focados. Minha confiança mudou. O melhor investimento na minha paz mental."</p>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- Section: O QUE VOCÊ VAI RECEBER (Ofertas Detalhadas) -->
-    <section id="oferta-principal" class="section-padding bg-[#F8F8F8] rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding text-center">
-            <h3 class="text-3xl sm:text-4xl font-extrabold mb-8 leading-tight text-[#2c3e50]">
-                💎 Escolha Sua Jornada: A Paz Não Tem Preço!
-            </h3>
-            
-            <div class="flex flex-col md:flex-row items-stretch gap-8 mb-10">
-                
-                <!-- Card 1: Desafio 7 Dias (Produto Isca) -->
-                <div id="oferta-inicial" class="price-card text-[#2c3e50] bg-white w-full md:w-1/2 rounded-2xl p-6 shadow-2xl">
-                    <h4 class="text-2xl font-bold mb-2">🎁 OPÇÃO 1: TESTE - DESAFIO 7 DIAS</h4>
-                    <p class="text-sm text-gray-500 mb-4">✨ Para quem quer experimentar o fim da culpa.</p>
-                    
-                    <div class="my-4">
-                        <p class="text-lg line-through text-gray-500">R$ 19,90</p>
-                        <p class="text-5xl font-extrabold text-[#FFAB91] mb-2">R$ 9<span class="text-3xl">,90</span></p>
-                        <span class="text-red-500 font-bold">50% OFF</span>
-                    </div>
-
-                    <ul class="text-left text-base mb-6 space-y-2">
-                        <!-- Itens do Desafio 7 Dias -->
-                        <li class="flex items-start">
-                            <span class="kiwify-icon-box kiwify-icon-green">✓</span>
-                            <span class="list-item-content">O <strong class="font-bold">Guia Essencial 7V</strong> (O mecanismo de 7 minutos)</span>
-                        </li>
-                        <li class="flex items-start">
-                             <span class="kiwify-icon-box kiwify-icon-green">✓</span>
-                            O Mapa dos 7 Versículos Emocionais
-                        </li>
-                        <li class="flex items-start">
-                             <span class="kiwify-icon-box kiwify-icon-green">✓</span>
-                            Garantia Incondicional de 7 Dias
-                        </li>
-                    </ul>
-                    <a href="https://pay.kiwify.com.br/O5vy5bs" class="btn-primary text-lg mt-4 bg-[#B2DFDB] text-[#2c3e50] hover:bg-[#80CBC4]">
-                        QUERO COMEÇAR MEU DESAFIO POR R$9,90
-                    </a>
-                    <!-- Selo de Segurança abaixo do CTA -->
-                    <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
-                         <span>✅ Pagamento Seguro (Kiwify)</span> 
-                         <span>|</span> 
-                         <span>🔒 Garantia 7 dias</span>
-                    </div>
-                    <p class="text-xs mt-2 text-gray-500">Acesso imediato, 100% digital.</p>
-                </div>
-                
-                <!-- Card 2: Jornada Completa (Produto Principal) - PREÇO R$ 47,70 -->
-                <div class="price-card featured bg-white w-full md:w-1/2 rounded-2xl p-6 shadow-2xl border-8 border-[#FFAB91] relative">
-                    <!-- Selo aprimorado com absolute positioning -->
-                    <span class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-600 to-orange-500 text-white text-md font-extrabold px-6 py-2 rounded-full shadow-xl uppercase z-10 border-2 border-white whitespace-nowrap">🏆 MAIS VENDIDO 🏆</span>
-                    <!-- Adicionado pt-4 para compensar a posição do selo -->
-                    <h4 class="text-2xl font-bold mb-2 pt-4">🎁 OPÇÃO 2: A JORNADA COMPLETA (O Fim da Culpa)</h4>
-                    
-                    <div class="my-4">
-                        <p class="text-lg line-through text-gray-500">De R$ 147,90</p>
-                        <p class="text-5xl font-extrabold text-[#FFAB91] mb-2">R$ 47<span class="text-3xl">,70</span></p>
-                        <span class="text-red-500 font-bold">67% OFF</span>
-                    </div>
-                    <!-- 7. VALOR POR DIA -->
-                    <p class="text-base text-green-600 font-bold -mt-2 mb-4">Menos de R$ 1,30 por dia de paz mental.</p>
-
-                    <!-- 4. STACK DE VALOR REVISADO com Benefício Imediato -->
-                    <ul class="text-left text-base mb-6 space-y-3">
-                        <li class="flex items-start text-gray-800">
-                             <span class="kiwify-icon-box kiwify-icon-blue">📘</span>
-                            <span class="list-item-content"><strong class="font-bold">O MÉTODO 7V ESSENCIAL:</strong> O fim da culpa em 7 minutos — simples, prático e testado com mães reais.</span>
-                        </li>
-                        <li class="flex items-start text-gray-800">
-                            <span class="kiwify-icon-box kiwify-icon-green">📗</span>
-                            <span class="list-item-content"><strong class="font-bold">GUIA "Mães na Palavra" (52 Planos):</strong> 52 planos para manter sua conexão viva, mesmo na correria.</span>
-                        </li>
-                        <li class="flex items-start text-gray-800">
-                            <span class="kiwify-icon-box kiwify-icon-red">📙</span>
-                            <span class="list-item-content"><strong class="font-bold">DEVOCIONAL "30 Dias de Poder":</strong> Para continuar firme e ter uma rotina sólida depois dos 7 dias.</span>
-                        </li>
-                        <li class="flex items-start text-gray-800">
-                            <span class="kiwify-icon-box kiwify-icon-blue">∞</span>
-                            <span class="list-item-content"><strong class="font-bold">ACESSO VITALÍCIO:</strong> Assista e reveja quando quiser, para sempre.</span>
-                        </li>
-                        <li class="flex items-start text-gray-800">
-                            <span class="kiwify-icon-box kiwify-icon-orange">🔒</span>
-                            <span class="list-item-content"><strong class="font-bold">GARANTIA INCONDICIONAL:</strong> 7 dias, ou seu dinheiro de volta.</span>
-                        </li>
-                    </ul>
-                    <!-- 10. CTA MELHORADO para benefício emocional -->
-                    <a href="https://pay.kiwify.com.br/vRdyJoq" class="btn-primary mt-4 bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] text-xl animate-pulse">
-                        🔥 SIM, QUERO DORMIR SEM CULPA HOJE
-                    </a>
-                    <!-- Selo de Segurança abaixo do CTA -->
-                    <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
-                         <span>✅ Pagamento Seguro (Kiwify)</span> 
-                         <span>|</span> 
-                         <span>🔒 Garantia 7 dias</span>
-                    </div>
-                    <p class="text-xs mt-2 text-gray-500">Acesso imediato. Último dia com 67% OFF.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 7: GARANTIA (Confiança Reversa) -->
-    <section class="section-padding bg-[#B2DFDB] rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding text-center">
-            <h3 class="text-3xl sm:text-4xl font-extrabold mb-6 text-[#2c3e50]">
-                🛡️ Nossa Garantia de Confiança Reversa: <span class="text-green-700">"Paz ou Seu Dinheiro de Volta"</span>
-            </h3>
-            <div class="flex flex-col items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-yellow-600 mb-6" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <p class="text-xl text-gray-800 leading-relaxed max-w-3xl font-semibold">
-                    Você tem <strong class="font-extrabold text-red-600">7 dias completos</strong> para testar tudo. Se você não se sentir:
-                </p>
-                <ul class="text-lg font-bold text-gray-700 mt-4 space-y-2 text-left">
-                    <li class="flex items-start"><span class="mr-3 text-green-700">✓</span> Mais conectada com Deus.</li>
-                    <li class="flex items-start"><span class="mr-3 text-green-700">✓</span> Em paz como mãe.</li>
-                    <li class="flex items-start"><span class="mr-3 text-green-700">✓</span> Menos culpada por sua rotina.</li>
+            <div class="max-w-md mx-auto space-y-3 text-lg text-gray-800">
+                <p class="text-2xl font-bold text-accent mb-4">✅ O que você recebe:</p>
+                <li class="flex items-start space-x-2 p-1"><span class="text-green-600 font-bold text-xl">✓</span><span class="font-bold">3 Guias digitais completos:</span></li>
+                <ul class="pl-8 list-disc space-y-1 text-base ml-2">
+                    <li><strong>7 Versículos</strong> - Orações diárias rápidas e poderosas</li>
+                    <li><strong>Mães na Palavra</strong> - Estudo bíblico prático para mães</li>
+                    <li><strong>30 Dias de Oração</strong> - Devocional transformador</li>
                 </ul>
-                <p class="text-xl font-extrabold mt-6 text-[#2c3e50] max-w-3xl">
-                    <strong class="underline">Você não precisa decidir agora.</strong> Teste o Método 7V e sinta a diferença. Se não sentir paz, <strong class="text-green-700">eu insisto que você receba 100% do seu reembolso.</strong> Seu risco é zero.
+                <li class="flex items-start space-x-2 p-1 mt-3"><span class="text-green-600 font-bold text-xl">✓</span><span>Reflexões guiadas e exercícios práticos</span></li>
+                <li class="flex items-start space-x-2 p-1"><span class="text-green-600 font-bold text-xl">✓</span><span>Acesso vitalício</span></li>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-3xl font-extrabold mb-4 text-gray-800">
+                    💸 Investimento: <span class="line-through text-gray-400 text-xl mr-2">R$ 147,90</span><span class="text-red-600">R$ 47,70</span> (74% OFF)
+                </p>
+                <p class="text-lg mb-6 text-pink-700 font-semibold">
+                    Valor individual de cada guia: R$49,30 | Hoje você leva os 3 por R$47,70
+                </p>
+<!-- CTA Jornada Completa -->
+                <a href="https://pay.kiwify.com.br/vRdyJoq" class="w-full sm:w-auto block mx-auto btn-principal text-white font-bold py-4 px-12 rounded-xl uppercase text-xl transform hover:scale-105 transition duration-300 shadow-2xl"
+                   role="button"
+                   aria-label="Comprar Jornada Completa por R$47,70">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    QUERO A JORNADA COMPLETA
+                </a>
+</div>
+        </section>
+
+        <!-- 📊 QUAL ESCOLHA É A MELHOR PARA VOCÊ HOJE? (TABELA) -->
+        <section class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-accent">
+                Qual Escolha é a Melhor para Você Hoje?
+            </h2>
+            <div class="overflow-x-auto rounded-xl shadow-lg border border-gray-200">
+                <table class="min-w-full bg-white border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 text-gray-700 uppercase text-sm leading-normal">
+                            <th class="py-3 px-6 text-left">Recurso</th>
+                            <th class="py-3 px-6 text-center text-accent">Desafio 7 Dias</th>
+                            <th class="py-3 px-6 text-center text-pink-600 font-extrabold">Jornada Completa</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 text-sm font-light">
+                        <tr class="border-b border-gray-200 hover:bg-pink-50">
+                            <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Versículos guiados</td>
+                            <td class="py-3 px-6 text-center text-green-500 font-bold">✅</td>
+                            <td class="py-3 px-6 text-center text-green-500 font-bold">✅</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-pink-50">
+                            <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Reflexões diárias</td>
+                            <td class="py-3 px-6 text-center text-green-500 font-bold">✅</td>
+                            <td class="py-3 px-6 text-center text-green-500 font-bold">✅</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-pink-50">
+                            <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Exercícios práticos</td>
+                            <td class="py-3 px-6 text-center text-green-500 font-bold">✅</td>
+                            <td class="py-3 px-6 text-center text-green-500 font-bold">✅</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-pink-50 bg-purple-50">
+                            <td class="py-3 px-6 text-left whitespace-nowrap font-medium">3 Guias espirituais</td>
+                            <td class="py-3 px-6 text-center text-red-500 font-bold">❌</td>
+                            <td class="py-3 px-6 text-center text-green-500 font-bold">✅</td>
+                        </tr>
+<tr class="hover:bg-pink-100 font-bold text-gray-800 bg-gray-100">
+                            <td class="py-3 px-6 text-left whitespace-nowrap text-lg">Investimento</td>
+                            <td class="py-3 px-6 text-center text-xl text-accent">R$ 9,90</td>
+                            <td class="py-3 px-6 text-center text-xl text-pink-600">R$ 47,70</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- 💬 DEPOIMENTOS (PROVA SOCIAL) -->
+        <section class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-pink-600">
+                💬 Mães Reais, Transformação Verdadeira
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Depoimento 1 - MELHORADO -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-pink-500">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/depoimento-luciana.png" 
+                             alt="Foto de Luciana" 
+                             class="w-12 h-12 rounded-full object-cover border-2 border-pink-400"
+                             loading="lazy">
+<div class="ml-3">
+                            <p class="font-bold text-lg">Marina Silva</p>
+                            <p class="text-sm text-gray-600">Mãe de 3, Professora</p>
+                            <p class="text-xs text-pink-600">São Paulo, SP</p>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 mb-4 italic">
+                        "Eu sempre quis ter uma rotina de oração, mas achava impossível 
+                        com 3 filhos pequenos e trabalho integral.
+                        
+                        Com o Método 7V, encontrei 7 minutos pela manhã - antes de 
+                        acordar a casa. Mudou TUDO.
+                        
+                        Agora meus filhos perguntam sobre os versículos e querem 
+                        participar. É puro amor! ❤️"
+                    </p>
+</div>
+                
+                <!-- Depoimento 2 - MELHORADO -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-pink-500">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/depoimento-patricia.png" 
+                             alt="Foto de Patricia" 
+                             class="w-12 h-12 rounded-full object-cover border-2 border-purple-400"
+                             loading="lazy">
+<div class="ml-3">
+                            <p class="font-bold text-lg">Patricia Oliveira</p>
+                            <p class="text-sm text-gray-600">Mãe de 4, Do Lar</p>
+                            <p class="text-xs text-pink-600">Fortaleza, CE</p>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 mb-4 italic">
+                        "Com 4 filhos pequenos, eu achava impossível ter 'tempo para orar'.
+                        
+                        O Método 7V me libertou! Os 7 versículos são TÃO rápidos que 
+                        consigo fazer na fila do mercado, no banho das crianças.
+                        
+                        Meu marido até comentou: 'Você está mais leve.' 
+                        É porque entrego tudo para Deus todos os dias! 💝"
+                    </p>
+</div>
+            </div>
+        </section>
+<!-- 🤗 GARANTIA DE AMOR -->
+        <section class="my-16 p-10 bg-guarantee rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-shrink-0">
+                <!-- Icone de Coração/Garantia -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-pink-700 mx-auto" viewBox="0 0 20 20" fill="currentColor" aria-label="Ícone de coração representando garantia de amor">
+                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                </svg>
+</div>
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-bold mb-2 text-pink-800">
+                    🤗 Garantia Incondicional de 7 Dias
+                </h2>
+                <p class="text-lg text-gray-800">
+                    Se não amar, basta enviar um e-mail.
+                </p>
+                <p class="text-xl font-extrabold mt-3 text-pink-900">
+                    Sem perguntas, sem julgamento. Só amor.
                 </p>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- ❓ FAQ COMPLETO -->
+        <section class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-accent">
+                ❓ Perguntas Frequentes
+            </h2>
+            <div class="space-y-4 max-w-2xl mx-auto">
+                <!-- Pergunta 1 -->
+                <details class="group bg-white p-4 rounded-xl shadow-lg cursor-pointer transition duration-300 open:ring-2 open:ring-pink-500">
+                    <summary class="flex justify-between items-center font-semibold text-lg text-gray-800">
+                        "Eu realmente consigo fazer isso com minha rotina?"
+                        <span class="ml-2 transform group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Sim, querida. Você consegue. O Método 7V foi feito para mães ocupadas. São apenas 7 minutos por dia, no momento que for melhor para você. 89% das mães continuam mesmo com rotina cheia, porque é leve e prazeroso.
+                    </p>
+                </details>
 
-    <!-- NOVO: SEÇÃO DE APRESENTAÇÃO DOS 3 EBOOKS DA JORNADA -->
-    <section class="section-padding bg-white rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding text-center">
-            <h3 class="text-3xl sm:text-4xl font-extrabold mb-12 text-[#2c3e50] border-b-4 border-[#FFAB91] pb-3 inline-block">
-                📚 O Conteúdo da Sua Jornada de Paz
-            </h3>
+                <!-- Pergunta 2 -->
+                <details class="group bg-white p-4 rounded-xl shadow-lg cursor-pointer transition duration-300 open:ring-2 open:ring-pink-500">
+                    <summary class="flex justify-between items-center font-semibold text-lg text-gray-800">
+                        "E se eu nunca estudei a Bíblia? Vou me sentir perdida?"
+                        <span class="ml-2 transform group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        De forma alguma. O conteúdo é simples, direto e cheio de carinho. Cada versículo vem com explicação clara, reflexão prática e aplicação para sua rotina como mãe. É para iniciantes, feito com amor.
+                    </p>
+                </details>
 
-            <div class="grid grid-cols-1 gap-12 text-left">
+                <!-- Pergunta 3 -->
+                <details class="group bg-white p-4 rounded-xl shadow-lg cursor-pointer transition duration-300 open:ring-2 open:ring-pink-500">
+                    <summary class="flex justify-between items-center font-semibold text-lg text-gray-800">
+                        "Tenho filhos pequenos ou agitados. Ainda assim consigo?"
+                        <span class="ml-2 transform group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Sim! Muitas mães fazem durante o cochilo, o banho ou enquanto os filhos assistem desenho. Algumas até envolvem os filhos no momento, criando uma rotina familiar cheia de amor.
+                    </p>
+                </details>
 
-                <!-- PRODUTO 1: 7 Versículos para Orar pelos Filhos Todos os Dias (Método 7V Essencial) - Corrigido -->
-                <div class="p-6 rounded-xl shadow-2xl border-l-8 border-[#FFAB91] bg-[#FFFBEB] transform hover:shadow-3xl transition duration-300">
-                    <div class="flex flex-col md:flex-row items-center gap-6">
-                        <img
-                            src="assets/7-versiculos-pequeno.png" 
-                            alt="Capa do Ebook 7 Versículos" 
-                            class="w-40 h-auto rounded-lg shadow-xl"
-                            onerror="this.onerror=null; this.src='https://placehold.co/150x200/FFAB91/333333?text=7V+Essencial';"
-                        >
-                        <div>
-                            <span class="text-sm font-bold text-red-600 bg-red-100 px-3 py-1 rounded-full mb-2 inline-block">PASSO 1: FIM DA CULPA</span>
-                            <h4 class="text-2xl font-bold mb-1 text-[#2c3e50]">📘 1. “7 Versículos para Orar pelos Filhos Todos os Dias”</h4>
-                            <p class="text-xl font-extrabold text-[#FF8A65] mb-3">7 minutos por dia. 7 versículos guiados. E o peso da culpa vai embora.</p>
-                            
-                            <p class="text-gray-700 leading-relaxed">
-                                Você não precisa de mais tempo, precisa de um <strong class="font-bold">método</strong>. Com o 7 Versículos, você aprende a orar pelos seus filhos todos os dias — de forma leve, profunda e <strong class="font-bold">sem culpa</strong>. O alívio imediato para a mãe ocupada.
-                            </p>
-                            <p class="mt-3 text-sm text-gray-500 italic">Ideal como seu primeiro passo na rotina espiritual materna.</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Pergunta 4 -->
+                <details class="group bg-white p-4 rounded-xl shadow-lg cursor-pointer transition duration-300 open:ring-2 open:ring-pink-500">
+                    <summary class="flex justify-between items-center font-semibold text-lg text-gray-800">
+                        "Eu não sou muito religiosa... esse método serve pra mim?"
+                        <span class="ml-2 transform group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Sim. Esse método acolhe todas as mães com coração aberto. Não exige rótulos nem religiosidade extrema. Basta querer criar um momento de conexão e amor por seus filhos com fé verdadeira.
+                    </p>
+                </details>
 
-                <!-- PRODUTO 2: Mães na Palavra — Como Estudar a Bíblia com Propósito -->
-                <div class="p-6 rounded-xl shadow-2xl border-l-8 border-[#4DB6AC] bg-[#E0F7FA] transform hover:shadow-3xl transition duration-300">
-                    <div class="flex flex-col md:flex-row items-center gap-6">
-                        <img
-                            src="assets/maes-na-palavra-pequeno.png" 
-                            alt="Capa do Ebook Mães na Palavra" 
-                            class="w-40 h-auto rounded-lg shadow-xl"
-                            onerror="this.onerror=null; this.src='https://placehold.co/150x200/B2DFDB/333333?text=M%C3%A3es+na+Palavra';"
-                        >
-                         <div>
-                            <span class="text-sm font-bold text-blue-600 bg-blue-100 px-3 py-1 rounded-full mb-2 inline-block">PASSO 2: APROFUNDAMENTO</span>
-                            <h4 class="text-2xl font-bold mb-1 text-[#2c3e50]">📗 2. “Mães na Palavra — Como Estudar a Bíblia com Propósito”</h4>
-                            <p class="text-xl font-extrabold text-[#4DB6AC] mb-3">A Bíblia não foi feita pra ser lida com pressa. Foi feita pra transformar o seu dia.</p>
-                            
-                            <p class="text-gray-700 leading-relaxed">
-                                Este guia ensina você a estudar a Bíblia com <strong class="font-bold">propósito e clareza</strong>, mesmo com a rotina corrida. São passos simples e práticos para você finalmente entender, aplicar e viver a Palavra no seu dia a dia.
-                            </p>
-                            <p class="mt-3 text-sm text-gray-500 italic">Continuação natural: para quem já orou e quer crescer na Palavra.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- PRODUTO 3: 30 Dias de Poder na Oração — Jornada de Fé para Mães -->
-                <div class="p-6 rounded-xl shadow-2xl border-l-8 border-[#E53E3E] bg-[#FEE2E2] transform hover:shadow-3xl transition duration-300">
-                    <div class="flex flex-col md:flex-row items-center gap-6">
-                        <img
-                            src="assets/30-dias-poder-pequeno.png" 
-                            alt="Capa do Ebook 30 Dias de Poder" 
-                            class="w-40 h-auto rounded-lg shadow-xl"
-                            onerror="this.onerror=null; this.src='https://placehold.co/150x200/FCA5A5/333333?text=30+Dias+de+Poder';"
-                        >
-                         <div>
-                            <span class="text-sm font-bold text-green-600 bg-green-100 px-3 py-1 rounded-full mb-2 inline-block">PASSO 3: TRANSFORMAÇÃO SÓLIDA</span>
-                            <h4 class="text-2xl font-bold mb-1 text-[#2c3e50]">📕 3. “30 Dias de Poder na Oração — Jornada de Fé para Mães”</h4>
-                            <p class="text-xl font-extrabold text-[#E53E3E] mb-3">30 dias. 30 orações. Uma nova mãe nasce quando ela aprende a orar com propósito.</p>
-                            
-                            <p class="text-gray-700 leading-relaxed">
-                                Esta é a sua <strong class="font-bold">imersão espiritual</strong>. Uma jornada de 30 dias para transformar sua relação com Deus e seus filhos através da oração. A cada dia, uma nova conversa e uma nova transformação.
-                            </p>
-                            <p class="mt-3 text-sm text-gray-500 italic">Foco na transformação e na construção de um alicerce inabalável.</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Pergunta 5 -->
+                <details class="group bg-white p-4 rounded-xl shadow-lg cursor-pointer transition duration-300 open:ring-2 open:ring-pink-500">
+                    <summary class="flex justify-between items-center font-semibold text-lg text-gray-800">
+                        "Funciona para mães de filhos adolescentes ou adultos?"
+                        <span class="ml-2 transform group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Com certeza. A oração de mãe não tem prazo de validade. Muitas mães com filhos maiores relatam que sentiram mais conexão, paz e propósito ao orarem com o Método 7V.
+                    </p>
+                </details>
 
+                <!-- Pergunta 6 -->
+                <details class="group bg-white p-4 rounded-xl shadow-lg cursor-pointer transition duration-300 open:ring-2 open:ring-pink-500">
+                    <summary class="flex justify-between items-center font-semibold text-lg text-gray-800">
+                        "É só conteúdo digital? Recebo algo físico?"
+                        <span class="ml-2 transform group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Todo o conteúdo é entregue dentro da plataforma Kiwify. Não há envio físico. Você acessa diretamente por login e senha, com total segurança.
+                    </p>
+                </details>
+
+                <!-- Pergunta 7 -->
+                <details class="group bg-white p-4 rounded-xl shadow-lg cursor-pointer transition duration-300 open:ring-2 open:ring-pink-500">
+                    <summary class="flex justify-between items-center font-semibold text-lg text-gray-800">
+                        "Posso acessar pelo celular?"
+                        <span class="ml-2 transform group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Sim! O material é totalmente compatível com celulares. Você pode fazer sua jornada espiritual no celular, em qualquer lugar, com total comodidade.
+                    </p>
+                </details>
+
+                <!-- Pergunta 8 -->
+                <details class="group bg-white p-4 rounded-xl shadow-lg cursor-pointer transition duration-300 open:ring-2 open:ring-pink-500">
+                    <summary class="flex justify-between items-center font-semibold text-lg text-gray-800">
+                        "E se eu comprar e não gostar?"
+                        <span class="ml-2 transform group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Você tem 7 dias de garantia. Se não sentir que é pra você, é só enviar um e-mail e devolvemos 100% do seu investimento. Sem perguntas, sem julgamentos. Só amor.
+                    </p>
+                </details>
             </div>
-
-            <a href="#oferta-principal" class="scroll-link btn-primary mt-12 text-xl font-bold bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] max-w-md">
-                SIM, QUERO DORMIR SEM CULPA HOJE
-            </a>
-            
-        </div>
-    </section>
-    <!-- FIM DA NOVO SEÇÃO DE APRESENTAÇÃO DOS 3 EBOOKS -->
-
-
-    <!-- SEÇÃO 8 & 9: URGÊNCIA, ESCASSEZ E ESCOLHA BINÁRIA -->
-    <section class="section-padding bg-white rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding text-center">
-            
-            <h3 class="text-3xl font-extrabold mb-4 text-red-600">
-                ⚠️ ATENÇÃO: Nossa equipe de suporte é limitada. Restam apenas 47 vagas hoje.
-            </h3>
-            
-            <h4 class="text-2xl font-bold mb-8 text-gray-800">
-                👇 Sua Paz Mental Depende Desta Escolha Binária:
-            </h4>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <!-- Escolha 1: Continuar na dor -->
-                <div class="bg-red-100 p-6 rounded-xl border-l-4 border-red-500 shadow-lg">
-                    <p class="text-2xl font-bold mb-4 text-red-700">❌ ESCOLHA 1: Continuar no ciclo de culpa</p>
-                    <ul class="space-y-2 text-lg text-gray-800">
-                        <li class="flex items-start">
-                             <span class="mr-3 text-red-500">→</span>
-                             <span class="list-item-content">Carregar a culpa <strong class="font-extrabold">que consome sua energia</strong> diariamente.</span>
-                        </li>
-                        <li class="flex items-start">
-                             <span class="mr-3 text-red-500">→</span>
-                             <span class="list-item-content">Deixar mais um ano passar sem uma rotina de oração sólida.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-red-500">→</span>
-                            <span class="list-item-content">O Custo: <strong class="font-extrabold">Sua paz, sua confiança e seu sono</strong>.</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Escolha 2: Transformação -->
-                <div class="bg-green-100 p-6 rounded-xl border-l-4 border-green-500 shadow-lg">
-                    <p class="text-2xl font-bold mb-4 text-green-700">✅ ESCOLHA 2: Transformação Hoje com o Método 7V</p>
-                    <ul class="space-y-2 text-lg text-gray-800">
-                        <li class="flex items-start">
-                            <span class="mr-3 text-green-500">→</span>
-                            <span class="list-item-content">Começar uma rotina de oração que <strong class="font-extrabold">funciona REALMENTE em 7 minutos</strong>.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-green-500">→</span>
-                            <span class="list-item-content">Dormir em paz, sem o peso da culpa.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-green-500">→</span>
-                            <span class="list-item-content">O Retorno: <strong class="font-extrabold">Paz, confiança e a certeza de ser a mãe cristã que você quer ser</strong>.</span>
-                        </li>
-                    </ul>
-                </div>
+        </section>
+<!-- Rodapé Legal (no desktop, substitui a barra final de CTA) -->
+        <footer class="text-center text-sm text-gray-500 mt-12 pt-8 border-t border-gray-200 hidden md:block">
+            <p class="text-xl font-bold text-accent mb-4">Seu coração deseja esse momento. Não adie mais.</p>
+            <div class="flex justify-center gap-4 mb-4">
+                 <!-- Botão Jornada Completa (Desktop Footer) -->
+                <a href="https://pay.kiwify.com.br/vRdyJoq" class="btn-principal text-white font-bold py-3 px-6 rounded-xl uppercase text-lg transform hover:scale-105 transition duration-300 shadow-lg">
+COMEÇAR AGORA COM A JORNADA COMPLETA – R$ 47,70
+</a>
+                <!-- Botão Desafio 7 Dias (Desktop Footer) -->
+                <a href="https://pay.kiwify.com.br/O5vy5bs" class="btn-secundario font-bold py-3 px-6 rounded-xl uppercase text-lg transform hover:scale-105 transition duration-300 shadow-lg">
+OU EXPERIMENTAR COM O DESAFIO DE 7 DIAS – R$ 9,90
+</a>
             </div>
-
-            <!-- 10. CTA FINAL REVISADO: Mais racional e orientado à ação -->
-            <h4 class="text-2xl font-bold mt-10 mb-4 text-[#2c3e50]">
-                QUAL VOCÊ ESCOLHE?
-            </h4>
-
-            <a href="#oferta-principal" class="scroll-link btn-primary text-2xl font-bold bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] max-w-lg">
-                SIM, QUERO DORMIR SEM CULPA HOJE
-            </a>
-            <!-- Selo de Segurança abaixo do CTA -->
-            <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
-                 <span>✅ Pagamento Seguro (Kiwify)</span> 
-                 <span>|</span> 
-                 <span>🔒 Garantia 7 dias</span>
+            <div class="text-xs mt-3 text-gray-500 flex justify-center flex-wrap gap-x-4 mb-4">
+                <!-- Alteração solicitada aqui: "Acesso imediato no email" trocado por "Acesso imediato na plataforma" -->
+                <span>Pagamento seguro via Kiwify | Pix | Cartão | Boleto</span>
+                <span>Garantia 7 Dias | Acesso imediato na plataforma</span>
             </div>
-            <p class="text-sm mt-3 text-gray-600">
-                Sua nova rotina de paz começa hoje.
+            <p class="mb-2">&copy; 2023 Método 7V - Oração com Amor em 7 Minutos. Todos os direitos reservados.</p>
+            <div class="space-x-4">
+                <a href="#termos" class="hover:text-pink-600 transition duration-150">Termos de Uso</a>
+                <a href="#privacidade" class="hover:text-pink-600 transition duration-150">Política de Privacidade</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- 🎯 CHAMADA FINAL + BARRA DE CONFIANÇA (FIXA NA PARTE INFERIOR - MOBILE ONLY) -->
+    <div id="final-cta-bar" class="fixed bottom-0 left-0 w-full bg-white border-t-4 border-pink-500 p-4 z-40 shadow-2xl md:hidden">
+        <div class="container mx-auto max-w-4xl text-center">
+            <p class="text-sm font-semibold text-accent mb-3">
+                Seu coração deseja esse momento. Não adie mais.
             </p>
-            <!-- Alterado 'href' para rolagem suave até o card de R$ 9,90 -->
-            <a href="#oferta-inicial" class="scroll-link text-[#2c3e50] text-sm mt-3 inline-block font-semibold hover:underline">
-                💎 Ou comece pequeno: Quero testar com o Desafio 7 Dias por R$ 9,90 →
-            </a>
-        </div>
-    </section>
-
-    <!-- 7. FAQ REVISADO com item de Segurança e Pagamento no topo -->
-    <section class="section-padding bg-[#E0F7FA] rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding">
-            <h3 class="text-2xl sm:text-3xl font-extrabold mb-8 text-center text-[#2c3e50]">
-                ❓ Perguntas Frequentes (FAQ Estratégico)
-            </h3>
-            <div class="space-y-4">
-                 <!-- NOVO FAQ #1: Segurança e Pagamento (Movido para o topo) -->
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200" open>
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">1. "É 100% seguro comprar? Meus dados estão protegidos?"</summary>
-                    <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">Sim! O pagamento é processado pela Kiwify, uma das maiores plataformas de produtos digitais do Brasil. A transação é criptografada (Certificado SSL) e 100% segura. Seus dados estão protegidos por parceiros como a NuvemPago e Stripe. Você recebe o acesso ao Método 7V <strong class="font-bold">automaticamente</strong> após a confirmação.</p>
-                </details>
-
-                <!-- 2. Não tem tempo (Antigo 1) -->
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">2. "Funciona mesmo para quem NÃO tem tempo?"</summary>
-                    <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">Sim. O Método 7V foi testado especificamente com mães que trabalham 12h/dia e vivem em caos. Não é sobre ter tempo—é sobre ter um <strong class="font-bold">SISTEMA</strong> que cabe na sua vida real. <strong class="font-bold">7 minutos cabem em qualquer lugar</strong>: no banho, antes de acordar e até na fila do mercado.</p>
-                </details>
-                <!-- 3. Nunca estudei a Bíblia (Antigo 2) -->
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">3. "E se eu NUNCA estudei a Bíblia?"</summary>
-                    <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">Perfeito. 78% das nossas alunas eram iniciantes. O Método 7V é baseado em versículos simples e diretos, sem teologia pesada. Cada um vem com uma reflexão em linguagem comum, e você aprende <strong class="font-bold">enquanto faz</strong>, sem se sentir intimidada.</p>
-                </details>
-                <!-- 4. Filhos agitados/pequenos (Antigo 4) -->
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">4. "Meus filhos são muito pequenos/agitados..."</summary>
-                    <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">O método funciona <strong class="font-extrabold">apesar do caos</strong>. Para bebês: você ora enquanto eles dormem. Para crianças maiores: o Guia traz estratégias para envolvê-los. O ponto é: você não precisa de silêncio absoluto. O método se adapta à sua vida, não o contrário.</p>
-                </details>
-                <!-- 5. Tempo para ver resultados (Antigo 5) -->
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">5. "Quanto tempo leva para ver resultados?"</summary>
-                    <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">Alívio imediato? <strong class="font-bold">Dia 1 você já sente diferença</strong> (porque finalmente fez algo). Transformação real? Dia 3-5 você sente a mudança interior e a paz genuína. Em 30 dias, você terá uma rotina sólida.</p>
-                </details>
-                <!-- 6. Denominação (Antigo 6) -->
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <summary class="text-gray-800 font-bold p-4 cursor-pointer">6. "Funciona para qualquer denominação?"</summary>
-                    <p class="text-gray-700 bg-gray-50 border-t border-gray-200 p-4">100% sim. O método é baseado na Bíblia pura, sem viés denominacional ou teologia pesada. Já ajudou mães de igrejas evangélicas, protestantes e católicas carismáticas. <strong class="font-bold">A oração é universal. A culpa da mãe ocupada também.</strong></p>
-                </details>
+            <div class="flex flex-col gap-2">
+                <!-- Botão Jornada Completa -->
+                <a href="https://pay.kiwify.com.br/vRdyJoq" class="flex-1 btn-principal text-white font-bold py-3 px-6 rounded-xl uppercase text-base transform hover:scale-105 transition duration-300 shadow-lg">
+COMEÇAR AGORA COM A JORNADA COMPLETA – R$ 47,70
+</a>
+                <!-- Botão Desafio 7 Dias -->
+                <a href="https://pay.kiwify.com.br/O5vy5bs" class="flex-1 btn-secundario font-bold py-3 px-6 rounded-xl uppercase text-base transform hover:scale-105 transition duration-300 shadow-lg">
+OU EXPERIMENTAR COM O DESAFIO DE 7 DIAS – R$ 9,90
+</a>
+            </div>
+            <!-- Barra de Confiança -->
+            <div class="text-xs mt-3 text-gray-500 flex justify-center flex-wrap gap-x-4">
+                <span>Pagamento seguro via Kiwify | Pix | Cartão | Boleto</span>
             </div>
         </div>
-    </section>
-
-    <!-- SEÇÃO 11: CTA FINAL PODEROSO -->
-    <section class="section-padding bg-white rounded-xl shadow-md my-8 mx-4 sm:mx-auto max-w-5xl">
-        <div class="max-w-4xl mx-auto container-padding text-center">
-            
-            <p class="text-3xl font-extrabold mb-4 text-[#2c3e50] max-w-3xl mx-auto">
-                Você já tem a fé e o amor. Você só precisa de um <strong class="text-[#FFAB91] underline">MÉTODO</strong>.
-            </p>
-            <p class="text-xl font-bold mb-8 text-gray-700">
-                Não deixe mais um dia de culpa te consumir.
-            </p>
-
-            <!-- 10. CTA FINAL REVISADO: Mais racional e orientado à ação -->
-            <a href="#oferta-principal" class="scroll-link btn-primary text-2xl font-bold bg-gradient-to-r from-[#FFAB91] to-[#FF8A65] hover:to-[#FF5C33] max-w-lg">
-                SIM, QUERO DORMIR SEM CULPA HOJE
-            </a>
-            <!-- Selo de Segurança abaixo do CTA -->
-            <div class="mt-4 flex justify-center items-center space-x-4 text-sm text-gray-700 font-semibold">
-                 <span>✅ Pagamento Seguro (Kiwify)</span> 
-                 <span>|</span> 
-                 <span>🔒 Garantia 7 dias</span>
-            </div>
-            <p class="text-sm mt-3 text-gray-600">
-                Sua nova rotina de paz começa hoje.
-            </p>
-            <p class="text-base font-extrabold mt-6 text-red-600 animate-pulse">
-                ÚLTIMAS HORAS DE OFERTA. (Restam 47 Vagas!)
-            </p>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-[#4B5563] text-white py-8 rounded-t-xl mt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h4 class="text-xl font-bold mb-4">Método 7V - Mães na Palavra</h4>
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" class="text-gray-300 hover:text-white text-sm">Política de Privacidade</a>
-                <a href="#" class="text-gray-300 hover:text-white text-sm">Termos de Uso</a>
-            </div>
-            <p class="text-gray-400 text-sm">&copy; 2024 - Método 7V. Todos os Direitos Reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Fixed CTA for mobile - COM EFEITO PULSANTE (Atualizado) -->
-    <div class="cta-fixed md:hidden">
-        <a href="#oferta-principal" class="btn-primary text-white font-bold text-lg">
-            SIM, QUERO DORMIR SEM CULPA HOJE - R$ 47,70
-        </a>
     </div>
-
-    <!-- Script de rastreamento e CONTADOR DINÂMICO -->
+    <!-- Scripts Otimizados -->
+    <script src="js/tracking.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
     <script>
-        const PAY_PREFIXES = ["https://pay.kiwify.com.br"];
-        
-        // --- 6. CONTADOR DINÂMICO (24h) ---
-        function initializeCountdown() {
-            const countdownEl = document.getElementById('countdown');
-            if (!countdownEl) return;
+    let prefix = ["https://pay.kiwify.com.br"];
 
-            // Use localStorage para persistir o tempo de expiração por 24 horas
-            const expiryKey = 'offerExpiryTime';
-            let expiryTime = localStorage.getItem(expiryKey);
-            const duration = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-
-            if (!expiryTime || new Date().getTime() > parseInt(expiryTime, 10)) {
-                // Se não houver tempo ou se já expirou, define um novo tempo de expiração
-                expiryTime = new Date().getTime() + duration;
-                localStorage.setItem(expiryKey, expiryTime);
-            }
-
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = expiryTime - now;
-
-                // Cálculo do tempo
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Formatação (adiciona zero à esquerda)
-                const h = String(hours).padStart(2, '0');
-                const m = String(minutes).padStart(2, '0');
-                const s = String(seconds).padStart(2, '0');
-
-                // Exibir o resultado
-                if (distance > 0) {
-                    countdownEl.innerHTML = `${h}h ${m}m ${s}s`;
-                } else {
-                    // Se o contador terminar, define como 0 e exibe uma mensagem
-                    countdownEl.innerHTML = "00h 00m 00s";
-                    // Para fins de teste, o contador pode ser reiniciado na próxima recarga
-                    // Para produção, você pode ocultar a barra ou alterar a mensagem
-                    clearInterval(timerInterval); 
-                }
-            }
-
-            // Atualiza o contador imediatamente e depois a cada segundo
-            updateCountdown();
-            const timerInterval = setInterval(updateCountdown, 1000);
+    function getParams() {
+        let t = "",
+            e = window.top.location.href,
+            r = new URL(e);
+        if (null != r) {
+            let a = r.searchParams.get("utm_source"),
+                n = r.searchParams.get("utm_medium"),
+                o = r.searchParams.get("utm_campaign"),
+                m = r.searchParams.get("utm_term"),
+                c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
         }
-
-        // --- RASTREAMENTO UTM (Mantido) ---
-        function getUTMs() {
-            const url = new URL(window.location.href);
-            const params = url.searchParams;
-            let qs = params.toString();
-        
-            // Create the sck field with all UTMs combined
-            const sck = [
-                params.get("utm_source") || "",
-                params.get("utm_medium") || "",
-                params.get("utm_campaign") || "",
-                params.get("utm_term") || "",
-                params.get("utm_content") || ""
-            ].join("|");
-        
-            if (sck.replace(/\|+$/, "")) {
-                qs += (qs ? "&" : "") + `sck=${encodeURIComponent(sck)}`;
-            }
-        
-            return qs ? `?${qs}` : "";
-        }
-        
-        function appendUTMsToKiwifyLinks() {
-            const utmString = getUTMs();
-            
-            document.querySelectorAll("a").forEach(function(e) {
-                const isKiwifyLink = PAY_PREFIXES.some(prefix => e.href.startsWith(prefix));
-
-                if (isKiwifyLink) {
-                    const updatedSuffix = utmString.startsWith("?") ? utmString.substring(1) : utmString;
-
-                    if (e.href.includes("?")) {
-                        e.href += "&" + updatedSuffix;
-                    } else {
-                        e.href += utmString;
-                    }
-                }
-            });
-        }
-        
-        // --- UX: Rolagem Suave para Âncoras Locais ---
-        function smoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        e.preventDefault();
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Executar as funções na carga da janela
-        window.onload = function() {
-            appendUTMsToKiwifyLinks();
-            initializeCountdown();
-            smoothScroll(); // Adiciona a rolagem suave a todos os links de âncora
-        };
+        return t
+    }! function() {
+        var t = new URLSearchParams(window.location.search);
+        t.toString() && document.querySelectorAll("a").forEach(function(e) {
+            for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+        })
+    }(); 
     </script>
 </body>
 </html>
