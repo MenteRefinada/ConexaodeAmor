@@ -52,11 +52,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_ID_AQUI'); // Insira seu ID do Pixel
+    fbq('init', '1131696225474131'); 
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=1131696225474131&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
 
@@ -320,7 +320,7 @@
                         <li class="flex items-center gap-2 text-sm text-gray-600"><span class="text-brand-primary">✓</span> Leitura rápida e direta</li>
                     </ul>
 
-                    <a href="LINK_CHECKOUT_1990" class="block w-full py-4 rounded border border-brand-primary text-brand-primary font-bold text-center hover:bg-brand-primary hover:text-white transition uppercase text-sm tracking-wide">
+                    <a href="https://pay.kiwify.com.br/NDqxMkX" class="block w-full py-4 rounded border border-brand-primary text-brand-primary font-bold text-center hover:bg-brand-primary hover:text-white transition uppercase text-sm tracking-wide">
                         Quero apenas o Estudo
                     </a>
                 </div>
@@ -337,7 +337,7 @@
                     
                     <div class="flex items-baseline gap-2 mb-2">
                         <span class="text-sm text-gray-400 line-through">R$ 97,00</span>
-                        <span class="text-5xl font-bold text-brand-primary">R$ 47,00</span>
+                        <span class="text-5xl font-bold text-brand-primary">R$ 47,70</span>
                     </div>
                     <p class="text-xs text-brand-accentHover font-bold mb-6 bg-brand-secondary/30 inline-block px-2 py-1 rounded">Oferta por tempo limitado</p>
 
@@ -369,7 +369,7 @@
                         </div>
                     </div>
 
-                    <a href="LINK_CHECKOUT_4700" class="btn-pulse block w-full py-4 rounded bg-brand-primary text-white font-bold text-center shadow-lg hover:bg-brand-text transition uppercase text-sm tracking-wide">
+                    <a href="https://pay.kiwify.com.br/IJtF4lt" class="btn-pulse block w-full py-4 rounded bg-brand-primary text-white font-bold text-center shadow-lg hover:bg-brand-text transition uppercase text-sm tracking-wide">
                         Quero o Pacote Completo
                     </a>
                     <p class="text-center text-xs text-gray-400 mt-3 flex justify-center items-center gap-1">
@@ -435,45 +435,33 @@
 
     <!-- CTA Mobile Fixo -->
     <div class="cta-fixed fixed bottom-0 left-0 w-full p-4 md:hidden z-50">
-        <a href="#oferta-principal" class="block w-full bg-brand-primary text-white font-bold text-center py-3 rounded shadow-lg uppercase tracking-wide text-sm">
+        <a href="https://pay.kiwify.com.br/IJtF4lt" class="block w-full bg-brand-primary text-white font-bold text-center py-3 rounded shadow-lg uppercase tracking-wide text-sm">
             Quero o Pacote Completo
         </a>
     </div>
 
     <!-- Script de Rastreamento (UTMs) -->
     <script>
-    const PAY_PREFIXES = ["https://pay.kiwify.com.br", "https://pay.hotmart.com"]; // Adicione seus checkouts
-    
-    function getUTMs() {
-      const url = new URL(window.location.href);
-      const params = url.searchParams;
-      let qs = params.toString();
-    
-      const sck = [
-        params.get("utm_source") || "",
-        params.get("utm_medium") || "",
-        params.get("utm_campaign") || "",
-        params.get("utm_term") || "",
-        params.get("utm_content") || ""
-      ].join("|");
-    
-      if (sck.replace(/\|+$/,"")) {
-        qs += (qs ? "&" : "") + `sck=${encodeURIComponent(sck)}`;
-      }
-    
-      return qs ? `?${qs}` : "";
-    }
-    
-    (function appendUTMs() {
-      const suffix = getUTMs();
-      if (!suffix) return;
-    
-      document.querySelectorAll("a[href]").forEach(a => {
-        if (PAY_PREFIXES.some(p => a.href.startsWith(p))) {
-          a.href += (a.href.includes("?") ? "&" : "") + suffix.slice(1);
-        }
-      });
-    })();
+        let prefix = ["https://pay.kiwify.com.br"];
+
+        function getParams() {
+            let t = "",
+                e = window.top.location.href,
+                r = new URL(e);
+            if (null != r) {
+                let a = r.searchParams.get("utm_source"),
+                    n = r.searchParams.get("utm_medium"),
+                    o = r.searchParams.get("utm_campaign"),
+                    m = r.searchParams.get("utm_term"),
+                    c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+            }
+            return t
+        }! function() {
+            var t = new URLSearchParams(window.location.search);
+            t.toString() && document.querySelectorAll("a").forEach(function(e) {
+                for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+            })
+        }(); 
     </script>
 </body>
 </html>
