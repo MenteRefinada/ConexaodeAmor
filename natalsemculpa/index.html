@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natal é Pecado? | Estudo Bíblico Definitivo</title>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Playfair Display (Autoridade) + Inter (Leitura) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuração Visual -->
+    <!-- Configuração Visual: Teologia Premium -->
     <script>
         tailwind.config = {
             theme: {
@@ -24,17 +24,17 @@
                     },
                     colors: {
                         brand: {
-                            bg: '#F9F7F2',
-                            primary: '#631818',
-                            secondary: '#E3DACE',
-                            accent: '#B8860B',
+                            bg: '#F9F7F2', /* Papel Antigo */
+                            primary: '#631818', /* Vinho Bordeaux */
+                            secondary: '#E3DACE', /* Bege Escuro */
+                            accent: '#B8860B', /* Dourado Envelhecido */
                             accentHover: '#8B6508',
-                            text: '#2D2424',
+                            text: '#2D2424', /* Preto Suave */
                             light: '#FFFFFF'
                         }
                     },
                     boxShadow: {
-                        'book': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'book': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
                         'glow': '0 0 25px rgba(184, 134, 11, 0.3)'
                     }
                 }
@@ -66,12 +66,14 @@
             color: #2D2424;
             scroll-behavior: smooth;
         }
+        
         .highlight-text {
             background: linear-gradient(120deg, #E3DACE 0%, #E3DACE 100%);
             background-repeat: no-repeat;
             background-size: 100% 40%;
             background-position: 0 90%;
         }
+
         @keyframes pulse-gold {
             0% { box-shadow: 0 0 0 0 rgba(184, 134, 11, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(184, 134, 11, 0); }
@@ -80,25 +82,43 @@
         .btn-pulse {
             animation: pulse-gold 2s infinite;
         }
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
-        @keyframes sweep {
-            0% {opacity: 0; transform: translateY(-10px)}
-            100% {opacity: 1; transform: translateY(0)}
+
+        details > summary {
+            list-style: none;
         }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+        
         .cta-fixed {
             background: rgba(255, 255, 255, 0.98);
             border-top: 1px solid #dcdcdc;
+        }
+        
+        /* Ajuste fino para as imagens de capa */
+        .book-cover {
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .book-cover:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body class="antialiased font-sans selection:bg-brand-primary selection:text-white">
 
-    <!-- Header -->
+    <!-- Header Discreto -->
     <header class="bg-white sticky top-0 z-40 border-b border-gray-200 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-center md:justify-between items-center">
             <div class="flex items-center gap-2">
+                <!-- Ícone de Livro/Bíblia -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
@@ -108,9 +128,11 @@
         </div>
     </header>
 
-    <!-- Hero Section (Imagem: Natalsemculpa.png) -->
+    <!-- Hero Section -->
     <section class="relative pt-12 pb-20 overflow-hidden">
+        <!-- Background Sutil -->
         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-brand-secondary/20 to-brand-bg -z-10"></div>
+        
         <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-center md:text-left z-10">
                 <div class="inline-block px-4 py-1 mb-6 rounded-sm bg-brand-primary/10 text-brand-primary font-bold text-xs tracking-widest uppercase border border-brand-primary/20">
@@ -120,8 +142,9 @@
                     Você celebra o Natal… mas vive com medo de estar <span class="highlight-text px-1">desagradando a Deus?</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0 font-light">
-                    Um estudo bíblico direto, honesto e sem achismo que mostra, com Escritura e contexto histórico, se o Natal é pecado ou não.
+                    Um estudo bíblico direto, honesto e sem achismo que mostra, com Escritura e contexto histórico, se o Natal é pecado ou não — para você parar de viver com culpa espiritual.
                 </p>
+                
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a href="#oferta-principal" class="bg-brand-primary text-white font-bold py-4 px-8 rounded shadow-glow transform transition hover:-translate-y-1 hover:bg-brand-text text-center border border-transparent">
                         QUERO LER A VERDADE
@@ -130,11 +153,16 @@
                         <span>Apenas o PDF Básico (R$19,90)</span>
                     </a>
                 </div>
+                
+                <div class="mt-8 flex items-center justify-center md:justify-start gap-4 text-sm text-gray-600">
+                    <p class="italic">"Nada de opinião humana. Apenas Bíblia, contexto e verdade."</p>
+                </div>
             </div>
+
             <div class="w-full md:w-1/2 relative flex justify-center">
-                <!-- IMAGEM CAPA PRINCIPAL -->
+                <!-- Capa do Livro Principal: Natalsemculpa.png -->
                 <div class="relative z-10 transform rotate-2 hover:rotate-0 transition duration-500">
-                    <img src="assets/Natalsemculpa.png" alt="Capa do Estudo Natal é Pecado" class="rounded shadow-2xl border-r-4 border-b-4 border-gray-800/20 max-w-[300px] md:max-w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x550/631818/F3E5AB?text=Erro:+assets/Natalsemculpa.png';">
+                    <img src="assets/Natalsemculpa.png" alt="Capa do Estudo Natal é Pecado" class="book-cover rounded shadow-2xl border-r-4 border-b-4 border-gray-800/20 max-w-[300px] md:max-w-full" onerror="this.style.display='none'; alert('Erro: Imagem assets/Natalsemculpa.png não encontrada. Verifique a pasta assets.');">
                 </div>
             </div>
         </div>
@@ -146,11 +174,16 @@
             <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-text mb-8">
                 A dúvida que rouba a sua paz
             </h2>
+            
             <div class="text-lg text-gray-700 leading-relaxed space-y-6 text-left md:text-center mb-12">
                 <p>Você ama a Deus. Quer viver uma fé verdadeira. Mas toda vez que chega o Natal… surge a dúvida.</p>
+                
                 <div class="bg-brand-bg p-6 rounded border-l-4 border-brand-primary italic text-gray-600 my-6 max-w-xl mx-auto">
                     “Será que estou pecando? E se Deus reprovar isso? E se eu estiver sendo enganado?”
                 </div>
+
+                <p>Às vezes a culpa vem de uma pregação. Às vezes de um comentário na internet. Às vezes de alguém “bem-intencionado”. E, aos poucos, o medo vai substituindo a paz.</p>
+                
                 <p class="font-bold text-brand-primary text-xl mt-8">
                     👉 Mas a Bíblia nunca foi escrita para aprisionar consciências.
                 </p>
@@ -158,24 +191,44 @@
         </div>
     </section>
 
-    <!-- Seção 2: Solução -->
+    <!-- Seção 2: A Virada de Chave (Solução) -->
     <section class="py-20 bg-brand-primary text-white relative overflow-hidden">
+        <!-- Pattern de fundo -->
         <svg class="absolute top-0 left-0 w-full h-full opacity-5" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)" /></svg>
+
         <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
             <h2 class="font-serif text-3xl md:text-5xl font-bold mb-6">A pergunta certa</h2>
             <p class="text-xl text-brand-secondary mb-10 font-light">
                 A pergunta não é "o Natal é pecado?".<br>
                 A pergunta certa é: <strong>O que a Bíblia realmente diz — e o que ela nunca disse?</strong>
             </p>
+
+            <div class="bg-white/5 p-8 rounded border border-white/10 backdrop-blur-sm">
+                <p class="text-lg mb-6">Esse estudo foi criado para cristãos que:</p>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-brand-accent p-2 rounded-full mb-3 text-brand-primary"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+                        <span class="font-medium">Não querem brigar</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-brand-accent p-2 rounded-full mb-3 text-brand-primary"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+                        <span class="font-medium">Não querem atacar</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-brand-accent p-2 rounded-full mb-3 text-brand-primary"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+                        <span class="font-medium">Querem base bíblica</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Seção 4: O que você vai descobrir (Imagem: O que você vai descobrir.png) -->
+    <!-- Seção 4: O que você vai descobrir -->
     <section class="py-20 bg-brand-bg">
         <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2">
-                <!-- IMAGEM DESCOBERTA -->
-                <img src="assets/O que você vai descobrir.png" alt="O que você vai descobrir sobre o Natal" class="rounded shadow-book border border-gray-200 w-full" onerror="this.onerror=null;this.src='https://placehold.co/500x600/631818/F3E5AB?text=Erro:+assets/O+que+você+vai+descobrir.png';">
+                <!-- Imagem: O que você vai descobrir.png -->
+                <img src="assets/O que você vai descobrir.png" alt="O que você vai descobrir" class="rounded shadow-book border border-gray-200 w-full" onerror="this.style.display='none'; alert('Erro: Imagem assets/O que você vai descobrir.png não encontrada.');">
             </div>
             <div class="w-full md:w-1/2">
                 <h3 class="font-serif text-3xl font-bold text-brand-text mb-6">O que você vai descobrir:</h3>
@@ -190,14 +243,22 @@
                     </li>
                     <li class="flex items-start gap-3">
                         <svg class="w-6 h-6 text-brand-primary mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <span class="text-gray-700"><strong>Versículos polêmicos explicados</strong> sem distorção.</span>
+                        <span class="text-gray-700"><strong>Versículos polêmicos explicados</strong> sem distorção (Jeremias 10, etc).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-brand-primary mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span class="text-gray-700">Como ter paz espiritual mesmo em meio à controvérsia.</span>
                     </li>
                 </ul>
+                <div class="mt-8 p-4 bg-white border border-brand-secondary rounded">
+                    <p class="text-brand-primary font-serif font-bold text-lg">💡 Resultado:</p>
+                    <p class="text-gray-600">Clareza, segurança e consciência tranquila diante de Deus.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção: O Pacote Completo (Imagens: Natalsemculpa, Comolidar, Comoviver, 10 respostas) -->
+    <!-- Seção: O Pacote Completo (Empilhamento com Imagens) -->
     <section class="py-20 bg-white border-b border-gray-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -205,36 +266,39 @@
                 <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-text mt-2 mb-4">
                     Coleção "Natal Sem Culpa"
                 </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Entender que não é pecado é o primeiro passo. O segundo é saber lidar com a pressão religiosa e viver sua fé com alegria.
+                </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
                 <!-- Item 1: Natalsemculpa.png -->
                 <div class="bg-brand-bg p-4 rounded border border-gray-200 hover:border-brand-primary transition duration-300 flex flex-col h-full">
-                    <img src="assets/Natalsemculpa.png" alt="Capa Natal é Pecado" class="w-full h-auto mb-4 rounded shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/300x400/631818/F3E5AB?text=Erro:+assets/Natalsemculpa.png';">
+                    <img src="assets/Natalsemculpa.png" alt="Capa Natal é Pecado" class="w-full h-auto mb-4 rounded shadow-sm" onerror="this.style.display='none';">
                     <span class="text-xs font-bold text-gray-400 uppercase">PDF #1</span>
                     <h4 class="font-serif text-lg font-bold text-brand-primary mt-2 mb-2">Natal é Pecado?</h4>
-                    <p class="text-sm text-gray-600">O estudo base. Base bíblica, contexto histórico e versículos explicados.</p>
+                    <p class="text-sm text-gray-600">O estudo base. Base bíblica, contexto histórico e versículos explicados para te dar paz.</p>
                 </div>
                 <!-- Item 2: Comolidar.png -->
                 <div class="bg-brand-bg p-4 rounded border border-gray-200 hover:border-brand-primary transition duration-300 flex flex-col h-full">
-                    <img src="assets/Comolidar.png" alt="Capa Como Lidar" class="w-full h-auto mb-4 rounded shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/300x400/631818/F3E5AB?text=Erro:+assets/Comolidar.png';">
+                    <img src="assets/Comolidar.png" alt="Capa Como Lidar" class="w-full h-auto mb-4 rounded shadow-sm" onerror="this.style.display='none';">
                     <span class="text-xs font-bold text-gray-400 uppercase">PDF #2</span>
                     <h4 class="font-serif text-lg font-bold text-brand-primary mt-2 mb-2">Como lidar com julgamentos religiosos</h4>
-                    <p class="text-sm text-gray-600">Aprenda a se blindar emocionalmente e responder sem brigar.</p>
+                    <p class="text-sm text-gray-600">Aprenda a se blindar emocionalmente, identificar manipulação e responder sem brigar.</p>
                 </div>
                 <!-- Item 3: Comoviver.png -->
                 <div class="bg-brand-bg p-4 rounded border border-gray-200 hover:border-brand-primary transition duration-300 flex flex-col h-full">
-                    <img src="assets/Comoviver.png" alt="Capa Como Viver" class="w-full h-auto mb-4 rounded shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/300x400/631818/F3E5AB?text=Erro:+assets/Comoviver.png';">
+                    <img src="assets/Comoviver.png" alt="Capa Como Viver" class="w-full h-auto mb-4 rounded shadow-sm" onerror="this.style.display='none';">
                     <span class="text-xs font-bold text-gray-400 uppercase">PDF #3</span>
                     <h4 class="font-serif text-lg font-bold text-brand-primary mt-2 mb-2">Como viver a fé com alegria</h4>
-                    <p class="text-sm text-gray-600">Como parar de viver com medo de errar o tempo todo.</p>
+                    <p class="text-sm text-gray-600">Como parar de viver com medo de errar o tempo todo e celebrar datas com profundidade.</p>
                 </div>
-                <!-- Item 4: 10 respostas.png -->
+                <!-- Bonus: 10 respostas.png -->
                 <div class="bg-brand-primary text-white p-4 rounded shadow-lg transform md:-translate-y-2 flex flex-col h-full">
-                    <img src="assets/10 respostas.png" alt="Capa Bônus" class="w-full h-auto mb-4 rounded shadow-sm border border-white/20" onerror="this.onerror=null;this.src='https://placehold.co/300x400/B8860B/FFFFFF?text=Erro:+assets/10+respostas.png';">
+                    <img src="assets/10 respostas.png" alt="Capa Bônus" class="w-full h-auto mb-4 rounded shadow-sm border border-white/20" onerror="this.style.display='none';">
                     <span class="text-xs font-bold text-brand-accent uppercase">🎁 Bônus Exclusivo</span>
                     <h4 class="font-serif text-lg font-bold mt-2 mb-2">10 Respostas Bíblicas Para Calar o Legalismo</h4>
-                    <p class="text-sm text-brand-secondary">Respostas curtas, firmes e bíblicas.</p>
+                    <p class="text-sm text-brand-secondary">Respostas curtas, firmes e bíblicas para calar o legalismo sem precisar entrar em discussão.</p>
                 </div>
             </div>
         </div>
@@ -249,29 +313,37 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
-                <!-- Card 1 -->
+                
+                <!-- Card 1: Básico (Isca) -->
                 <div id="oferta-inicial" class="bg-white rounded p-8 shadow-sm border border-gray-200 hover:shadow-md transition flex flex-col">
                     <h3 class="font-serif text-2xl font-bold text-gray-700">Estudo Básico</h3>
                     <p class="text-sm text-gray-500 mt-2 mb-6">Para tirar a dúvida teológica imediata.</p>
+                    
                     <div class="flex items-baseline gap-2 mb-6">
                         <span class="text-4xl font-bold text-brand-text">R$ 19,90</span>
                     </div>
+
                     <ul class="space-y-3 mb-8 flex-1">
                         <li class="flex items-center gap-2 text-sm text-gray-600"><span class="text-brand-primary">✓</span> PDF: Natal é Pecado?</li>
                         <li class="flex items-center gap-2 text-sm text-gray-600"><span class="text-brand-primary">✓</span> Análise dos versículos</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="text-brand-primary">✓</span> Leitura rápida e direta</li>
                     </ul>
+
                     <a href="https://pay.kiwify.com.br/NDqxMkX" class="block w-full py-4 rounded border border-brand-primary text-brand-primary font-bold text-center hover:bg-brand-primary hover:text-white transition uppercase text-sm tracking-wide">
                         Quero apenas o Estudo
                     </a>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Card 2: Bundle (Upsell/Principal) -->
                 <div id="oferta-principal" class="bg-white rounded p-8 shadow-book border-2 border-brand-primary relative transform md:-translate-y-4 flex flex-col">
+                    <!-- Badge -->
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-primary text-white px-4 py-1 rounded-sm text-xs font-bold uppercase tracking-wider shadow-sm">
                         Recomendado
                     </div>
+
                     <h3 class="font-serif text-2xl font-bold text-brand-primary">Coleção Completa</h3>
                     <p class="text-sm text-gray-500 mt-2 mb-6">Para viver a fé sem medo e sem culpa.</p>
+                    
                     <div class="flex items-baseline gap-2 mb-2">
                         <span class="text-sm text-gray-400 line-through">R$ 97,00</span>
                         <span class="text-5xl font-bold text-brand-primary">R$ 47,70</span>
@@ -281,21 +353,31 @@
                     <div class="space-y-4 mb-8 flex-1">
                         <div class="flex gap-3">
                             <div class="mt-1"><svg class="w-4 h-4 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-                            <div><strong class="block text-gray-800 text-sm">PDF 1: Natal é Pecado?</strong></div>
+                            <div>
+                                <strong class="block text-gray-800 text-sm">PDF 1: Natal é Pecado?</strong>
+                            </div>
                         </div>
                         <div class="flex gap-3">
                             <div class="mt-1"><svg class="w-4 h-4 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-                            <div><strong class="block text-gray-800 text-sm">PDF 2: Como lidar com julgamentos</strong></div>
+                            <div>
+                                <strong class="block text-gray-800 text-sm">PDF 2: Como lidar com julgamentos religiosos sem perder a fé (nem a paz)</strong>
+                                <span class="text-xs text-gray-500">Blinde-se contra o legalismo.</span>
+                            </div>
                         </div>
                         <div class="flex gap-3">
                             <div class="mt-1"><svg class="w-4 h-4 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-                            <div><strong class="block text-gray-800 text-sm">PDF 3: Como viver a fé com alegria</strong></div>
+                            <div>
+                                <strong class="block text-gray-800 text-sm">PDF 3: Como viver a fé com alegria todos os dias (sem culpa e sem legalismo)</strong>
+                            </div>
                         </div>
                         <div class="flex gap-3">
                             <div class="mt-1"><svg class="w-4 h-4 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-                            <div><strong class="block text-brand-accent text-sm">BÔNUS: 10 Respostas Bíblicas</strong></div>
+                            <div>
+                                <strong class="block text-brand-accent text-sm">BÔNUS: 10 Respostas Bíblicas Para Calar o Legalismo (sem briga)</strong>
+                            </div>
                         </div>
                     </div>
+
                     <a href="https://pay.kiwify.com.br/IJtF4lt" class="btn-pulse block w-full py-4 rounded bg-brand-primary text-white font-bold text-center shadow-lg hover:bg-brand-text transition uppercase text-sm tracking-wide">
                         Quero o Pacote Completo
                     </a>
@@ -316,19 +398,36 @@
                 <details class="group bg-brand-bg rounded border border-gray-200 cursor-pointer">
                     <summary class="flex justify-between items-center p-5 font-medium text-brand-text">
                         É um livro físico?
-                        <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
                     </summary>
                     <div class="text-gray-600 px-5 pb-5 leading-relaxed">
-                        Não, todo o material é digital (PDF).
+                        Não, todo o material é digital (PDF). Você recebe o acesso por e-mail imediatamente após a compra e pode ler no celular, tablet ou computador.
                     </div>
                 </details>
+                
                 <details class="group bg-brand-bg rounded border border-gray-200 cursor-pointer">
                     <summary class="flex justify-between items-center p-5 font-medium text-brand-text">
                         Esse estudo defende o Natal ou é contra?
-                        <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
                     </summary>
                     <div class="text-gray-600 px-5 pb-5 leading-relaxed">
-                        O estudo analisa o que a Bíblia diz, sem defender festas ou criar proibições extras.
+                        O estudo analisa o que a Bíblia diz. O objetivo não é defender uma festa, mas libertar a consciência cristã de proibições que não existem nas Escrituras.
+                    </div>
+                </details>
+
+                <details class="group bg-brand-bg rounded border border-gray-200 cursor-pointer">
+                    <summary class="flex justify-between items-center p-5 font-medium text-brand-text">
+                        Serve para quem quer debater na internet?
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 px-5 pb-5 leading-relaxed">
+                        Não. Este material foi feito para quem busca paz e clareza, não para quem quer brigar ou atacar outros irmãos.
                     </div>
                 </details>
             </div>
