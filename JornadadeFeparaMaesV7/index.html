@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7 Dias de Oração para Mães Ocupadas | Devocional Rápido</title>
+    <!-- TÍTULO -->
+    <title>MÉTODO 7V - Transforme Amor em Oração</title>
     
-    <!-- Google Fonts: Playfair Display (Títulos) + Inter (Texto) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuração do Tailwind para Cores Personalizadas -->
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Configuração de Cores -->
     <script>
         tailwind.config = {
             theme: {
@@ -24,500 +23,519 @@
                     },
                     colors: {
                         brand: {
-                            bg: '#FDFBF7', /* Fundo Creme Suave */
-                            primary: '#4A6C58', /* Verde Sálvia Escuro */
-                            secondary: '#CDE2D6', /* Verde Sálvia Claro */
-                            accent: '#E07A5F', /* Terracota (CTA) */
-                            accentHover: '#D6664A',
-                            text: '#2D3748',
-                            light: '#F7FAFC'
+                            pink: '#ec4899', 
+                            darkPink: '#be185d', 
+                            lightPink: '#fdf2f8', 
+                            lightYellow: '#fffbeb', 
+                            cream: '#fef3c7',       
+                            gold: '#d97706',        
+                            darkGold: '#b45309',    
                         }
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
-                        'glow': '0 0 20px rgba(224, 122, 95, 0.5)'
                     }
                 }
             }
         }
     </script>
 
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1131696225474131');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1131696225474131&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <style>
-        body {
-            background-color: #FDFBF7;
-            color: #2D3748;
-            scroll-behavior: smooth;
-        }
+        body { background-color: #fffdfa; color: #4a4a4a; }
         
-        .highlight-text {
-            background: linear-gradient(120deg, #CDE2D6 0%, #CDE2D6 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 35%;
-            background-position: 0 90%;
+        /* Botão Principal (Rosa - Jornada) */
+        .btn-primary {
+            background: linear-gradient(to right, #ec4899, #db2777);
+            box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.4);
+            transition: all 0.3s ease;
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(236, 72, 153, 0.5);
+            filter: brightness(1.1);
         }
 
-        @keyframes pulse-soft {
-            0% { box-shadow: 0 0 0 0 rgba(224, 122, 95, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(224, 122, 95, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(224, 122, 95, 0); }
+        /* Botão Secundário (Dourado - Desafio) */
+        .btn-secondary {
+            background-color: white;
+            border: 2px solid #d97706;
+            color: #d97706;
+            transition: all 0.3s ease;
         }
-        .btn-pulse {
-            animation: pulse-soft 2s infinite;
+        .btn-secondary:hover {
+            background-color: #fffbeb;
+            transform: translateY(-2px);
         }
 
-        details > summary {
-            list-style: none;
+        /* Cards com efeito de elevação */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        details > summary::-webkit-details-marker {
-            display: none;
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(217, 119, 6, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        details[open] summary ~ * {
-            animation: sweep .3s ease-in-out;
+
+        @keyframes gentle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
         }
-        @keyframes sweep {
-            0%    {opacity: 0; transform: translateY(-10px)}
-            100%  {opacity: 1; transform: translateY(0)}
-        }
-        
-        .cta-fixed {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            border-top: 1px solid #eee;
+        .animate-pulse-slow {
+            animation: gentle-pulse 3s infinite;
         }
     </style>
 </head>
-<body class="antialiased font-sans selection:bg-brand-secondary selection:text-brand-primary">
 
-    <!-- Header Minimalista -->
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-center md:justify-between items-center">
-            <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-                <span class="font-serif font-bold text-xl text-brand-primary tracking-tight">Mães de Oração</span>
+<body class="antialiased">
+
+    <!-- HERO SECTION -->
+    <section class="text-center pt-12 pb-16 md:pt-20 md:pb-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-4xl relative z-10">
+            
+            <!-- Badge Superior -->
+            <div class="mb-6">
+                <span class="bg-brand-lightPink text-brand-darkPink text-xs md:text-sm font-bold px-4 py-2 rounded-full uppercase tracking-widest border border-pink-100 shadow-sm">
+                    Para mães que amam com todo o coração
+                </span>
             </div>
-            <div class="hidden md:block text-sm font-medium text-gray-500">Guia Devocional Prático</div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-12 pb-20 overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-brand-secondary/30 to-brand-bg -z-10"></div>
-        
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2 text-center md:text-left z-10">
-                <div class="inline-block px-4 py-1 mb-6 rounded-full bg-brand-secondary/50 text-brand-primary font-semibold text-sm tracking-wide uppercase">
-                    Para mães que desejam paz
-                </div>
-                <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.2] mb-6">
-                    Encontre paz em <span class="highlight-text px-1">10 minutos</span> por dia — e coloque a vida dos seus filhos nas mãos de Deus.
-                </h1>
-                <p class="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
-                    Um método simples, curto e profundamente espiritual para mães que desejam orar com propósito, mas não conseguem parar nem por 5 minutos.
-                </p>
+            <!-- Imagem Principal (Opcional no Hero, mas bom para contexto) -->
+            <div class="mb-8 flex justify-center">
+                 <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-pink-200 to-brand-cream rounded-full blur opacity-60"></div>
+                    <img src="assets/7-versiculos-pequeno.png" alt="Método 7V" class="relative h-40 md:h-56 object-contain drop-shadow-xl transform hover:scale-105 transition duration-500">
+                 </div>
+            </div>
+
+            <!-- HEADLINE -->
+            <h1 class="font-serif text-3xl md:text-5xl font-bold mb-6 leading-tight text-slate-900">
+                Você é a primeira pessoa a sentir a existência de um filho — <br class="hidden md:block"/>
+                <span class="text-brand-pink">e cada momento de oração é um abraço eterno na alma dele.</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+                Imagine transformar seu amor em oração poderosa. Descobrir que 10 minutos por dia são suficientes para envolver seus filhos na presença de Deus. E sentir a paz de saber que eles estão cobertos, protegidos e abençoados.
+            </p>
+
+            <!-- CTAs -->
+            <div class="flex flex-col items-center gap-6">
+                <a href="#ofertas" class="btn-primary animate-pulse-slow w-full md:w-auto px-10 py-4 rounded-full font-bold text-lg md:text-xl tracking-wide shadow-xl uppercase">
+                    QUERO COMEÇAR ESSA JORNADA
+                </a>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#oferta-principal" class="bg-gradient-to-r from-brand-accent to-brand-accentHover text-white font-bold py-4 px-8 rounded-xl shadow-glow transform transition hover:-translate-y-1 hover:shadow-lg text-center">
-                        QUERO COMEÇAR AGORA
-                    </a>
-                    <a href="#oferta-inicial" class="flex items-center justify-center gap-2 text-brand-primary font-semibold py-4 px-6 hover:bg-brand-secondary/30 rounded-xl transition">
-                        <span>Ver opção de R$9,90</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </a>
-                </div>
-                
-                <div class="mt-8 flex items-center justify-center md:justify-start gap-4 text-sm text-gray-500">
-                    <div class="flex -space-x-2">
-                        <div class="w-8 h-8 rounded-full bg-gray-300 border-2 border-white"></div>
-                        <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-white"></div>
-                        <div class="w-8 h-8 rounded-full bg-gray-300 border-2 border-white"></div>
-                    </div>
-                    <p>Junte-se a +3.000 mães abençoadas</p>
-                </div>
+                <a href="#oferta-entrada" class="text-brand-gold font-bold hover:text-brand-darkGold transition border-b border-brand-gold pb-0.5 text-sm uppercase tracking-wide">
+                    Ver opção de R$ 9,90
+                </a>
             </div>
 
-            <div class="w-full md:w-1/2 relative">
-                <div class="absolute inset-0 bg-brand-secondary rounded-full filter blur-3xl opacity-30 transform translate-y-10"></div>
-                <img src="assets/7-versiculos-pequeno.png" alt="Capa do Guia" class="relative z-10 w-3/4 mx-auto md:w-full max-w-md rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500" onerror="this.onerror=null;this.src='https://placehold.co/400x500/E8F5E9/4A6C58?text=Capa+do+Livro';">
-            </div>
+            <!-- Prova Social -->
+            <p class="mt-8 text-sm text-slate-500 flex items-center justify-center gap-2">
+                <span class="text-brand-pink">❤</span> Junte-se a +3.000 mães que já transformaram amor em oração
+            </p>
         </div>
     </section>
 
-    <!-- Seção A Dor e o Desejo -->
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="font-serif text-3xl md:text-4xl text-center font-bold text-gray-800 mb-8">
-                Você ama seus filhos profundamente...<br>
-                <span class="text-brand-accent">Mas a rotina não para.</span>
+    <!-- SEÇÃO: O AMOR QUE TRANSBORDA -->
+    <section class="my-16 bg-white py-16">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="font-serif text-3xl font-bold text-slate-800 mb-6">
+                Você ama seus filhos com uma intensidade que nem palavras conseguem expressar.
             </h2>
             
-            <div class="text-lg text-gray-700 leading-relaxed space-y-6 text-center max-w-3xl mx-auto mb-12">
-                <p>Entre trabalho, casa, estudos, cansaço e urgências que nunca acabam, a oração — que deveria ser seu refúgio — vira algo que você faz “quando der”.</p>
-                <p class="font-medium text-gray-900">E quando não dá, vem o incômodo no peito: <br><em>“Será que estou fazendo o suficiente espiritualmente por eles?”</em></p>
-                <p>Muitas mães carregam essa culpa em silêncio. Mas a verdade é:</p>
-                <div class="bg-brand-bg p-6 rounded-xl border border-brand-secondary/50 inline-block text-left">
-                    <p class="mb-2">👉 Deus nunca exigiu horas de oração… apenas sinceridade e constância.</p>
-                    <p>👉 E você pode orar pelos seus filhos de forma poderosa, mesmo com pouco tempo.</p>
-                </div>
+            <div class="text-lg text-slate-600 leading-relaxed space-y-6 text-left md:text-center">
+                <p>
+                    Você conhece cada detalhe deles. Os medos que ninguém mais vê. Os sonhos que brilham nos olhos. Os talentos únicos que florescem a cada dia.
+                    Eles são parte do seu próprio ser. Você os ama mais que a própria vida.
+                </p>
+                <p class="font-medium text-brand-darkPink">
+                    E esse amor imenso merece uma expressão igualmente poderosa.
+                </p>
+                <p>
+                    A oração é a linguagem mais bonita do amor de mãe. É o abraço que alcança onde suas mãos não chegam. É a proteção que vai além do que você pode controlar.
+                </p>
+                <p>
+                    Mas você já sentiu isso? Aquele desejo profundo de fazer mais pelos seus filhos espiritualmente... de envolvê-los em algo maior, mais duradouro, mais eterno?
+                </p>
             </div>
 
-            <!-- Micro-história -->
-            <div class="bg-brand-primary/5 p-8 md:p-10 rounded-2xl border-l-4 border-brand-accent shadow-sm relative mx-auto max-w-3xl">
-                <div class="absolute -top-6 -left-2 text-6xl text-brand-accent opacity-30 font-serif">“</div>
-                <p class="text-lg text-gray-700 leading-relaxed italic mb-4">
-                    Carla, mãe de 3, dizia sempre: <strong>“Eu quero orar mais. Eu preciso orar mais. Mas eu não consigo.”</strong>
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed italic mb-4">
-                    Quando ela começou o Desafio de 7 Dias, dedicando só 10 minutos por dia, algo mudou. Ela passou a dormir mais leve, menos ansiosa e com a sensação real de que seus filhos estavam cobertos diante de Deus.
-                </p>
-                <p class="text-brand-primary font-bold not-italic mt-4">
-                    E essa é a mesma transformação que você pode viver hoje.
-                </p>
+            <div class="bg-brand-lightYellow p-8 rounded-3xl border border-brand-cream mt-10 text-left">
+                <h3 class="font-bold text-brand-gold mb-4 text-center uppercase tracking-wide text-sm">Você anseia por:</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start"><span class="text-brand-gold mr-3">✨</span> Momentos sagrados de conexão com Deus pelos seus filhos</li>
+                    <li class="flex items-start"><span class="text-brand-gold mr-3">✨</span> Uma forma tangível de expressar todo esse amor em oração</li>
+                    <li class="flex items-start"><span class="text-brand-gold mr-3">✨</span> A certeza de que está fazendo algo significativo por eles todos os dias</li>
+                    <li class="flex items-start"><span class="text-brand-gold mr-3">✨</span> Paz interior de saber que eles estão nas mãos de Deus</li>
+                </ul>
+            </div>
+
+            <div class="mt-10 bg-pink-50 p-6 rounded-2xl border border-pink-100">
+                <p class="font-bold text-brand-darkPink mb-4">A boa notícia é:</p>
+                <ul class="space-y-2 text-sm md:text-base text-slate-700">
+                    <li>✨ Você não precisa de horas — apenas de um coração sincero</li>
+                    <li>✨ Deus honra o amor transformado em oração, mesmo quando é breve</li>
+                    <li class="font-bold">✨ A oração de uma mãe é o maior ato de amor que um coração pode oferecer.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Seção Mecanismo Único (IMAGEM ATUALIZADA AQUI) -->
-    <section class="py-20 bg-brand-primary text-white relative overflow-hidden">
-        <svg class="absolute top-0 left-0 w-full h-full opacity-10" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)" /></svg>
-
-        <div class="max-w-5xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-12">
-                <span class="uppercase tracking-widest text-sm font-semibold text-brand-secondary">O Segredo</span>
-                <h2 class="font-serif text-3xl md:text-5xl font-bold mt-2">O Método 7V</h2>
-                <p class="mt-4 text-xl text-brand-secondary font-light">O que faz esse guia funcionar tão rápido?</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <p class="text-lg">O Método 7V reúne:</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-4 bg-white/10 p-3 rounded-lg">
-                            <div class="text-brand-accent"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
-                            <span class="font-semibold">7 versículos cuidadosamente selecionados</span>
-                        </li>
-                        <li class="flex items-center gap-4 bg-white/10 p-3 rounded-lg">
-                            <div class="text-brand-accent"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
-                            <span class="font-semibold">7 orações curtas e poderosas</span>
-                        </li>
-                        <li class="flex items-center gap-4 bg-white/10 p-3 rounded-lg">
-                            <div class="text-brand-accent"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
-                            <span class="font-semibold">Devocionais de 3 minutos</span>
-                        </li>
-                        <li class="flex items-center gap-4 bg-white/10 p-3 rounded-lg">
-                            <div class="text-brand-accent"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
-                            <span class="font-semibold">Aplicações práticas para qualquer rotina</span>
-                        </li>
-                    </ul>
-                    <p class="text-brand-secondary italic border-l-2 border-brand-accent pl-4 mt-6">
-                        "Nada complicado. Nada que exija tempo que você não tem. Apenas um caminho simples para mães que desejam reconectar a fé com a maternidade."
-                    </p>
-                </div>
-                <div class="relative">
-                    <div class="absolute inset-0 bg-white/10 rounded-2xl transform rotate-3"></div>
-                    <!-- IMAGEM ALTERADA PARA MAE-FILHOS-BIBLIA.PNG -->
-                    <img src="assets/mae-filhos-biblia.png" alt="Mãe lendo a Bíblia com os filhos" class="relative rounded-2xl shadow-2xl border-4 border-white/20 w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CDE2D6/4A6C58?text=Mãe+e+Filhos';">
-                </div>
-            </div>
+    <!-- MICRO-HISTÓRIA -->
+    <section class="my-16 container mx-auto px-4 max-w-4xl">
+        <div class="bg-white border-l-4 border-brand-gold shadow-lg rounded-r-2xl p-8 md:p-12 italic text-slate-600 relative">
+            <div class="text-6xl text-brand-gold opacity-20 absolute top-4 left-4">“</div>
+            <p class="mb-4 text-lg">
+                Ana, mãe de 2, sempre soube que queria orar pelos filhos. 'Eu amo tanto eles que às vezes meu peito até dói. E eu sempre quis transformar esse amor em algo mais... em proteção eterna.'
+            </p>
+            <p class="mb-4">
+                Quando ela descobriu o Desafio de 7 Dias, tudo mudou. Cada manhã, 10 minutos eram suficientes para ela sentir que estava fazendo algo profundo e eterno por quem mais amava.
+            </p>
+            <p class="mb-6">
+                'Agora eu durmo em paz. Porque sei que coloquei meus filhos nas mãos de Deus. E não há lugar mais seguro no universo.'
+            </p>
+            <p class="font-bold text-brand-darkPink not-italic">
+                Essa mesma paz está ao seu alcance hoje.
+            </p>
         </div>
     </section>
 
-    <!-- O que você vai receber (Empilhamento) -->
-    <section class="py-20 bg-white border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
+    <!-- O MECANISMO ÚNICO (MÉTODO 7V) -->
+    <section class="my-20 bg-brand-lightPink py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
             <div class="text-center mb-12">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Veja o que você vai receber na Jornada Completa:
+                <span class="bg-white text-brand-pink text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-sm">O Presente Perfeito</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-darkPink mb-2">
+                    O Método 7V
                 </h2>
-                <p class="text-gray-600 text-lg">Tudo pensado para mães ocupadas que querem viver a fé de forma leve.</p>
+                <p class="text-slate-600 max-w-2xl mx-auto">
+                    Como transformar amor em oração poderosa em apenas 10 minutos.
+                    Mãe, você é quem mais conhece seus filhos. Quando você ora, coisas eternas acontecem.
+                </p>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                <!-- Imagens dos Produtos -->
-                <div class="w-full md:w-1/2 flex justify-center relative">
-                    <div class="absolute inset-0 bg-brand-secondary/30 rounded-full filter blur-3xl transform scale-90"></div>
-                    <div class="relative z-10 flex flex-col items-center -space-y-10">
-                        <img src="assets/maes-na-palavra-pequeno.png" alt="Ebook Mães na Palavra" class="w-48 rounded-xl shadow-lg transform -translate-x-12 rotate-[-5deg] z-10" onerror="this.onerror=null;this.src='https://placehold.co/200x250/CDE2D6/4A6C58?text=Mães+na+Palavra';">
-                        <img src="assets/30-dias-poder-pequeno.png" alt="Ebook 30 Dias" class="w-52 rounded-xl shadow-xl z-20" onerror="this.onerror=null;this.src='https://placehold.co/200x250/4A6C58/ffffff?text=30+Dias';">
-                        <img src="assets/7-versiculos-pequeno.png" alt="Ebook 7 Versículos" class="w-48 rounded-xl shadow-lg transform translate-x-12 rotate-[5deg] z-30" onerror="this.onerror=null;this.src='https://placehold.co/200x250/E07A5F/ffffff?text=7+Versículos';">
-                    </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                    <div class="text-3xl mb-3">📖</div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-2">7 Versículos Escolhidos</h3>
+                    <p class="text-xs text-slate-500">Orações extraídas da Bíblia para proteção, saúde e propósito.</p>
                 </div>
-
-                <!-- Lista de Benefícios -->
-                <div class="w-full md:w-1/2">
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-4 p-4 bg-brand-bg rounded-xl border border-brand-secondary/30">
-                            <div class="bg-brand-secondary text-brand-primary p-2 rounded-full shrink-0">
-                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </div>
-                            <div>
-                                <strong class="block text-gray-900 text-lg mb-1">Guia Completo de Estudo Bíblico</strong>
-                                <p class="text-gray-600 text-sm">Para aprender a mergulhar na Palavra mesmo com pouco tempo.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4 p-4 bg-brand-bg rounded-xl border border-brand-secondary/30">
-                            <div class="bg-brand-secondary text-brand-primary p-2 rounded-full shrink-0">
-                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </div>
-                            <div>
-                                <strong class="block text-gray-900 text-lg mb-1">Devocional de 30 Dias</strong>
-                                <p class="text-gray-600 text-sm">Orações curtas, profundas e transformadoras que mudam a atmosfera da sua casa.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4 p-4 bg-brand-bg rounded-xl border border-brand-secondary/30">
-                            <div class="bg-brand-secondary text-brand-primary p-2 rounded-full shrink-0">
-                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </div>
-                            <div>
-                                <strong class="block text-gray-900 text-lg mb-1">Guia Essencial de 7 Versículos</strong>
-                                <p class="text-gray-600 text-sm">A forma mais simples, rápida e prática de começar sua vida de oração pelos filhos hoje mesmo.</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                    <div class="text-3xl mb-3">💖</div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-2">7 Orações do Coração</h3>
+                    <p class="text-xs text-slate-500">Palavras prontas para personalizar com o nome dos seus filhos.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                    <div class="text-3xl mb-3">🔥</div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-2">Devocionais de 3 min</h3>
+                    <p class="text-xs text-slate-500">Reflexão curta e profunda para renovar suas forças.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+                    <div class="text-3xl mb-3">☕</div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-2">Prático na Rotina</h3>
+                    <p class="text-xs text-slate-500">Na fila, no banho ou no café. Sempre há espaço para o amor.</p>
                 </div>
             </div>
-            
-            <!-- Benefício Principal Resumido -->
-            <div class="mt-12 text-center">
-                <p class="text-xl font-medium text-brand-primary">
-                    💛 Em menos de 10 minutos, você encontra paz — e seus filhos recebem cobertura espiritual todos os dias.
+
+            <p class="text-center text-slate-600 italic max-w-3xl mx-auto font-serif text-lg">
+                "Nada complicado. Nada que exija sacrifício que você não pode fazer. Apenas um caminho bonito e simples para mães que desejam abençoar seus filhos todos os dias."
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: O QUE VOCÊ VAI RECEBER (VITRINE 3 GUIAS) -->
+    <section class="my-20 container mx-auto px-4 max-w-5xl">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Veja o presente que você vai dar para si mesma e seus filhos
+            </h2>
+            <p class="text-slate-600">Três ferramentas poderosas para transformar amor em bênção diária.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Produto 1: Estudo -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-50 card-hover flex flex-col items-center text-center">
+                <div class="bg-brand-lightYellow w-full h-48 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                    <img src="assets/maes-na-palavra-pequeno.png" class="h-40 shadow-md object-contain" alt="Capa Mães na Palavra">
+                </div>
+                <h3 class="font-serif text-lg font-bold text-brand-gold mb-3">Guia "Mães na Palavra"</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Aprenda a mergulhar na Palavra mesmo com pouco tempo. Descubra promessas perfeitas para seus filhos e construa uma fé vibrante.
+                </p>
+            </div>
+
+            <!-- Produto 2: Devocional -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-50 card-hover flex flex-col items-center text-center">
+                <div class="bg-brand-lightPink w-full h-48 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                    <img src="assets/30-dias-poder-pequeno.png" class="h-40 shadow-md object-contain" alt="Capa 30 Dias">
+                </div>
+                <h3 class="font-serif text-lg font-bold text-brand-darkPink mb-3">Devocional "O Poder da Oração"</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    30 dias de orações profundas sobre proteção, propósito, equilíbrio emocional e futuro brilhante. Um manual de amor em oração.
+                </p>
+            </div>
+
+            <!-- Produto 3: Guia Essencial -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-50 card-hover flex flex-col items-center text-center">
+                <div class="bg-brand-lightPink w-full h-48 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                    <img src="assets/7-versiculos-pequeno.png" class="h-40 shadow-md object-contain" alt="Capa 7 Versículos">
+                </div>
+                <h3 class="font-serif text-lg font-bold text-brand-darkPink mb-3">Guia Essencial de 7 Versículos</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    O ponto de partida perfeito. Simples, rápido e transformador. Comece hoje mesmo a cobrir seus filhos com a Palavra.
                 </p>
             </div>
         </div>
+
+        <div class="mt-10 text-center bg-brand-lightYellow/50 p-4 rounded-xl border border-brand-cream">
+            <p class="font-bold text-brand-gold">💛 Em apenas 10 minutos por dia, você transforma amor em oração — e seus filhos recebem bênçãos eternas.</p>
+        </div>
     </section>
 
-    <!-- Seção Oferta (Pricing) -->
-    <section id="ofertas-do-dia" class="py-24 bg-brand-bg">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="font-serif text-3xl md:text-5xl font-bold text-gray-900 mb-4">Escolha seu ponto de partida</h2>
-                <p class="text-gray-600">Comece pequeno ou mergulhe fundo. O importante é começar.</p>
+    <!-- TRANSFORMAÇÕES -->
+    <section class="my-20 container mx-auto px-4 max-w-4xl">
+        <h2 class="font-serif text-3xl font-bold text-center mb-10 text-slate-800">O que acontece quando amor se transforma em oração</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex gap-4">
+                <span class="text-2xl text-brand-pink">🕊️</span>
+                <div>
+                    <h4 class="font-bold text-slate-800">Paz Profunda no Coração</h4>
+                    <p class="text-sm text-slate-600">Durma melhor sabendo que você fez o melhor por eles hoje.</p>
+                </div>
             </div>
+            <div class="flex gap-4">
+                <span class="text-2xl text-brand-pink">💞</span>
+                <div>
+                    <h4 class="font-bold text-slate-800">Conexão Mais Profunda</h4>
+                    <p class="text-sm text-slate-600">Você se torna mais presente, atenta e conectada aos detalhes da vida deles.</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <span class="text-2xl text-brand-pink">⚡</span>
+                <div>
+                    <h4 class="font-bold text-slate-800">Força Renovada</h4>
+                    <p class="text-sm text-slate-600">Sinta energia divina te fortalecendo para ser a mãe que você deseja ser.</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <span class="text-2xl text-brand-pink">🌟</span>
+                <div>
+                    <h4 class="font-bold text-slate-800">Vínculo Eterno</h4>
+                    <p class="text-sm text-slate-600">Você está construindo memórias espirituais que eles carregarão para sempre.</p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-center mt-10 text-brand-darkPink font-serif italic text-lg">
+            "Cada palavra lançada em fé jamais se perde — ela floresce no tempo de Deus."
+        </p>
+    </section>
 
-            <div class="grid md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+    <!-- OFERTAS -->
+    <section id="ofertas" class="my-24 container mx-auto px-4 max-w-5xl">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-800 mb-4">Escolha como começar essa jornada de amor</h2>
+            <p class="text-slate-600">Seja qual for sua escolha, você está dando um presente eterno para seus filhos.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+            
+            <!-- OFERTA 1: DESAFIO (ENTRADA) -->
+            <div id="oferta-entrada" class="md:w-1/3 bg-white rounded-3xl p-8 border border-slate-200 shadow-lg flex flex-col relative">
+                <h3 class="font-serif text-2xl font-bold text-slate-800 mb-2">Desafio 7 Dias</h3>
+                <p class="text-xs text-slate-500 mb-6">Perfeito para começar hoje mesmo.</p>
                 
-                <!-- Card 1: Básico -->
-                <div id="oferta-inicial" class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col">
-                    <h3 class="font-serif text-2xl font-bold text-gray-800">Desafio 7 Dias</h3>
-                    <p class="text-sm text-gray-500 mt-2 mb-6">Perfeito para quem quer começar hoje, sem complicação.</p>
-                    
-                    <div class="flex items-baseline gap-2 mb-6">
-                        <span class="text-sm text-gray-400 line-through">R$ 19,90</span>
-                        <span class="text-4xl font-bold text-brand-primary">R$ 9,90</span>
-                    </div>
+                <div class="mb-6">
+                    <span class="text-slate-400 line-through text-sm">R$ 19,90</span>
+                    <span class="block text-3xl font-bold text-brand-gold">R$ 9,90</span>
+                </div>
 
-                    <ul class="space-y-3 mb-8 flex-1">
-                        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="text-brand-primary">✓</span> O Método 7V</li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="text-brand-primary">✓</span> 7 devocionais guiados</li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="text-brand-primary">✓</span> Oração diária de 3 minutos</li>
-                        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="text-brand-primary">✓</span> Ideal para mães que precisam de algo imediato</li>
+                <ul class="space-y-3 text-sm text-slate-600 mb-8 flex-1">
+                    <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> O Método 7V completo</li>
+                    <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> 7 devocionais que aquecem</li>
+                    <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Orações diárias prontas</li>
+                    <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Ideal para o primeiro passo</li>
+                </ul>
+
+                <a href="https://pay.kiwify.com.br/O5vy5bs" class="btn-secondary w-full py-3 rounded-xl font-bold text-sm uppercase text-center shadow-sm">
+                    Quero dar esse presente
+                </a>
+            </div>
+
+            <!-- OFERTA 2: JORNADA (PRINCIPAL) -->
+            <div class="md:w-1/2 bg-white rounded-3xl p-8 border-4 border-brand-lightPink shadow-2xl flex flex-col relative transform md:-translate-y-4">
+                <div class="absolute top-0 right-0 bg-brand-pink text-white text-xs font-bold px-4 py-2 rounded-bl-2xl uppercase tracking-widest">⭐ Escolha de Milhares</div>
+                
+                <h3 class="font-serif text-3xl font-bold text-brand-darkPink mb-2">Jornada Completa</h3>
+                <p class="text-sm text-slate-500 mb-6">Para você que deseja fazer da oração um presente diário.</p>
+                
+                <div class="mb-6 flex items-center gap-3">
+                    <div>
+                        <span class="text-slate-400 line-through text-sm">R$ 147,90</span>
+                        <span class="block text-4xl font-bold text-brand-darkPink">R$ 47,70</span>
+                    </div>
+                    <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">68% OFF</span>
+                </div>
+
+                <div class="bg-pink-50 rounded-xl p-4 mb-6">
+                    <p class="font-bold text-brand-darkPink text-sm mb-2 uppercase">Inclui os 3 Guias:</p>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="flex items-center"><span class="bg-white text-brand-pink rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mr-2">1</span> Guia Completo de Estudo Bíblico</li>
+                        <li class="flex items-center"><span class="bg-white text-brand-pink rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mr-2">2</span> Devocional de 30 Dias</li>
+                        <li class="flex items-center"><span class="bg-white text-brand-pink rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mr-2">3</span> Guia Essencial de 7 Versículos</li>
                     </ul>
-
-                    <a href="https://pay.kiwify.com.br/O5vy5bs" class="block w-full py-4 rounded-xl border-2 border-brand-primary text-brand-primary font-bold text-center hover:bg-brand-primary hover:text-white transition uppercase text-sm tracking-wide">
-                        QUERO COMEÇAR MEU DESAFIO POR R$9,90
-                    </a>
                 </div>
 
-                <!-- Card 2: Premium (Destaque) -->
-                <div id="oferta-principal" class="bg-white rounded-2xl p-8 shadow-soft border-2 border-brand-accent relative transform md:-translate-y-4 flex flex-col">
-                    <!-- Badge -->
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
-                        Mais Vendido
-                    </div>
-
-                    <h3 class="font-serif text-2xl font-bold text-gray-800">Jornada Completa</h3>
-                    <p class="text-sm text-gray-500 mt-2 mb-6">Se você deseja uma transformação real na sua rotina espiritual.</p>
-                    
-                    <div class="flex items-baseline gap-2 mb-2">
-                        <span class="text-sm text-gray-400 line-through">R$ 147,90</span>
-                        <span class="text-5xl font-bold text-brand-accent">R$ 47,70</span>
-                    </div>
-                    <p class="text-xs text-green-600 font-bold mb-6 bg-green-50 inline-block px-2 py-1 rounded">68% OFF HOJE</p>
-
-                    <div class="space-y-4 mb-8 flex-1">
-                        <div class="flex gap-3">
-                            <div class="mt-1 bg-brand-secondary/50 p-1 rounded-full h-fit"><svg class="w-3 h-3 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
-                            <div>
-                                <strong class="block text-gray-800 text-sm">Criar hábito e orar com constância</strong>
-                            </div>
-                        </div>
-                        <div class="flex gap-3">
-                            <div class="mt-1 bg-brand-secondary/50 p-1 rounded-full h-fit"><svg class="w-3 h-3 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
-                            <div>
-                                <strong class="block text-gray-800 text-sm">Fortalecer sua fé e sentir paz diária</strong>
-                            </div>
-                        </div>
-                        <div class="flex gap-3">
-                            <div class="mt-1 bg-brand-secondary/50 p-1 rounded-full h-fit"><svg class="w-3 h-3 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
-                            <div>
-                                <strong class="block text-gray-800 text-sm">Cobrir seus filhos espiritualmente todos os dias</strong>
-                            </div>
-                        </div>
-                        <p class="text-xs text-gray-500 italic mt-2">A solução mais completa para 30 dias de renovação.</p>
-                    </div>
-
-                    <a href="https://pay.kiwify.com.br/vRdyJoq" class="btn-pulse block w-full py-4 rounded-xl bg-gradient-to-r from-brand-accent to-brand-accentHover text-white font-bold text-center shadow-lg hover:shadow-xl transition uppercase text-sm tracking-wide">
-                        QUERO A JORNADA COMPLETA
-                    </a>
-                    <p class="text-center text-xs text-gray-400 mt-3 flex justify-center items-center gap-1">
-                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
-                        Compra Segura e Acesso Imediato
-                    </p>
+                <div class="space-y-2 mb-8 flex-1">
+                    <p class="text-sm text-slate-600 flex items-center"><span class="text-brand-gold mr-2">💛</span> Criar um hábito bonito de oração</p>
+                    <p class="text-sm text-slate-600 flex items-center"><span class="text-brand-gold mr-2">💛</span> Fortalecer a fé e viver em paz</p>
+                    <p class="text-sm text-slate-600 flex items-center"><span class="text-brand-gold mr-2">💛</span> Envolver os filhos em proteção</p>
                 </div>
+
+                <a href="https://pay.kiwify.com.br/vRdyJoq" class="btn-primary w-full py-4 rounded-xl font-bold text-lg uppercase text-center shadow-lg animate-pulse-slow">
+                    Quero Abençoar Meus Filhos
+                </a>
+                <p class="text-center text-xs text-slate-400 mt-3">🔒 Compra Segura e Acesso Imediato</p>
             </div>
         </div>
     </section>
 
-    <!-- Garantia -->
-    <section class="py-16 bg-white border-t border-gray-100">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <div class="w-16 h-16 bg-brand-secondary/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-gray-900 mb-4">Seu Risco é ZERO</h3>
-            <p class="text-gray-600 leading-relaxed">
-                Se em 7 dias você sentir que o material não te ajudou ou não encaixou na sua rotina, devolvemos 100% do valor. Sem perguntas, sem burocracia.
+    <!-- GARANTIA -->
+    <section class="my-16 container mx-auto px-4 max-w-3xl text-center">
+        <div class="bg-white rounded-3xl p-10 shadow-lg border border-pink-100">
+            <h3 class="font-serif text-2xl font-bold text-slate-800 mb-4">Sua Felicidade é Garantida</h3>
+            <p class="text-slate-600 mb-4">
+                Se em 7 dias você sentir que o material não tocou seu coração ou não se encaixou na sua rotina, devolvemos 100% do valor. Sem perguntas, sem burocracia.
+            </p>
+            <p class="font-bold text-brand-darkPink">
+                Acreditamos que você vai amar cada página — porque este guia foi feito com amor para mães que amam.
             </p>
         </div>
     </section>
 
-    <!-- CTA Final -->
-    <section class="py-16 bg-brand-bg text-center">
-        <div class="max-w-2xl mx-auto px-4">
-            <h3 class="font-serif text-3xl font-bold text-gray-900 mb-6">
-                Não deixe para amanhã o cuidado espiritual que seus filhos precisam hoje.
-            </h3>
-            <p class="text-lg text-gray-600 mb-8">
-                Dê o primeiro passo agora — Deus honra movimentos simples.
+    <!-- CTA FINAL -->
+    <section class="my-20 container mx-auto px-4 max-w-4xl text-center">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-800 mb-4">Seus filhos merecem o poder da sua oração</h2>
+        <p class="text-lg text-slate-600 mb-8">E você merece sentir a paz de saber que está fazendo algo eterno por eles.</p>
+        
+        <div class="bg-brand-lightYellow/50 p-8 rounded-3xl border border-brand-cream mb-10">
+            <p class="font-serif text-xl italic text-brand-gold mb-6">
+                "Orar por um filho é o maior ato de amor que um coração pode oferecer. É o abraço que alcança onde suas mãos não chegam. É a bênção que planta jardins eternos na alma deles."
             </p>
-            <a href="#oferta-principal" class="inline-block bg-brand-accent text-white font-bold py-4 px-10 rounded-xl shadow-lg hover:bg-brand-accentHover transition uppercase tracking-wide">
-                QUERO COMEÇAR AGORA
-            </a>
+            <p class="text-slate-700">
+                Você ama seus filhos mais que tudo. Agora, transforme esse amor em algo que vai acompanhá-los para sempre.
+                A oração de uma mãe é um presente que vale por toda a vida.
+                <br><br>
+                <span class="font-bold">E você tem apenas 10 minutos para começar.</span>
+            </p>
         </div>
+
+        <a href="#ofertas" class="btn-primary px-12 py-5 rounded-full font-bold text-xl shadow-xl uppercase">
+            QUERO DAR ESSE PRESENTE ETERNO HOJE
+        </a>
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 bg-white border-t border-gray-100">
-        <div class="max-w-2xl mx-auto px-4">
-            <h3 class="font-serif text-3xl font-bold text-center text-gray-900 mb-10">Dúvidas Comuns</h3>
-            <div class="space-y-4">
-                <details class="group bg-gray-50 rounded-xl shadow-sm cursor-pointer">
-                    <summary class="flex justify-between items-center p-5 font-medium text-gray-800">
-                        Como recebo o material?
-                        <span class="transition group-open:rotate-180">
-                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 px-5 pb-5 leading-relaxed">
-                        É tudo digital! Assim que o pagamento for aprovado, você recebe um e-mail com o link para baixar seus PDFs e começar a ler no celular, tablet ou computador.
-                    </div>
-                </details>
-                
-                <details class="group bg-gray-50 rounded-xl shadow-sm cursor-pointer">
-                    <summary class="flex justify-between items-center p-5 font-medium text-gray-800">
-                        Serve para quem tem filhos adolescentes?
-                        <span class="transition group-open:rotate-180">
-                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 px-5 pb-5 leading-relaxed">
-                        Sim! Os versículos e princípios de oração se aplicam a filhos de todas as idades. A Palavra de Deus não tem prazo de validade.
-                    </div>
-                </details>
+    <section class="my-20 container mx-auto px-4 max-w-3xl">
+        <h2 class="font-serif text-3xl font-bold text-center mb-10 text-slate-800">Perguntas Frequentes</h2>
+        <div class="space-y-4">
+            <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 p-4 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-800 font-semibold hover:text-brand-gold transition">
+                    Como recebo o material?
+                    <span class="shrink-0 rounded-full bg-white p-1.5 text-slate-900 sm:p-3 group-open:-rotate-180 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 leading-relaxed text-slate-600">É tudo digital e imediato! Assim que o pagamento for aprovado, você recebe um e-mail com seus materiais e pode começar a orar pelos seus filhos hoje mesmo. Leia no celular, tablet ou computador.</p>
+            </details>
+            
+            <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 p-4 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-800 font-semibold hover:text-brand-gold transition">
+                    Serve para filhos de qualquer idade?
+                    <span class="shrink-0 rounded-full bg-white p-1.5 text-slate-900 sm:p-3 group-open:-rotate-180 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 leading-relaxed text-slate-600">Sim! Do bebê ao filho adulto — a oração de uma mãe é poderosa em qualquer fase da vida. As promessas de Deus não têm prazo de validade.</p>
+            </details>
 
-                <details class="group bg-gray-50 rounded-xl shadow-sm cursor-pointer">
-                    <summary class="flex justify-between items-center p-5 font-medium text-gray-800">
-                        Por quanto tempo tenho acesso?
-                        <span class="transition group-open:rotate-180">
-                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                        </span>
-                    </summary>
-                    <div class="text-gray-600 px-5 pb-5 leading-relaxed">
-                        O acesso é vitalício. Você baixa os arquivos e eles são seus para sempre.
-                    </div>
-                </details>
-            </div>
+            <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 p-4 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-800 font-semibold hover:text-brand-gold transition">
+                    Por quanto tempo tenho acesso?
+                    <span class="shrink-0 rounded-full bg-white p-1.5 text-slate-900 sm:p-3 group-open:-rotate-180 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 leading-relaxed text-slate-600">Para sempre! Você baixa os arquivos e eles são seus. Você pode reler, imprimir, presentear — são seus para a vida toda.</p>
+            </details>
+
+            <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 p-4 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-800 font-semibold hover:text-brand-gold transition">
+                    Nunca fui muito de orar. Isso é para mim?
+                    <span class="shrink-0 rounded-full bg-white p-1.5 text-slate-900 sm:p-3 group-open:-rotate-180 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 leading-relaxed text-slate-600">SIM! Este guia foi feito especialmente para você. Se você ama seus filhos e deseja o melhor para eles, você já tem tudo que precisa. O guia vai te mostrar o caminho, passo a passo.</p>
+            </details>
+
+            <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 p-4 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-slate-800 font-semibold hover:text-brand-gold transition">
+                    Quanto tempo preciso dedicar por dia?
+                    <span class="shrink-0 rounded-full bg-white p-1.5 text-slate-900 sm:p-3 group-open:-rotate-180 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 leading-relaxed text-slate-600">Apenas 10 minutos. É um método pensado para mães ocupadas que amam profundamente — mas que têm mil coisas para fazer. Dez minutos são suficientes para transformar amor em bênção eterna.</p>
+            </details>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-10 text-sm border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="mb-4">&copy; 2024 Mães de Oração. Todos os direitos reservados.</p>
-            <div class="flex justify-center gap-6">
-                <a href="#" class="hover:text-white transition">Termos de Uso</a>
-                <a href="#" class="hover:text-white transition">Privacidade</a>
-                <a href="#" class="hover:text-white transition">Contato</a>
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 mt-20 pt-12 pb-8 text-center bg-white">
+        <p class="font-serif text-2xl font-bold text-slate-800 mb-2">Deus está no cuidado simples, de cada dia.</p>
+        <p class="text-slate-500 mb-8">E hoje pode ser o primeiro desses dias.</p>
+        
+        <div class="mt-12 text-sm text-slate-400">
+            <p>&copy; 2023 Método 7V. Todos os direitos reservados.</p>
+            <div class="flex justify-center gap-4 mt-2">
+                <a href="#" class="hover:text-brand-pink">Termos de Uso</a>
+                <a href="#" class="hover:text-brand-pink">Privacidade</a>
             </div>
-            <p class="mt-6 text-xs text-gray-600 max-w-lg mx-auto">
-                Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Uma vez que você sai do Facebook, a responsabilidade não é deles, mas do nosso site.
-            </p>
         </div>
     </footer>
 
-    <!-- CTA Mobile Fixo (Aparece só no celular) -->
-    <div class="cta-fixed fixed bottom-0 left-0 w-full p-4 md:hidden z-50">
-        <a href="#oferta-principal" class="block w-full bg-brand-accent text-white font-bold text-center py-3 rounded-xl shadow-lg uppercase tracking-wide text-sm">
-            Quero a Jornada Completa
-        </a>
+    <!-- MOBILE STICKY BAR -->
+    <div id="final-cta-bar" class="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-pink-100 p-4 z-40 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] md:hidden">
+        <div class="flex gap-3">
+            <a href="https://pay.kiwify.com.br/vRdyJoq" class="flex-1 btn-primary text-white font-bold py-3 rounded-xl text-center text-sm uppercase shadow-lg flex items-center justify-center flex-col leading-tight">
+                <span>Jornada Completa</span>
+                <span class="text-[10px] font-normal opacity-90">R$ 47,70</span>
+            </a>
+            <a href="https://pay.kiwify.com.br/O5vy5bs" class="flex-1 btn-secondary font-bold py-3 rounded-xl text-center text-sm uppercase flex items-center justify-center flex-col leading-tight">
+                <span>Desafio</span>
+                <span class="text-[10px] font-normal">R$ 9,90</span>
+            </a>
+        </div>
     </div>
 
-    <!-- Script de Rastreamento (UTMs) -->
+    <!-- Scripts -->
+    <script src="js/tracking.js" defer></script>
+    <script src="js/main.js" defer></script>
     <script>
-    const PAY_PREFIXES = ["https://pay.kiwify.com.br"];
-    
-    function getUTMs() {
-      const url = new URL(window.location.href);
-      const params = url.searchParams;
-      let qs = params.toString();
-    
-      const sck = [
-        params.get("utm_source") || "",
-        params.get("utm_medium") || "",
-        params.get("utm_campaign") || "",
-        params.get("utm_term") || "",
-        params.get("utm_content") || ""
-      ].join("|");
-    
-      if (sck.replace(/\|+$/,"")) {
-        qs += (qs ? "&" : "") + `sck=${encodeURIComponent(sck)}`;
-      }
-    
-      return qs ? `?${qs}` : "";
-    }
-    
-    (function appendUTMs() {
-      const suffix = getUTMs();
-      if (!suffix) return;
-    
-      document.querySelectorAll("a[href]").forEach(a => {
-        if (PAY_PREFIXES.some(p => a.href.startsWith(p))) {
-          a.href += (a.href.includes("?") ? "&" : "") + suffix.slice(1);
+        // Script de parâmetros URL
+        let prefix = ["https://pay.kiwify.com.br"];
+        function getParams() {
+            let t = "", e = window.top.location.href, r = new URL(e);
+            if (null != r) {
+                let a = r.searchParams.get("utm_source"), n = r.searchParams.get("utm_medium"), o = r.searchParams.get("utm_campaign"), m = r.searchParams.get("utm_term"), c = r.searchParams.get("utm_content");
+                -1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`);
+            } return t
         }
-      });
-    })();
+        !function() {
+            var t = new URLSearchParams(window.location.search);
+            t.toString() && document.querySelectorAll("a").forEach(function(e) {
+                for (let r = 0; r < prefix.length; r++) -1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+            })
+        }(); 
     </script>
 </body>
 </html>
-
