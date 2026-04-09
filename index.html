@@ -3,733 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conexão Irresistível - Vínculo com Seu Pet</title>
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1269167077519366');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1269167077519366&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    <!-- Tailwind CSS CDN -->
+    <title>Mente Refinada | Conceito de Desenvolvimento Humano</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nature: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        mind: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['Merriweather', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a1a1a; /* Dark background similar to the reference site */
-            color: #e0e0e0; /* Light text */
-            line-height: 1.6;
         }
-        .container {
-            max-width: 1200px;
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Merriweather', serif;
         }
-        .btn-primary {
-            background: linear-gradient(90deg, #ff6b6b, #ee4c4c); /* Vibrant gradient for CTA */
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: transform 0.2s ease-in-out;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        .hero-pattern {
+            background-color: #f0f9ff;
+            background-image: radial-gradient(#bbf7d0 1px, transparent 1px);
+            background-size: 24px 24px;
         }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
-        }
-        .section-separator {
-            border-top: 1px solid #333; /* Soft dividing line */
-            margin-top: 4rem;
-            margin-bottom: 4rem;
-        }
-        .card {
-            background-color: #2a2a2a; /* Card background lighter than body */
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .faq-item {
-            background-color: #2a2a2a;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-            overflow: hidden; /* Ensures content doesn't spill during transition */
-        }
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem;
-            cursor: pointer;
-            color: #ff6b6b; /* Highlight color for questions */
-            font-size: 1.25rem; /* md:text-2xl */
-            font-weight: bold;
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-            padding: 0 1.5rem; /* Initial padding, will expand */
-            color: #e0e0e0; /* Text color for answers */
-        }
-        .faq-answer.open {
-            max-height: 200px; /* Adjust based on expected content height */
-            padding: 0.5rem 1.5rem 1.5rem 1.5rem; /* Padding when open */
-        }
-        .faq-arrow {
-            transition: transform 0.3s ease-out;
-        }
-        .faq-arrow.rotate {
-            transform: rotate(180deg);
-        }
-        .text-highlight {
-            color: #ff6b6b; /* Highlight color for keywords */
-        }
-        .price-old {
-            text-decoration: line-through;
-            color: #999;
-        }
-        .price-new {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #4ade80; /* Green for new price, contrasting with red */
-        }
-
-        /* Carousel specific styles */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 500px; /* Adjust as needed for single card view */
-            margin: 0 auto;
-        }
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel-slide {
-            flex: 0 0 100%; /* Each slide takes full width of the container */
-            padding: 1rem; /* Adjust padding as needed */
-            box-sizing: border-box;
-            display: flex; /* Ensure content inside card is centered */
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            z-index: 10;
-            border-radius: 0.5rem;
-            font-size: 1.5rem;
-            transition: background-color 0.3s ease;
-        }
-        .carousel-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .carousel-button.prev {
-            left: 0;
-        }
-        .carousel-button.next {
-            right: 0;
-        }
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-        .dot {
-            height: 10px;
-            width: 10px;
-            background-color: #555;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .dot.active {
-            background-color: #ff6b6b;
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-nature-600 text-white p-2 rounded-lg">
+                        <i data-lucide="leaf"></i>
+                    </div>
+                    <span class="font-serif font-bold text-2xl text-mind-900 tracking-tight">Mente Refinada</span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-b from-gray-900 to-gray-800 py-16 md:py-24 text-center rounded-b-lg shadow-lg">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-white">
-                🐶🐱 Conexão Irresistível: <span class="text-highlight">Transforme Seu Vínculo com Seu Pet!</span>
-            </h1>
-            <h2 class="text-2xl md:text-4xl font-semibold mb-8 text-gray-200">
-                💔 Seu Pet Te Evita? Descubra o Segredo para uma Conexão Inabalável!
-            </h2>
-            <h3 class="text-lg md:text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-                Crie (ou recupere) um vínculo emocional profundo com seu cão ou gato, mesmo que ele pareça frio, distante ou indiferente.
-            </h3>
-
-            <p class="text-md md:text-lg mb-6 max-w-2xl mx-auto text-gray-400">
-                Você cuida, alimenta, dá carinho... mas ainda sente que falta algo? Talvez seu pet evite o seu toque, não demonstre afeto como antes ou simplesmente pareça viver no próprio mundo, desconectado de você.
-            </p>
-            <p class="text-md md:text-lg mb-10 max-w-2xl mx-auto text-gray-400">
-                E o pior: isso machuca. Porque no fundo, tudo o que você queria era que ele te enxergasse como parte do coração dele.
-            </p>
-            <p class="text-xl md:text-2xl font-bold mb-12 text-white">
-                A boa notícia? Isso tem solução — e ela começa com o <span class="text-highlight">cheiro certo.</span>
-            </p>
-
-            <!-- REMOVED: Placeholder for Main Image/Video -->
-        </div>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Manual do Cheiro Familiar Section (as a standalone, but hinting at the package) -->
-    <section class="py-16 md:py-20 bg-gray-900 rounded-lg shadow-lg mx-auto container px-6 mb-16">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-white">
-                🐾 Manual do Cheiro Familiar — <span class="text-highlight">O Primeiro Passo para a Reconexão</span>
-            </h2>
-            <h3 class="text-2xl md:text-3xl font-semibold mb-8 text-gray-200">
-                Por apenas R$ 9,70
-            </h3>
-            <p class="text-lg md:text-xl mb-8 text-gray-300">
-                Um guia simples, sensorial e imediato para reconstruir a confiança e o afeto do seu pet usando técnicas naturais baseadas em toque e olfato.
-            </p>
-
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-10">
-                <!-- Ebook Image com proporção de livro -->
-                <div class="w-48 h-72 bg-gray-700 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
-                    <img src="assets/ebook-manual-3d.png" alt="Ebook Manual do Cheiro Familiar" class="w-full h-full object-cover">
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-mind-100 text-mind-900 text-sm font-semibold mb-6 shadow-sm border border-mind-200">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-mind-600"></i>
+                    Desenvolvimento Humano Integral
                 </div>
-                <ul class="text-left text-lg md:text-xl space-y-3 text-gray-300">
-                    <li class="flex items-center">
-                        <span class="text-green-500 mr-3 text-2xl">✔️</span> Ebook digital (PDF) com acesso imediato
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-green-500 mr-3 text-2xl">✔️</span> Técnicas usadas por especialistas em vínculo emocional
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-green-500 mr-3 text-2xl">✔️</span> Ideal para pets resgatados, traumatizados ou desconectados
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-green-500 mr-3 text-2xl">✔️</span> Funciona mesmo se o seu pet for “do tipo mais na dele”
-                    </li>
-                </ul>
-            </div>
-
-            <p class="text-lg md:text-xl font-bold mb-10 text-white">
-                Este manual está incluso no Pacote <span class="text-highlight">Conexão Irresistível</span>, que você verá logo abaixo.
-            </p>
-
-            <!-- Link de compra para o Manual do Cheiro Familiar foi atualizado -->
-            <a href="https://pay.kiwify.com.br/504pRvY" class="btn-primary inline-block text-xl md:text-2xl">
-                QUERO O MANUAL DO CHEIRO FAMILIAR AGORA!
-            </a>
-        </div>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Depoimento Exclusivo Section (Manual do Cheiro Familiar) -->
-    <section class="py-16 md:py-20 text-center container mx-auto px-6 mb-16">
-        <div class="max-w-3xl mx-auto card">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-white">
-                🎯 Depoimento Exclusivo: <span class="text-highlight">Veja a Transformação Acontecer!</span>
-            </h2>
-            <!-- Imagem adicionada para o depoimento, usando a pasta assets -->
-            <div class="w-32 h-32 mx-auto mb-8 bg-gray-600 rounded-full overflow-hidden flex items-center justify-center shadow-md">
-                <img src="assets/depoimento-sandra.jpg" alt="Foto de uma pessoa com seu pet" class="w-full h-full object-cover">
-            </div>
-            <blockquote class="text-xl md:text-2xl italic text-gray-300 mb-6">
-                    “Com poucos dias aplicando o que aprendi no Manual, meu gato passou a dormir no meu colo. Antes, ele me evitava.”
-            </blockquote>
-            <p class="text-lg md:text-xl font-semibold text-gray-400">
-                — Sandra, RJ
-            </p>
-        </div>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Conexão Irresistível - Pacote Completo Section -->
-    <section class="py-16 md:py-20 bg-gray-900 rounded-lg shadow-lg mx-auto container px-6 mb-16">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4 text-white">
-                🐶🐱 Conexão Irresistível — <span class="text-highlight">O Pacote Completo para Criar (ou Recuperar) um Vínculo Emocional Verdadeiro com Seu Pet</span>
-            </h2>
-            <h3 class="text-2xl md:text-3xl font-semibold mb-8 text-gray-200">
-                Quatro guias emocionais. Um só objetivo: transformar cuidado em conexão real.
-            </h3>
-
-            <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-                Você cuida, alimenta, leva ao veterinário… mas sente que o seu pet não responde com afeto, carinho ou confiança verdadeira?
-            </p>
-            <p class="text-lg md:text-xl mb-12 text-gray-300 max-w-3xl mx-auto">
-                Seja porque o vínculo se perdeu, nunca aconteceu ou parece frágil demais — o pacote Conexão Irresistível foi feito para você.
-            </p>
-            <p class="text-xl md:text-2xl font-bold mb-12 text-white max-w-4xl mx-auto">
-                Reunimos <span class="text-highlight">4 eBooks profundos e práticos</span> que vão te guiar, passo a passo, na construção de uma relação emocional forte, respeitosa e afetuosa com seu cão ou gato — do zero ao reencontro.
-            </p>
-
-            <!-- Placeholder for Ebooks Bundle Image - Mantido object-contain para melhor visualização do bundle -->
-            <div class="w-full max-w-4xl mx-auto bg-gray-700 h-48 md:h-64 rounded-lg overflow-hidden flex items-center justify-center mb-12 shadow-xl">
-                <img src="assets/bundle-4-ebooks.png" alt="Pacote Conexão Irresistível" class="w-full h-full object-contain">
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- O que você vai receber Section - Transformed into Carousel -->
-    <section class="py-16 md:py-20 container mx-auto px-6 mb-16">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-white">
-            📦 O que você vai receber:
-        </h2>
-
-        <div class="carousel-container">
-            <div class="carousel-slides" id="productCarousel">
-                <!-- Product 1: Manual do Cheiro Familiar -->
-                <div class="carousel-slide">
-                    <div class="card flex flex-col items-center text-center w-full">
-                        <!-- Ebook Image com proporção de livro -->
-                        <div class="w-48 h-72 bg-gray-700 rounded-lg overflow-hidden flex items-center justify-center mb-4 shadow-lg">
-                            <img src="assets/ebook-manual-3d.png" alt="Capa do Manual do Cheiro Familiar" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">🐾 1. Manual do Cheiro Familiar</h3>
-                        <p class="text-lg text-gray-300 mb-4">Um guia simples, sensorial e imediato para reconstruir a confiança e o afeto do seu pet usando técnicas naturais baseadas em toque e olfato.</p>
-                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-4 text-left">
-                            <li>Ebook digital (PDF) com acesso imediato</li>
-                            <li>Técnicas usadas por especialistas em vínculo emocional</li>
-                            <li>Ideal para pets resgatados, traumatizados ou desconectados</li>
-                            <li>Funciona mesmo se o seu pet for “do tipo mais na dele”</li>
-                        </ul>
-                        <p class="text-lg font-bold text-highlight mb-4">
-                            Transformação: O ponto de partida para a reconexão, ativando a confiança através dos sentidos.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Product 2: Conexão de Amor -->
-                <div class="carousel-slide">
-                    <div class="card flex flex-col items-center text-center w-full">
-                        <!-- Ebook Image com proporção de livro -->
-                        <div class="w-48 h-72 bg-gray-700 rounded-lg overflow-hidden flex items-center justify-center mb-4 shadow-lg">
-                            <img src="assets/ebook-conexao-amor.png" alt="Capa do Conexão de Amor" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">� 2. Conexão de Amor: Como Fortalecer o Vínculo com Seu Pet</h3>
-                        <p class="text-lg text-gray-300 mb-2 text-left">
-                            👥 <strong class="font-bold">Público:</strong> Tutores de cães e gatos que sentem que oferecem cuidados físicos, mas ainda não conseguiram estabelecer uma conexão emocional verdadeira com seus pets. Pessoas que desejam entender melhor seus animais, criar laços mais profundos e transformar a convivência cotidiana em uma experiência de amor, compreensão e parceria.
-                        </p>
-                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-4 text-left">
-                            <li>Orientações práticas e acessíveis</li>
-                            <li>Exercícios de convivência</li>
-                            <li>Dicas de rotina, alimentação, socialização e reforço positivo</li>
-                            <li>Estratégias emocionais e comportamentais para tutores</li>
-                            <li>10 capítulos ilustrativos + conclusão e dicas extras</li>
-                        </ul>
-                        <p class="text-lg font-bold text-highlight mb-4 text-left">
-                            🔄 <strong class="font-bold">Transformação:</strong> Ao aplicar as orientações do ebook, o tutor passa a compreender os sinais emocionais do pet, aprende a respeitar sua individualidade e constrói, com gestos simples e diários, um relacionamento mais harmonioso, afetivo e responsivo — onde o pet se sente mais seguro, feliz e conectado com o tutor.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Product 3: Reconexão Pet -->
-                <div class="carousel-slide">
-                    <div class="card flex flex-col items-center text-center w-full">
-                        <!-- Ebook Image com proporção de livro -->
-                        <div class="w-48 h-72 bg-gray-700 rounded-lg overflow-hidden flex items-center justify-center mb-4 shadow-lg">
-                            <img src="assets/ebook-reconexao-pet.png" alt="Capa do Reconexão Pet" class="w-full h-full object-cover">
-                        </div>
-                        <!-- Título e subtítulo atualizados conforme a sua solicitação -->
-                        <h3 class="text-2xl font-bold mb-4 text-white">🔁 3. Reconexão Pet: Roteiro de Reencontro Emocional</h3>
-                        <p class="text-lg text-gray-300 mb-2 text-left">
-                            Este guia foi desenvolvido para tutores que sentem que a conexão com seu pet se perdeu, oferecendo um roteiro prático para um reencontro verdadeiro.
-                        </p>
-                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-4 text-left">
-                            <li>Desafios diários diários simples e eficazes</li>
-                            <li>Estratégias para reativar segurança emocional e confiança mútua</li>
-                            <li>Construção de Confiança Mútua</li>
-                        </ul>
-                        <p class="text-lg font-bold text-highlight mb-4 text-left">
-                            🔄 <strong class="font-bold">Transformação:</strong> Recuperação do afeto + melhoria comportamental sutil.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Product 4: Conexão Instantânea -->
-                <div class="carousel-slide">
-                    <div class="card flex flex-col items-center text-center w-full">
-                        <!-- Ebook Image com proporção de livro -->
-                        <div class="w-48 h-72 bg-gray-700 rounded-lg overflow-hidden flex items-center justify-center mb-4 shadow-lg">
-                            <img src="assets/ebook-conexao-instantanea.png" alt="Capa do Conexão Instantânea" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-white">⚡ 4. Conexão Instantânea — O Guia Prático Para Criar Vínculos Reais com Seu Pet</h3>
-                        <p class="text-lg text-gray-300 mb-2 text-left">
-                            👥 <strong class="font-bold">Público:</strong> Donos que nunca conseguiram criar vínculo emocional real.
-                        </p>
-                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mb-4 text-left">
-                            <li>Exercícios práticos + rituais + guia emocional</li>
-                        </ul>
-                        <p class="text-lg font-bold text-highlight mb-4 text-left">
-                            🔄 <strong class="font-bold">Transformação:</strong> Criação de afeto real em poucos dias.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carousel Navigation Buttons -->
-            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
-
-        <!-- Carousel Dots -->
-        <div class="carousel-dots" id="carouselDots">
-            <span class="dot active" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Resumo do Pacote "Conexão Irresistível" Section -->
-    <section class="py-16 md:py-20 bg-gray-900 rounded-lg shadow-lg mx-auto container px-6 mb-16 text-center">
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-white">
-            ✅ Resumo do Pacote <span class="text-highlight">"Conexão Irresistível"</span>
-        </h2>
-        <ul class="text-lg md:text-xl space-y-4 text-gray-300 max-w-2xl mx-auto text-left">
-            <li class="flex items-center">
-                <span class="text-green-500 mr-3 text-2xl">🔹</span> 4 eBooks digitais (formato PDF, acesso imediato)
-            </li>
-            <li class="flex items-center">
-                <span class="text-green-500 mr-3 text-2xl">🔹</span> Mais de 300 páginas de conteúdo aplicado, emocional e transformador
-            </li>
-            <li class="flex items-center">
-                <span class="text-green-500 mr-3 text-2xl">🔹</span> Ideal para cães e gatos, de qualquer idade ou histórico
-            </li>
-            <li class="flex items-center">
-                <span class="text-green-500 mr-3 text-2xl">🔹</span> Soluções para quem perdeu, nunca teve ou quer fortalecer o vínculo afetivo com o pet
-            </li>
-            <li class="flex items-center">
-                <span class="text-green-500 mr-3 text-2xl">🔹</span> Linguagem acessível, escrita empática e embasamento científico/comportamental
-            </li>
-        </ul>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Transformação Prometida Section -->
-    <section class="py-16 md:py-20 text-center container mx-auto px-6 mb-16">
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-white">
-            🧲 Transformação Prometida:
-        </h2>
-        <p class="text-xl md:text-2xl italic text-gray-300 max-w-4xl mx-auto mb-8">
-            Você vai aprender a se tornar, de forma prática e respeitosa, a pessoa mais segura e afetuosa do mundo para o seu pet.
-        </p>
-        <p class="text-xl md:text-2xl font-bold text-highlight max-w-4xl mx-auto">
-            E ele vai te mostrar isso — com aproximações espontâneas, relaxamento, afeto e presença verdadeira.
-        </p>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Filosofia do Vínculo Section -->
-    <section class="py-12 md:py-16 bg-gray-900 rounded-lg shadow-lg mx-auto container px-6 mb-16 text-center">
-        <p class="text-2xl md:text-4xl font-extrabold text-white max-w-4xl mx-auto">
-            Conexão não é sobre comandos.
-        </p>
-        <p class="text-2xl md:text-4xl font-extrabold text-highlight max-w-4xl mx-auto mt-2">
-            É sobre confiança, presença e escolha mútua.
-        </p>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mt-6">
-            O pacote Conexão Irresistível te ensina como criar isso — todos os dias.
-        </p>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Oferta Especial Section -->
-    <section class="py-16 md:py-20 bg-gradient-to-r from-red-600 to-red-800 text-center rounded-lg shadow-xl mx-auto container px-6 mb-16">
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-white">
-            💥 Oferta Especial: <span class="text-yellow-300">Adquira o Pacote Completo Agora!</span>
-        </h2>
-        <p class="text-2xl md:text-3xl font-semibold mb-2 text-white">
-            <span class="price-old">Valor total dos 4 produtos: R$ 122,80</span> <!-- Updated total value -->
-        </p>
-        <p class="price-new text-white mb-8">
-            <span class="text-green-300">Mas você paga apenas R$ 47,70</span> à vista (ou em até 5x no cartão)
-        </p>
-        <!-- Link de compra para o Pacote Completo foi atualizado -->
-        <a href="https://pay.kiwify.com.br/9nS26Hg" class="btn-primary inline-block text-2xl md:text-3xl animate-pulse">
-            SIM! QUERO O PACOTE CONEXÃO IRRESISTÍVEL POR R$ 47,70!
-        </a>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Depoimentos Reais Section -->
-    <section class="py-16 md:py-20 text-center container mx-auto px-6 mb-16">
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-12 text-white">
-            📣 O que nossos clientes dizem:
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card flex flex-col items-center">
-                <!-- Placeholder for Testimonial Image -->
-                <div class="w-24 h-24 bg-gray-600 rounded-full overflow-hidden flex items-center justify-center mb-4 shadow-md">
-                    <img src="assets/testimonial-mariana.png" alt="Foto de Mariana Lopes" class="w-full h-full object-contain">
-                </div>
-                <blockquote class="text-lg italic text-gray-300 mb-4">
-                    “O Conexão Irresistível mudou a forma como eu enxergo meu cachorro. Ele agora me espera na porta com o rabinho abanando. É outra relação.”
-                </blockquote>
-                <p class="text-md font-semibold text-gray-400">
-                    — Mariana Lopes, SP
-                </p>
-            </div>
-            <div class="card flex flex-col items-center">
-                <!-- Placeholder for Testimonial Image -->
-                <div class="w-24 h-24 bg-gray-600 rounded-full overflow-hidden flex items-center justify-center mb-4 shadow-md">
-                    <img src="assets/testimonial-rogerio.png" alt="Foto de Rogério" class="w-full h-full object-contain">
-                </div>
-                <blockquote class="text-lg italic text-gray-300 mb-4">
-                    “Adotei um gato que tinha muito medo. Com os rituais diários, ele começou a confiar em mim. Hoje dorme comigo. Chorei de emoção.”
-                </blockquote>
-                <p class="text-md font-semibold text-gray-400">
-                    — Rogério, MG
-                </p>
-            </div>
-            <div class="card flex flex-col items-center">
-                <!-- Placeholder for Testimonial Image -->
-                <div class="w-24 h-24 bg-gray-600 rounded-full overflow-hidden flex items-center justify-center mb-4 shadow-md">
-                    <img src="assets/testimonial-luciana.png" alt="Foto de Luciana Tavares" class="w-full h-full object-contain">
-                </div>
-                <blockquote class="text-lg italic text-gray-300 mb-4">
-                    “Meu pet não é mais só um animal que mora comigo. Somos uma família agora.”
-                </blockquote>
-                <p class="text-md font-semibold text-gray-400">
-                    — Luciana Tavares, SC
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight mb-6">
+                    Refine sua mente,<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-nature-600 to-mind-600">transforme seu mundo.</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Conhecimento que conecta você à natureza, à sociedade e ao seu eu interior. Explore a nossa essência e inicie sua jornada de evolução.
                 </p>
             </div>
         </div>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Garantia Incondicional Section -->
-    <section class="py-16 md:py-20 bg-gray-900 rounded-lg shadow-lg mx-auto container px-6 mb-16 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-white">
-                ✅ Sua Satisfação é Garantida!
-            </h2>
-            <div class="w-32 h-32 mx-auto mb-8 bg-gray-700 rounded-full flex items-center justify-center shadow-md">
-                <span class="text-6xl text-green-400">🛡️</span> <!-- Placeholder for Guarantee Seal Icon -->
-            </div>
-            <h3 class="text-2xl md:text-4xl font-semibold mb-6 text-gray-200">
-                Garantia Incondicional de 7 Dias
-            </h3>
-            <p class="text-lg md:text-xl text-gray-300">
-                Se por qualquer motivo você sentir que não houve nenhum avanço no vínculo com seu pet, basta pedir reembolso. Sem perguntas, sem burocracia. Seu risco é zero.
-            </p>
+        
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+            <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-nature-200 opacity-20 blur-3xl"></div>
+            <div class="absolute top-[20%] -right-[10%] w-[40%] h-[60%] rounded-full bg-mind-200 opacity-30 blur-3xl"></div>
         </div>
     </section>
 
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
+    <!-- Sobre Nós Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Image Concept -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-nature-900/40 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Harmonia com a natureza e mente tranquila" class="w-full h-full object-cover aspect-square md:aspect-[4/3] transform transition-transform duration-700">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg flex items-center gap-4">
+                        <div class="bg-mind-100 text-mind-600 p-3 rounded-full">
+                            <i data-lucide="brain" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Evolução Constante</p>
+                            <p class="text-sm text-gray-600">Mente e Natureza</p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Atenção: Oferta Limitada Section -->
-    <section class="py-12 md:py-16 bg-red-700 text-center rounded-lg shadow-xl mx-auto container px-6 mb-16">
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-white">
-            ⏰ Atenção: <span class="text-yellow-300">essa oferta é por tempo limitado!</span>
-        </h2>
-        <p class="text-lg md:text-xl text-gray-200 mb-6">
-            Os bônus e o preço especial podem sair do ar a qualquer momento.
-        </p>
-        <p class="text-xl md:text-2xl font-bold text-white">
-            Se você chegou até aqui, seu pet precisa disso — e você também.
-        </p>
-    </section>
-
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Perguntas Frequentes (FAQ) Section - Transformed into Accordion -->
-    <section class="py-16 md:py-20 container mx-auto px-6 mb-16">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-white">
-            ❓ Perguntas Frequentes
-        </h2>
-
-        <div class="max-w-3xl mx-auto">
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <strong class="text-xl md:text-2xl">1. Funciona com cães e gatos?</strong>
-                    <span class="faq-arrow text-2xl">&#9660;</span> <!-- Down arrow -->
-                </div>
-                <div class="faq-answer">
-                    <p class="text-lg text-gray-300">Sim! As técnicas emocionais e os sinais comportamentais são adaptáveis a ambos — e a qualquer personalidade ou idade.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <strong class="text-xl md:text-2xl">2. Quando vejo resultados?</strong>
-                    <span class="faq-arrow text-2xl">&#9660;</span>
-                </div>
-                <div class="faq-answer">
-                    <p class="text-lg text-gray-300">Muitos relatam mudanças em 2 a 7 dias. Depende da frequência e do histórico do pet. Quanto mais consistência, mais rápido o efeito.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <strong class="text-xl md:text-2xl">3. Como recebo os ebooks?</strong>
-                    <span class="faq-arrow text-2xl">&#9660;</span>
-                </div>
-                <div class="faq-answer">
-                    <p class="text-lg text-gray-300">Você compra, recebe um e-mail da Kiwify com o link de acesso. Os PDFs ficam disponíveis na sua conta Kiwify, para leitura online ou offline.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <strong class="text-xl md:text-2xl">4. Posso ler no celular?</strong>
-                    <span class="faq-arrow text-2xl">&#9660;</span>
-                </div>
-                <div class="faq-answer">
-                    <p class="text-lg text-gray-300">Sim. Totalmente compatível com celular, tablet ou computador.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <strong class="text-xl md:text-2xl">5. E se eu não gostar?</strong>
-                    <span class="faq-arrow text-2xl">&#9660;</span>
-                </div>
-                <div class="faq-answer">
-                    <p class="text-lg text-gray-300">Basta solicitar o reembolso em até 7 dias via Kiwify. Sem burocracia, sem condições ocultas.</p>
+                <!-- Text Content -->
+                <div>
+                    <h2 class="text-nature-600 font-semibold tracking-wide uppercase text-sm mb-2">Quem Somos</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 leading-snug">
+                        A arte de lapidar o conhecimento.
+                    </h3>
+                    
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="mb-4">
+                            A <strong>Mente Refinada</strong> é uma webempresa especializada na criação e venda de infoprodutos, promovendo o desenvolvimento humano em harmonia com a natureza e a sociedade.
+                        </p>
+                        <p class="mb-6 italic border-l-4 border-nature-500 pl-4 py-2 bg-nature-50/50 rounded-r-lg text-gray-700">
+                            "Acreditamos que quanto mais conhecimento adquirimos, mais refinamos nossas mentes, aprendendo a nos integrar de forma equilibrada entre os animais, as pessoas e o mundo ao nosso redor."
+                        </p>
+                        
+                        <ul class="space-y-4 mt-8">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-nature-100 text-nature-600 p-1 rounded-full">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <span><strong>Desenvolvimento Integral:</strong> Foco no crescimento mental e emocional através do saber.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-nature-100 text-nature-600 p-1 rounded-full">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <span><strong>Harmonia Natural:</strong> Coexistência pacífica com o meio ambiente e os seres vivos.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-nature-100 text-nature-600 p-1 rounded-full">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <span><strong>Integração Social:</strong> Equilíbrio nas relações humanas e na vida em sociedade.</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Separator -->
-    <div class="container mx-auto section-separator"></div>
-
-    <!-- Final Call to Action Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-t from-gray-900 to-gray-800 text-center rounded-t-lg shadow-lg">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-8 text-white">
-                ❤️ Seu pet sente quando você se entrega.
-            </h2>
-            <h3 class="text-xl md:text-3xl font-semibold mb-12 text-gray-200">
-                Mas agora é hora de fazer ele sentir que pode confiar de verdade em você.
-            </h3>
-            <p class="text-lg md:text-xl mb-12 text-gray-300">
-                Clique abaixo e comece hoje mesmo uma nova fase entre vocês dois.
-            </p>
-            <!-- Link de compra para o Pacote Completo foi atualizado -->
-            <a href="https://pay.kiwify.com.br/9nS26Hg" class="btn-primary inline-block text-2xl md:text-4xl px-8 py-4 animate-bounce">
-                QUERO CRIAR UM VÍNCULO INQUEBRÁVEL COM MEU PET AGORA!
-            </a>
+    <!-- Simple Concept Footer -->
+    <footer class="bg-gray-50 py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4 opacity-50">
+                <div class="text-nature-600">
+                    <i data-lucide="leaf" class="w-5 h-5"></i>
+                </div>
+                <span class="font-serif font-bold text-lg text-mind-900 tracking-tight">Mente Refinada</span>
+            </div>
+            <p class="text-sm text-gray-500 italic">Uma mente refinada é o reflexo de um mundo em harmonia.</p>
+            <p class="text-xs text-gray-400 mt-8">&copy; <span id="year"></span> Mente Refinada. WebSite Conceito.</p>
         </div>
-    </section>
+    </footer>
 
+    <!-- Scripts -->
     <script>
-        // Carousel JavaScript
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
 
-        function moveSlide(n) {
-            showSlides(slideIndex += n);
-        }
+        // Atualiza o ano
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("carousel-slide");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.transform = `translateX(-${(slideIndex - 1) * 100}%)`;
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            dots[slideIndex-1].className += " active";
-        }
-
-        // FAQ Accordion JavaScript
-        function toggleFaq(element) {
-            const faqItem = element.closest('.faq-item');
-            const answer = faqItem.querySelector('.faq-answer');
-            const arrow = faqItem.querySelector('.faq-arrow');
-
-            if (answer.classList.contains('open')) {
-                answer.classList.remove('open');
-                arrow.classList.remove('rotate');
+        // Efeito simples de scroll na Navbar
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-sm');
             } else {
-                // Close all other open FAQs
-                document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
-                    openAnswer.classList.remove('open');
-                    openAnswer.closest('.faq-item').querySelector('.faq-arrow').classList.remove('rotate');
-                });
-
-                answer.classList.add('open');
-                arrow.classList.add('rotate');
+                nav.classList.remove('shadow-sm');
             }
-        }
+        });
     </script>
-    <!-- Script para passar parâmetros UTM para links da Kiwify -->
-    <script>
-        let prefix = ["https://pay.kiwify.com.br"];
-
-        function getParams() {
-            let t = "",
-                e = window.top.location.href,
-                r = new URL(e);
-            if (null != r) {
-                let a = r.searchParams.get("utm_source"),
-                    n = r.searchParams.searchParams.get("utm_medium"),
-                    o = r.searchParams.get("utm_campaign"),
-                    m = r.searchParams.get("utm_term"),
-                    c = r.searchParams.get("utm_content");
-                -1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
-            }
-            return t
-        }! function() {
-            var t = new URLSearchParams(window.location.search);
-            t.toString() && document.querySelectorAll("a").forEach(function(e) {
-                for (let r = 0; r < prefix.length; r++) -1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
-            })
-        }();
-    </script>
-
 </body>
 </html>
-�
