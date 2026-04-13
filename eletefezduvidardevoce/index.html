@@ -18,344 +18,773 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1131696225474131&ev=PageView&noscript=1"
 /></noscript>
-
 <!-- End Meta Pixel Code -->
-    <!-- Script de Rastreamento UTMify -->
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ele Te Fez Duvidar de Você? | Recupere sua Clareza Mental</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Serif:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Facebook Conversions API (Server-Side via fetch) -->
+<script>
+(function() {
+  var pixelId = '1131696225474131';
+  var token = 'EAAyqMxw05MkBRIZBSqFgCZCwgkzUuePZBy3DRnUOCgbhizcaljCccVsqyLnVYCe9JjrsD3A6AAgXAJ0RkNznov0qqLiwwlw7rrvN8MtlPsLMg4sEkYY9jNUAMFEmNK31nrb1kHYr448GA1um5OPKgkriaVhB5NXSUzfW9LZBbntjSFCR8ZARnXTE7Rxt5VIkPGgZDZD';
 
-    <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #1e293b; }
-        h1, h2, h3 { font-family: 'Noto Serif', serif; }
-        
-        .bg-hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
+  function getCookie(name) {
+    var v = '; ' + document.cookie, p = v.split('; ' + name + '=');
+    if (p.length === 2) return p.pop().split(';').shift();
+    return '';
+  }
 
-        .cta-pulse {
-            animation: pulse-animation 2s infinite;
-        }
+  function sendEvent(eventName, customData) {
+    var payload = {
+      data: [{
+        event_name: eventName,
+        event_time: Math.floor(Date.now() / 1000),
+        event_id: 'ev_' + Math.random().toString(36).substr(2,9) + '_' + Date.now(),
+        action_source: 'website',
+        event_source_url: window.location.href,
+        client_user_data: {
+          client_user_agent: navigator.userAgent,
+          fbc: getCookie('_fbc') || '',
+          fbp: getCookie('_fbp') || ''
+        },
+        custom_data: customData || {}
+      }]
+    };
+    fetch('https://graph.facebook.com/v18.0/' + pixelId + '/events?access_token=' + token, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(function(){});
+  }
 
-        @keyframes pulse-animation {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
-        }
+  window.addEventListener('load', function() { sendEvent('PageView', {}); });
 
-        .bonus-card {
-            border: 2px dashed #cbd5e1;
-            transition: all 0.3s ease;
-        }
-        .bonus-card:hover {
-            border-color: #f59e0b;
-            background-color: #fffbeb;
-        }
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="kiwify"]');
+    if (link) {
+      sendEvent('InitiateCheckout', { currency: 'BRL', value: 47.70 });
+      if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout', { currency: 'BRL', value: 47.70 });
+    }
+  });
+})();
+</script>
 
-        .product-image-container {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto 40px auto;
-            min-height: 300px;
-            background: rgba(255,255,255,0.05);
-            border: 2px dashed rgba(255,255,255,0.2);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
+<!-- UTMify -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
 
-        .product-image {
-            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));
-            z-index: 10;
-        }
-        
-        .testimonial-img-slot {
-            background: #f1f5f9;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .testimonial-img-slot img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Você Não Estava Exagerando — Descubra o Que Realmente Aconteceu Com Você</title>
 
-        .placeholder-icon {
-            color: #cbd5e1;
-            font-size: 2rem;
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --sage:         #6D9B72;
+  --sage-mid:     #8BB48F;
+  --sage-light:   #B3CEB6;
+  --sage-pale:    #E6F0E7;
+  --rose:         #C07878;
+  --rose-light:   #DCA8A8;
+  --rose-pale:    #F9EAEA;
+  --amber:        #B8833A;
+  --amber-light:  #D4AA72;
+  --amber-pale:   #FBF2E4;
+  --cream:        #F8F5F1;
+  --white:        #FFFFFF;
+  --dark:         #2A3B2B;
+  --mid:          #556456;
+  --soft:         #8EA48F;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--cream);
+  color:var(--dark);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.2}
+
+/* ── PAGE BG BLOBS ── */
+.pg-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:var(--cream)}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.28}
+.b1{width:700px;height:700px;background:var(--sage-light);top:-180px;left:-200px}
+.b2{width:550px;height:550px;background:var(--rose-light);top:38%;right:-160px}
+.b3{width:450px;height:450px;background:var(--amber-light);bottom:0;left:5%}
+.b4{width:350px;height:350px;background:var(--sage-pale);top:18%;left:38%}
+
+/* ── GLASS ── */
+.glass{
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(22px) saturate(180%);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);
+  border:1.5px solid rgba(255,255,255,.80);
+  box-shadow:0 8px 32px rgba(109,155,114,.14),inset 0 1px 0 rgba(255,255,255,.9);
+  border-radius:22px;
+}
+.glass-strong{
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(28px) saturate(200%);
+  -webkit-backdrop-filter:blur(28px) saturate(200%);
+  border:1.5px solid rgba(255,255,255,.92);
+  box-shadow:0 16px 48px rgba(109,155,114,.16),inset 0 1px 0 rgba(255,255,255,1);
+  border-radius:26px;
+}
+
+/* ── LAYOUT ── */
+.wrap{width:100%;max-width:860px;margin:0 auto;padding:0 20px}
+.wrap-wide{width:100%;max-width:1060px;margin:0 auto;padding:0 20px}
+
+/* ── BADGE ── */
+.badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(109,155,114,.12);
+  border:1px solid rgba(109,155,114,.28);
+  color:var(--sage);
+  font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  padding:6px 14px;border-radius:100px;
+}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+#hero{
+  min-height:100svh;
+  padding:80px 20px 64px;
+  display:flex;align-items:center;
+}
+#hero .inner{
+  text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:30px;
+}
+#hero h1{
+  font-size:clamp(2.5rem,6vw,5rem);
+  font-weight:700;
+  color:var(--dark);
+  max-width:820px;
+}
+#hero h1 em{color:var(--rose);font-style:italic}
+#hero .sub{
+  font-size:clamp(.98rem,2.2vw,1.18rem);
+  font-weight:300;
+  color:var(--mid);
+  max-width:560px;
+  line-height:1.85;
+}
+#hero .sub strong{font-weight:600;color:var(--dark)}
+
+.hero-quote{max-width:520px;padding:22px 28px;text-align:center}
+.hero-quote p{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:1.18rem;
+  color:var(--mid);
+  line-height:1.75;
+}
+.hero-quote p strong{color:var(--sage);font-style:normal;font-weight:700}
+
+.prod-wrap{width:100%;max-width:440px;padding:20px}
+.prod-wrap img{
+  width:100%;height:auto;border-radius:16px;
+  filter:drop-shadow(0 20px 40px rgba(109,155,114,.22));
+}
+.prod-ph{
+  width:100%;aspect-ratio:4/3;border-radius:16px;
+  background:linear-gradient(135deg,var(--sage-pale),var(--rose-pale));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:var(--soft);font-size:.85rem;
+  border:2px dashed var(--sage-light);
+}
+.prod-ph i{font-size:2.4rem;margin-bottom:8px;color:var(--sage-light)}
+
+.scroll-hint{font-size:.82rem;color:var(--soft);display:flex;align-items:center;gap:6px}
+.scroll-hint i{color:var(--sage);animation:bob .9s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(5px)}}
+
+/* ─────────────────────────────────────────
+   SECTIONS
+───────────────────────────────────────── */
+section{padding:80px 20px}
+
+.lbl{
+  display:block;
+  font-size:10.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--rose);margin-bottom:12px;
+}
+.sec-title{
+  font-size:clamp(1.85rem,4vw,2.9rem);
+  font-weight:700;color:var(--dark);
+  margin-bottom:16px;
+}
+.sec-title em{color:var(--sage);font-style:italic}
+.sec-sub{
+  font-size:.98rem;color:var(--mid);max-width:520px;
+  margin:0 auto;line-height:1.85;
+}
+.divider{width:46px;height:3px;background:linear-gradient(to right,var(--sage-light),var(--rose-light));border-radius:2px;margin:0 auto 32px}
+
+/* ─────────────────────────────────────────
+   PAIN GRID
+───────────────────────────────────────── */
+.pain-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;margin-top:36px;
+}
+.pain-item{padding:18px 16px;display:flex;align-items:flex-start;gap:12px}
+.pain-item i{color:var(--rose);font-size:.85rem;margin-top:5px;flex-shrink:0}
+.pain-item p{font-size:.88rem;color:var(--mid);line-height:1.75}
+
+/* ─────────────────────────────────────────
+   WHY GRID
+───────────────────────────────────────── */
+.why-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;margin-top:38px;
+}
+.why-card{padding:22px 20px;display:flex;gap:14px;align-items:flex-start}
+.why-card.bad{border-left:3px solid var(--rose)}
+.why-card.good{border-left:3px solid var(--sage)}
+.wicon{
+  width:40px;height:40px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:.9rem;
+}
+.bad-i{background:rgba(192,120,120,.12);color:var(--rose)}
+.good-i{background:rgba(109,155,114,.12);color:var(--sage)}
+.why-card h4{font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:5px}
+.why-card p{font-size:.82rem;color:var(--mid);line-height:1.7}
+
+/* ─────────────────────────────────────────
+   CONTENT CARDS
+───────────────────────────────────────── */
+.content-stack{display:flex;flex-direction:column;gap:16px;margin-top:40px}
+.cc{padding:28px 26px;display:flex;gap:20px;align-items:flex-start}
+.cnum{
+  min-width:48px;height:48px;border-radius:14px;
+  background:linear-gradient(135deg,var(--sage),var(--sage-mid));
+  color:#fff;font-weight:700;font-size:.88rem;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 4px 14px rgba(109,155,114,.28);
+}
+.cc h4{font-size:1.12rem;font-weight:700;color:var(--dark);margin-bottom:7px}
+.cc h4 em{color:var(--rose)}
+.cc p{font-size:.9rem;color:var(--mid)}
+.cc p strong{color:var(--dark)}
+
+/* ─────────────────────────────────────────
+   BONUS
+───────────────────────────────────────── */
+.bonus-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:14px;margin-top:38px;
+}
+.bc{
+  padding:28px 20px;text-align:center;
+  transition:transform .25s,box-shadow .25s;
+}
+.bc:hover{
+  transform:translateY(-5px);
+  box-shadow:0 24px 52px rgba(109,155,114,.18),inset 0 1px 0 #fff;
+}
+.bicon{
+  width:54px;height:54px;border-radius:16px;
+  margin:0 auto 14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;
+}
+.si{background:rgba(109,155,114,.13);color:var(--sage)}
+.ri{background:rgba(192,120,120,.13);color:var(--rose)}
+.ai{background:rgba(184,131,58,.13);color:var(--amber)}
+.btag{
+  display:inline-block;
+  font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--amber);background:rgba(184,131,58,.10);
+  border:1px solid rgba(184,131,58,.22);
+  padding:3px 10px;border-radius:100px;margin-bottom:10px;
+}
+.bc h5{font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:700;color:var(--dark);margin-bottom:7px;text-transform:uppercase;letter-spacing:.04em}
+.bc p{font-size:.8rem;color:var(--mid);line-height:1.72}
+
+/* ─────────────────────────────────────────
+   TESTIMONIALS
+───────────────────────────────────────── */
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.test-slot{
+  border-radius:18px;overflow:hidden;
+  min-height:220px;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.55);
+  border:1.5px solid rgba(255,255,255,.80);
+  backdrop-filter:blur(16px);
+  box-shadow:0 6px 24px rgba(109,155,114,.11);
+}
+.test-slot img{width:100%;height:auto;display:block}
+.test-ph{text-align:center;padding:28px 18px;color:var(--soft)}
+.test-ph i{font-size:1.9rem;margin-bottom:8px;display:block}
+.test-ph p{font-size:.76rem}
+.test-quote{max-width:520px;margin:26px auto 0;padding:20px 26px;text-align:center}
+.test-quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--mid)}
+.stars{color:var(--amber);font-size:.82rem;display:flex;gap:3px;justify-content:center;margin-bottom:6px}
+
+/* ─────────────────────────────────────────
+   OFFER
+───────────────────────────────────────── */
+.offer-box{
+  max-width:600px;margin:0 auto;
+  padding:48px 40px;text-align:center;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(30px) saturate(200%);
+  -webkit-backdrop-filter:blur(30px) saturate(200%);
+  border:2px solid rgba(255,255,255,.95);
+  border-top:4px solid var(--sage);
+  border-radius:32px;
+  box-shadow:0 28px 72px rgba(109,155,114,.18),inset 0 1px 0 #fff;
+}
+.guar-strip{
+  display:flex;align-items:center;gap:18px;
+  padding:20px 22px;margin-bottom:30px;
+  background:rgba(109,155,114,.08);
+  border:1.5px solid rgba(109,155,114,.22);
+  border-radius:18px;text-align:left;
+}
+.guar-strip i{font-size:2rem;color:var(--sage);flex-shrink:0}
+.guar-strip h4{font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+.guar-strip p{font-size:.78rem;color:var(--mid);line-height:1.6}
+.price-from{font-size:.95rem;color:var(--soft);text-decoration:line-through;margin-bottom:4px}
+.price-big{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.2rem,10vw,5.2rem);
+  font-weight:700;color:var(--dark);
+  line-height:1;margin:4px 0;
+}
+.price-big span{font-size:38%;vertical-align:top;margin-top:14px;display:inline-block}
+.install{font-size:.88rem;color:var(--soft);font-style:italic;margin-bottom:30px}
+
+/* CTA BUTTON */
+.cta{
+  display:block;width:100%;
+  background:linear-gradient(135deg,var(--sage) 0%,#4E8054 100%);
+  color:#fff;
+  font-family:'DM Sans',sans-serif;
+  font-size:1.02rem;font-weight:700;letter-spacing:.04em;
+  padding:18px 24px;
+  border-radius:16px;
+  text-align:center;text-decoration:none;
+  box-shadow:0 8px 28px rgba(78,128,84,.32),inset 0 1px 0 rgba(255,255,255,.22);
+  transition:transform .2s,box-shadow .2s;
+  position:relative;overflow:hidden;
+}
+.cta::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(255,255,255,.14),transparent);
+  pointer-events:none;
+}
+.cta:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(78,128,84,.38),inset 0 1px 0 rgba(255,255,255,.22)}
+.cta:active{transform:translateY(0)}
+.cta-pulse{animation:pglow 2.4s ease-in-out infinite}
+@keyframes pglow{
+  0%,100%{box-shadow:0 8px 28px rgba(78,128,84,.32),inset 0 1px 0 rgba(255,255,255,.22)}
+  50%{box-shadow:0 8px 40px rgba(78,128,84,.50),0 0 0 8px rgba(109,155,114,.12),inset 0 1px 0 rgba(255,255,255,.22)}
+}
+
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:24px;font-size:.78rem;color:var(--soft)}
+.trust span{display:flex;align-items:center;gap:5px}
+.trust i{color:var(--sage)}
+
+/* ─────────────────────────────────────────
+   STICKY MOBILE
+───────────────────────────────────────── */
+.sticky-m{
+  position:fixed;bottom:0;left:0;right:0;
+  padding:10px 14px;
+  background:rgba(248,245,241,.88);
+  backdrop-filter:blur(18px);
+  border-top:1px solid rgba(109,155,114,.18);
+  z-index:100;display:none;
+}
+.sticky-m a{
+  display:block;width:100%;
+  background:linear-gradient(135deg,var(--sage),#4E8054);
+  color:#fff;text-align:center;
+  font-weight:700;font-size:.86rem;letter-spacing:.04em;
+  padding:13px;border-radius:12px;
+  text-decoration:none;
+  box-shadow:0 4px 16px rgba(78,128,84,.28);
+}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+footer{
+  padding:38px 20px;text-align:center;
+  font-size:.73rem;color:var(--soft);
+  border-top:1px solid rgba(109,155,114,.12);
+}
+footer p+p{margin-top:7px}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────── */
+.fi{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.fi.vis{opacity:1;transform:translateY(0)}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media(max-width:768px){
+  section{padding:60px 20px}
+  #hero{padding:70px 20px 50px}
+  .why-grid,.pain-grid,.test-grid,.bonus-grid{grid-template-columns:1fr}
+}
+@media(max-width:767px){body{padding-bottom:72px}.sticky-m{display:block}}
+@media(max-width:540px){.offer-box{padding:32px 20px}}
+</style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- SEÇÃO 1: HERO -->
-    <section class="bg-hero text-white pt-16 pb-20 px-4">
-        <div class="container mx-auto max-w-4xl text-center">
-            <p class="text-amber-400 font-bold uppercase tracking-widest text-sm mb-4">
-                <i class="fas fa-exclamation-circle mr-2"></i> Você não está louca — Existe um padrão invisível
-            </p>
-            
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 uppercase">
-                Ele te fez duvidar de você?
-            </h1>
-            
-            <h2 class="text-xl md:text-2xl font-light text-slate-300 mb-8 max-w-3xl mx-auto">
-                Descubra agora como identificar se foi <span class="text-white font-bold underline decoration-amber-500 text-amber-500">manipulação emocional</span> e aprenda o método para parar de pensar nele em minutos.
-            </h2>
+<div class="pg-bg">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="blob b4"></div>
+</div>
 
-            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl mb-8 inline-block border border-white/20">
-                <p class="text-lg md:text-xl italic text-amber-200">
-                    "Recupere sua clareza mental e se liberte do ciclo emocional — sem terapia longa e no seu próprio tempo."
-                </p>
-            </div>
+<!-- ═══════════════════════════════════════
+     HERO — sem botão
+═══════════════════════════════════════ -->
+<section id="hero">
+  <div class="wrap">
+    <div class="inner fi vis">
 
-            <div class="product-image-container">
-                <img src="assets/capas.png" alt="Capas do Pacote Ele Te Fez Duvidar de Você" class="product-image w-full h-auto" onerror="this.parentElement.innerHTML='<span class=\'text-slate-500\'>Imagem do Pacote Digital</span>'">
-            </div>
+      <div class="badge">
+        <i class="fas fa-heart-pulse"></i>
+        Saúde Emocional Feminina
+      </div>
 
-            <div class="flex flex-col items-center gap-4">
-                <a href="https://pay.kiwify.com.br/nX5fgqc" class="cta-pulse inline-block bg-green-500 hover:bg-green-600 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl uppercase tracking-tighter transition-all">
-                    Quero Recuperar Minha Paz
-                </a>
-                <p class="text-slate-400 text-sm flex items-center gap-2">
-                    <i class="fas fa-lock"></i> Acesso imediato e 100% seguro
-                </p>
-            </div>
-        </div>
-    </section>
+      <h1>
+        Você não estava <em>exagerando</em> —<br>
+        havia um padrão invisível agindo contra você
+      </h1>
 
-    <!-- SEÇÃO 2: JEITO ERRADO VS JEITO CERTO -->
-    <section class="py-16 px-4 bg-slate-50">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Por que você ainda se sente presa?</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- JEITO ERRADO -->
-                <div class="bg-red-50 p-8 rounded-3xl border border-red-100">
-                    <h3 class="text-xl font-bold text-red-700 mb-6 flex items-center">
-                        <i class="fas fa-times-circle mr-3"></i> O Jeito Errado (Caminho da Confusão)
-                    </h3>
-                    <ul class="space-y-4 text-slate-700">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-ban mt-1 text-red-400"></i>
-                            <span>Ficar presa tentando entender "o que aconteceu" sem respostas.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-ban mt-1 text-red-400"></i>
-                            <span>Se culpar achando que exagerou ou imaginou coisas (Gaslighting).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-ban mt-1 text-red-400"></i>
-                            <span>Tentar esquecer à força, mas continuar pensando nele o tempo todo.</span>
-                        </li>
-                    </ul>
-                </div>
+      <p class="sub">
+        Descubra se foi <strong>manipulação emocional</strong>, reative sua clareza mental
+        e finalmente pare o ciclo de pensamentos que não te deixa seguir em frente —
+        no seu próprio ritmo e tempo.
+      </p>
 
-                <!-- JEITO CERTO -->
-                <div class="bg-green-50 p-8 rounded-3xl border border-green-100">
-                    <h3 class="text-xl font-bold text-green-700 mb-6 flex items-center">
-                        <i class="fas fa-check-circle mr-3"></i> O Jeito Certo (Caminho da Liberdade)
-                    </h3>
-                    <ul class="space-y-4 text-slate-700">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-bolt mt-1 text-green-500"></i>
-                            <span>Entender o padrão psicológico por trás da manipulação.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-bolt mt-1 text-green-500"></i>
-                            <span>Usar <strong>scripts mentais</strong> para interromper a obsessão imediatamente.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-bolt mt-1 text-green-500"></i>
-                            <span>Recuperar a clareza emocional sem depender da validação dele.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="glass hero-quote">
+        <p>
+          "Quando uma mulher começa a duvidar da própria memória e das suas percepções —<br>
+          <strong>não é fraqueza. É o efeito de algo que foi feito a ela.</strong>"
+        </p>
+      </div>
 
-    <!-- SEÇÃO 3: O CONTEÚDO DO PACOTE -->
-    <section class="py-16 px-4 bg-white">
-        <div class="container mx-auto max-w-4xl">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">O que você vai receber:</h2>
-                <p class="text-slate-500">Tudo pronto para você recuperar seu controle mental hoje.</p>
-            </div>
+      <div class="glass-strong prod-wrap">
+        <img
+          src="assets/capas.png"
+          alt="Pacote Digital Ele Te Fez Duvidar de Você"
+          onerror="this.outerHTML='<div class=\'prod-ph\'><i class=\'fas fa-book-open\'></i><p>Imagem do Pacote Digital</p></div>'"
+        >
+      </div>
 
-            <div class="grid grid-cols-1 gap-6">
-                <!-- Produto 1 -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-6 items-start">
-                    <div class="bg-slate-900 text-amber-400 w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
-                        <span class="font-bold">01</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-xl mb-2 italic">Ebook "LOUCA OU MANIPULADA?"</h4>
-                        <p class="text-slate-600">Um guia direto ao ponto (40 páginas) que disseca o padrão invisível da manipulação e explica exatamente o que você viveu.</p>
-                    </div>
-                </div>
+      <p class="scroll-hint">
+        <i class="fas fa-arrow-down"></i>
+        Continue lendo — o que você vai descobrir muda tudo
+      </p>
 
-                <!-- Produto 2 -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-6 items-start">
-                    <div class="bg-slate-900 text-amber-400 w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
-                        <span class="font-bold">02</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-xl mb-2 italic">MAPA DA CONFUSÃO MENTAL</h4>
-                        <p class="text-slate-600">Um guia visual simples (Ebook curto): <strong>“O que você sente” → “O que realmente é”</strong>. Aprenda a distinguir saudade de vício emocional e culpa de manipulação.</p>
-                    </div>
-                </div>
-
-                <!-- Produto 3 -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-6 items-start">
-                    <div class="bg-slate-900 text-amber-400 w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
-                        <span class="font-bold">03</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-xl mb-2 italic">SCRIPT ANTI-LOOP MENTAL</h4>
-                        <p class="text-slate-600">Passo a passo prático (Ebook curto): <strong>Pensou nele? Faça isso. Veio culpa? Pense isso.</strong> Instruções curtas para silenciar sua mente em minutos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 4: BÔNUS -->
-    <section class="py-16 px-4 bg-amber-50">
-        <div class="container mx-auto max-w-4xl">
-            <div class="text-center mb-10">
-                <span class="bg-amber-200 text-amber-900 text-xs font-black px-4 py-1 rounded-full uppercase">Presente Exclusivo</span>
-                <h2 class="text-3xl font-bold mt-4 italic">Você ainda leva 3 Bônus Gratuitos:</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bonus-card p-6 bg-white rounded-2xl text-center shadow-sm">
-                    <i class="fas fa-list-check text-amber-600 text-3xl mb-4"></i>
-                    <h5 class="font-bold text-sm uppercase mb-2">Checklist: 21 Sinais</h5>
-                    <p class="text-xs text-slate-500">Valide sua situação identificando cada sinal de manipulação emocional.</p>
-                </div>
-                <div class="bonus-card p-6 bg-white rounded-2xl text-center shadow-sm">
-                    <i class="fas fa-stopwatch text-amber-600 text-3xl mb-4"></i>
-                    <h5 class="font-bold text-sm uppercase mb-2">Script 5 Minutos</h5>
-                    <p class="text-xs text-slate-500">Como parar de pensar nele imediatamente com uma técnica rápida.</p>
-                </div>
-                <div class="bonus-card p-6 bg-white rounded-2xl text-center shadow-sm">
-                    <i class="fas fa-shield-heart text-amber-600 text-3xl mb-4"></i>
-                    <h5 class="font-bold text-sm uppercase mb-2">Guia Anti-Repetição</h5>
-                    <p class="text-xs text-slate-500">Como nunca mais cair no mesmo tipo de homem ou padrão tóxico.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO DE DEPOIMENTOS -->
-    <section class="py-16 px-4 bg-white border-b border-slate-100">
-        <div class="container mx-auto max-w-5xl">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">O que outras mulheres estão dizendo:</h2>
-                <div class="flex justify-center gap-1 text-amber-400 mb-2">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="text-slate-500">Transformando confusão em liberdade emocional.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="testimonial-img-slot">
-                    <img src="assets/depoimento1.png" alt="Depoimento 1" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-center p-6\'><i class=\'fas fa-image placeholder-icon mb-2\'></i><p class=\'text-xs text-slate-400\'>Print de Depoimento 1</p></div>'">
-                </div>
-                <div class="testimonial-img-slot">
-                    <img src="assets/depoimento2.png" alt="Depoimento 2" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-center p-6\'><i class=\'fas fa-image placeholder-icon mb-2\'></i><p class=\'text-xs text-slate-400\'>Print de Depoimento 2</p></div>'">
-                </div>
-                <div class="testimonial-img-slot">
-                    <img src="assets/depoimento3.png" alt="Depoimento 3" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-center p-6\'><i class=\'fas fa-image placeholder-icon mb-2\'></i><p class=\'text-xs text-slate-400\'>Print de Depoimento 3</p></div>'">
-                </div>
-            </div>
-            
-            <div class="mt-8 text-center">
-                <p class="text-slate-600 italic">"Pela primeira vez em anos, eu sinto que o peso no meu peito sumiu."</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 5: OFERTA FINAL -->
-    <section id="oferta" class="py-20 px-4 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
-            <i class="fas fa-brain text-[300px] -rotate-12"></i>
-        </div>
-
-        <div class="container mx-auto max-w-3xl text-center relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 italic">Comece sua libertação emocional agora.</h2>
-            <p class="text-slate-400 mb-8 italic">Receba acesso imediato a todos os Ebooks, checklists e bônus no seu e-mail.</p>
-            
-            <div class="bg-white text-slate-900 p-8 md:p-12 rounded-[40px] shadow-2xl border-t-8 border-amber-500">
-                <p class="text-slate-400 line-through text-xl mb-1">De R$ 97,00 por apenas:</p>
-                <div class="flex items-center justify-center gap-2 mb-8">
-                    <span class="text-5xl md:text-7xl font-black tracking-tighter text-slate-900">R$ 47,70</span>
-                </div>
-                <p class="text-slate-500 mb-8 font-medium italic">Ou 12x de R$ 4,78 no cartão</p>
-
-                <a href="https://pay.kiwify.com.br/nX5fgqc" class="cta-pulse block w-full bg-green-500 hover:bg-green-600 text-white font-black py-6 rounded-2xl text-2xl uppercase tracking-tighter shadow-xl">
-                    <i class="fas fa-shopping-cart mr-2"></i> Quero Acesso Imediato
-                </a>
-            </div>
-
-            <div class="mt-12 grid grid-cols-2 md:grid-cols-3 gap-6 text-sm text-slate-400">
-                <div class="flex items-center justify-center gap-2">
-                    <i class="fas fa-check-circle text-green-500"></i> Garantia de 7 Dias
-                </div>
-                <div class="flex items-center justify-center gap-2">
-                    <i class="fas fa-check-circle text-green-500"></i> Entrega Digital Imediata
-                </div>
-                <div class="flex items-center justify-center gap-2 col-span-2 md:col-span-1">
-                    <i class="fas fa-lock text-green-500"></i> Pagamento Seguro
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-12 bg-slate-950 text-slate-500 text-center text-xs px-4">
-        <div class="container mx-auto max-w-4xl">
-        
-            <p>&copy; 2024 - Pacote "Ele Te Fez Duvidar de Você" - Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- BOTÃO FLUTUANTE MOBILE -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 md:hidden z-50">
-        <a href="https://pay.kiwify.com.br/nX5fgqc" class="block w-full bg-green-500 text-white text-center font-bold py-4 rounded-xl shadow-2xl uppercase text-sm tracking-widest">
-            Acesso Imediato - R$ 47,70
-        </a>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     RECONHECIMENTO / DORES
+═══════════════════════════════════════ -->
+<section id="pain">
+  <div class="wrap">
+    <div class="fi" style="text-align:center">
+      <span class="lbl">Você reconhece isso?</span>
+      <h2 class="sec-title">Se algum desses pensamentos te<br><em>persegue, este material é pra você</em></h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="pain-grid fi">
+      <div class="glass pain-item">
+        <i class="fas fa-circle-dot"></i>
+        <p>Você ainda fica repassando conversas tentando entender "onde foi que eu errei"</p>
+      </div>
+      <div class="glass pain-item">
+        <i class="fas fa-circle-dot"></i>
+        <p>Sente saudade, mas não sabe se é dele ou da versão de você que existia antes</p>
+      </div>
+      <div class="glass pain-item">
+        <i class="fas fa-circle-dot"></i>
+        <p>Já foi chamada de "sensível demais", "dramática" ou "louca" por expressar o que sentia</p>
+      </div>
+      <div class="glass pain-item">
+        <i class="fas fa-circle-dot"></i>
+        <p>Perdeu a confiança em si mesma — duvida das suas lembranças, dos seus sentimentos</p>
+      </div>
+      <div class="glass pain-item">
+        <i class="fas fa-circle-dot"></i>
+        <p>Sabe que precisa seguir em frente, mas sua mente simplesmente não "desliga" quando quer</p>
+      </div>
+      <div class="glass pain-item">
+        <i class="fas fa-circle-dot"></i>
+        <p>Teme se perder de novo em outro relacionamento e repetir o mesmo padrão doloroso</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     JEITO ERRADO VS CERTO
+═══════════════════════════════════════ -->
+<section id="why">
+  <div class="wrap">
+    <div class="fi" style="text-align:center">
+      <span class="lbl">Por que você ainda se sente presa?</span>
+      <h2 class="sec-title">Não é falta de força de vontade.<br><em>É falta da ferramenta certa.</em></h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="why-grid fi">
+      <div class="glass why-card bad">
+        <div class="wicon bad-i"><i class="fas fa-xmark"></i></div>
+        <div>
+          <h4>Forçar o "esquecimento"</h4>
+          <p>Tentar apagar sem entender o padrão faz o pensamento voltar ainda mais forte.</p>
+        </div>
+      </div>
+      <div class="glass why-card good">
+        <div class="wicon good-i"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Compreender o mecanismo</h4>
+          <p>Quando você nomeia o que houve, o cérebro para de buscar sentido no passado.</p>
+        </div>
+      </div>
+      <div class="glass why-card bad">
+        <div class="wicon bad-i"><i class="fas fa-xmark"></i></div>
+        <div>
+          <h4>Esperar o tempo curar sozinho</h4>
+          <p>Sem intervenção ativa, o loop mental se aprofunda e vira padrão crônico.</p>
+        </div>
+      </div>
+      <div class="glass why-card good">
+        <div class="wicon good-i"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Agir com método específico</h4>
+          <p>Instruções curtas que você aplica no exato momento em que o pensamento surge.</p>
+        </div>
+      </div>
+      <div class="glass why-card bad">
+        <div class="wicon bad-i"><i class="fas fa-xmark"></i></div>
+        <div>
+          <h4>Buscar validação de outros</h4>
+          <p>Contar a história sem estrutura de análise só alimenta a confusão interna.</p>
+        </div>
+      </div>
+      <div class="glass why-card good">
+        <div class="wicon good-i"><i class="fas fa-check"></i></div>
+        <div>
+          <h4>Reconhecer o padrão em você</h4>
+          <p>A cura começa quando você mesma vê o que aconteceu com clareza e sem culpa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONTEÚDO DO PACOTE
+═══════════════════════════════════════ -->
+<section id="content">
+  <div class="wrap">
+    <div class="fi" style="text-align:center">
+      <span class="lbl">O que você vai receber</span>
+      <h2 class="sec-title">Três materiais criados<br><em>para o que você sente agora</em></h2>
+      <p class="sec-sub">Tudo entregue direto no seu e-mail. Você começa a aplicar hoje.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="content-stack fi">
+      <div class="glass-strong cc">
+        <div class="cnum">01</div>
+        <div>
+          <h4><em>E-book</em> "Louca ou Manipulada?"</h4>
+          <p>Um guia direto e honesto (30–40 páginas) que disseca o padrão invisível da manipulação emocional e te mostra, com clareza, o que você de fato viveu. Você vai ler e pensar: <strong>"era exatamente isso."</strong></p>
+        </div>
+      </div>
+      <div class="glass-strong cc">
+        <div class="cnum">02</div>
+        <div>
+          <h4>Mapa da <em>Confusão Mental</em></h4>
+          <p>Um guia visual simples que traduz: <strong>"O que você sente" → "O que realmente é"</strong>. Aprenda a distinguir saudade de vício emocional, e culpa de manipulação — sentir diferente não te faz culpada.</p>
+        </div>
+      </div>
+      <div class="glass-strong cc">
+        <div class="cnum">03</div>
+        <div>
+          <h4>Script <em>Anti-Loop Mental</em></h4>
+          <p>Instruções práticas passo a passo: <strong>Pensou nele? Faça isso. Veio culpa? Pense isso.</strong> Técnicas para silenciar a mente em minutos — sem precisar de sessões longas de terapia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     BÔNUS
+═══════════════════════════════════════ -->
+<section id="bonus">
+  <div class="wrap">
+    <div class="fi" style="text-align:center">
+      <span class="lbl">Presente exclusivo</span>
+      <h2 class="sec-title">Você ainda leva <em>3 bônus</em> gratuitos</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="bonus-grid fi">
+      <div class="glass bc">
+        <div class="bicon si"><i class="fas fa-list-check"></i></div>
+        <div class="btag">Bônus 01</div>
+        <h5>Checklist: 21 Sinais</h5>
+        <p>Valide sua situação identificando cada sinal de manipulação emocional. Em minutos você terá a resposta que buscou por tanto tempo.</p>
+      </div>
+      <div class="glass bc">
+        <div class="bicon ri"><i class="fas fa-stopwatch"></i></div>
+        <div class="btag">Bônus 02</div>
+        <h5>Script 5 Minutos</h5>
+        <p>Uma técnica de 5 minutos para parar de pensar nele imediatamente — use em qualquer lugar, a qualquer hora do dia.</p>
+      </div>
+      <div class="glass bc">
+        <div class="bicon ai"><i class="fas fa-shield-heart"></i></div>
+        <div class="btag">Bônus 03</div>
+        <h5>Guia Anti-Repetição</h5>
+        <p>Como reconhecer os sinais antes de se envolver emocionalmente e nunca mais cair no mesmo tipo de relacionamento tóxico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     DEPOIMENTOS
+═══════════════════════════════════════ -->
+<section id="depoimentos">
+  <div class="wrap-wide">
+    <div class="fi" style="text-align:center">
+      <span class="lbl">Resultados reais</span>
+      <h2 class="sec-title">O que outras mulheres estão <em>dizendo</em></h2>
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <p class="sec-sub">Transformando confusão em liberdade emocional.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="test-grid fi">
+      <div class="test-slot">
+        <img src="assets/depoimento1.png" alt="Depoimento 1"
+          onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'test-ph\'><i class=\'fas fa-image\'></i><p>Depoimento 1</p></div>'">
+      </div>
+      <div class="test-slot">
+        <img src="assets/depoimento2.png" alt="Depoimento 2"
+          onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'test-ph\'><i class=\'fas fa-image\'></i><p>Depoimento 2</p></div>'">
+      </div>
+      <div class="test-slot">
+        <img src="assets/depoimento3.png" alt="Depoimento 3"
+          onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'test-ph\'><i class=\'fas fa-image\'></i><p>Depoimento 3</p></div>'">
+      </div>
+    </div>
+
+    <div class="glass test-quote fi">
+      <p>"Pela primeira vez em anos, eu sinto que o peso no meu peito sumiu. Finalmente entendi o que aconteceu comigo."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     OFERTA FINAL — preço aparece só aqui
+═══════════════════════════════════════ -->
+<section id="oferta">
+  <div class="wrap">
+    <div class="fi" style="text-align:center;margin-bottom:40px">
+      <span class="lbl">Sua decisão</span>
+      <h2 class="sec-title">Comece sua recuperação<br><em>hoje mesmo</em></h2>
+      <p class="sec-sub">Acesso imediato a todos os e-books, mapas, scripts e bônus direto no seu e-mail.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="offer-box fi">
+
+      <div class="guar-strip">
+        <i class="fas fa-shield-halved"></i>
+        <div>
+          <h4>Garantia incondicional de 7 dias</h4>
+          <p>Se por qualquer motivo não gostar, peça reembolso total. Sem burocracia, sem perguntas.</p>
+        </div>
+      </div>
+
+      <p class="price-from">De R$ 97,00 — hoje por apenas:</p>
+      <div class="price-big"><span>R$</span> 47,70</div>
+      <p class="install">ou 12x de R$ 4,78 no cartão</p>
+
+      <a href="https://pay.kiwify.com.br/nX5fgqc" class="cta cta-pulse">
+        <i class="fas fa-leaf" style="margin-right:8px"></i>
+        Quero Recuperar Minha Paz Agora
+      </a>
+
+      <div class="trust">
+        <span><i class="fas fa-lock"></i> Pagamento seguro</span>
+        <span><i class="fas fa-bolt"></i> Acesso imediato</span>
+        <span><i class="fas fa-envelope"></i> Entrega por e-mail</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <p>Este site não faz parte do Facebook ou do Google. Além disso, este site não é endossado pelo Facebook ou Google de forma alguma.</p>
+    <p>© 2025 — Pacote "Ele Te Fez Duvidar de Você?" — Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Sticky Mobile CTA -->
+<div class="sticky-m">
+  <a href="https://pay.kiwify.com.br/nX5fgqc">
+    <i class="fas fa-leaf" style="margin-right:6px"></i>
+    Acesso Imediato — R$ 47,70
+  </a>
+</div>
+
+<script>
+// Fade-in on scroll
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+
+// Scroll depth tracking
+var tracked = {};
+window.addEventListener('scroll', function() {
+  var pct = Math.round(window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100);
+  [25,50,75,100].forEach(function(d) {
+    if(pct >= d && !tracked[d]) {
+      tracked[d] = true;
+      if(typeof fbq !== 'undefined') fbq('trackCustom','ScrollDepth',{depth:d+'%'});
+    }
+  });
+});
+</script>
 
 </body>
 </html>
